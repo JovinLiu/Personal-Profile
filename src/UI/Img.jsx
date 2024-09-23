@@ -13,7 +13,7 @@ const StyledImg = styled.img`
 
 function Img({hover}) {
   const opacity = hover ? 100 : 0;
-  return <StyledImg opacity={opacity} src="./../../public/65a310dff0bb9ee343fe4599_arrow-right-light.svg"></StyledImg>;
+  return <StyledImg opacity={opacity} src="public/65a310dff0bb9ee343fe4599_arrow-right-light.svg"></StyledImg>;
 }
 
 export default Img;
