@@ -106,22 +106,14 @@ function Hero() {
     };
   }, []);
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      const x = Math.floor((e.clientX / windowWidth.current) * 100);
-      const y = Math.floor((e.clientY / windowHeight.current) * 100);
-      setPosition({x, y});
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, []);
+  function handleMouseOver(e) {
+    const x = Math.floor((e.clientX / windowWidth.current) * 100);
+    const y = Math.floor((e.clientY / windowHeight.current) * 100);
+    setPosition({x, y});
+  }
 
   return (
-    <Section id="hero">
+    <Section id="hero" onMouseOver={handleMouseOver}>
       <Highlight x={position.x} y={position.y} transition="all 7s cubic-bezier(.19,.93,.93,.6)" opacity="100%" />
       <Highlight x={position.x} y={position.y} transition="all 17s cubic-bezier(.19,.93,.93,.6)" opacity="60%" />
       <TitleContainer>

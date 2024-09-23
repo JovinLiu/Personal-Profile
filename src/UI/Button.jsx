@@ -22,16 +22,6 @@ const StyledButton = styled.button`
   }
 `;
 
-// const Round = styled.div`
-//   height: 4.3rem;
-//   aspect-ratio: 1;
-//   background-color: var(--orange);
-//   border-radius: 1000px;
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-// `;
-
 function Button({children}) {
   return <StyledButton>{children}</StyledButton>;
 }
