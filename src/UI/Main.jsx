@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const MainContainer = styled.main`
   max-width: 100vw;
-  min-height: 100vh;
+  height: 550vh;
   position: relative;
   overflow: hidden;
   background-color: var(--dark);
@@ -10,7 +10,8 @@ const MainContainer = styled.main`
 `;
 
 const Line = styled.div`
-  height: 500vh;
+  height: 550vh;
+  z-index: 100;
   position: absolute;
   left: ${({left}) => left};
   transform: ${({transform}) => transform};
@@ -20,7 +21,7 @@ const Line = styled.div`
 
 const Grain = styled.div`
   width: 100vw;
-  z-index: 9999;
+  z-index: 99;
   pointer-events: none;
   mix-blend-mode: overlay;
   background-image: url("grain.webp");

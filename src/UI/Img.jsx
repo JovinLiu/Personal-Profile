@@ -1,17 +1,26 @@
 import styled from "styled-components";
 
-const StyledImg = styled.img`
+const StyledImg = styled.div`
   position: absolute;
-  right: ${({hover}) => (hover ? "-1.5rem" : "0rem")};
-  top: ${({hover}) => (hover ? "0.8rem" : "2.5rem")};
+  right: ${({right}) => right};
+  top: ${({top}) => top};
   width: 1rem;
   opacity: ${({opacity}) => opacity};
-  transition: var(--transition-2);
+  scale: ${({scale}) => scale};
+  transition: var(--transition-1);
 `;
 
-function Img({hover}) {
+function Img({hover, children}) {
   const opacity = hover ? 100 : 0;
-  return <StyledImg opacity={opacity} hover={hover} src="arrow-right.svg"></StyledImg>;
+  const scale = hover ? 1.3 : 1;
+  const right = hover ? "-1.5rem" : "0rem";
+  const top = hover ? "0.3rem" : "2.5rem";
+
+  return (
+    <StyledImg opacity={opacity} scale={scale} right={right} top={top}>
+      {children}
+    </StyledImg>
+  );
 }
 
 export default Img;

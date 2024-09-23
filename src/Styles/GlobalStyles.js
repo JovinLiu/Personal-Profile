@@ -9,6 +9,8 @@ const GlobalStyles = createGlobalStyle`
   --orange: #f2887e;
   --orange-0-05: rgb(242, 136, 126, 0.05);
   --orange-0-15: rgb(242, 136, 126, 0.15);
+  --orange-0-5: rgb(242, 136, 126, 0.5);
+  --orange-0-75: rgb(242, 136, 126, 0.65);
   --purple: #8768a6;
   --turquoise: #5bdfe7;
   --yellow: #f2ae72;
@@ -19,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
   --light-0-1: rgba(255, 255, 255, .1);
   --light-0-2: rgba(255, 255, 255, .2);
   --light-0-3: rgba(255, 255, 255, .3);
+  --light-0-03: rgba(255, 255, 255, .03);
   --light-0-5: rgba(255, 255, 255, .5);
   --pink-0: rgba(230, 91, 154, 0);
   --purple-0: rgba(135, 104, 166, 0);
@@ -26,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
   --blue-0: rgba(120, 155, 206, 0);
   --transition-1: all 0.2s ease-in-out;
   --transition-2: all 0.4s ease-out;
+  --transition-3: all 3s ease-in-out;
   --border-radius-tiny: 3px;
   --border-radius-sm: 5px;
   --border-radius-md: 7px;

@@ -7,10 +7,12 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import GlobalStyles from "./Styles/GlobalStyles";
 import Main from "./UI/Main";
+import Curtain from "./Components/Curtain";
 
 function App() {
   return (
     <>
+      <Curtain />
       <GlobalStyles />
       <Header />
       <Main>

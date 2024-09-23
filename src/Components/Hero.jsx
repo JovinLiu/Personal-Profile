@@ -1,17 +1,35 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import Button from "../UI/Button";
 import Icon from "../UI/Icon";
 import {useEffect, useRef, useState} from "react";
-import {CSSTransition} from "react-transition-group";
+import Link from "../UI/Link";
+import Highlight from "../UI/Highlight";
 
 const Section = styled.section`
   inset: 0;
-  z-index: 9999;
+  z-index: 150;
   height: 100vh;
-  width: 90vw;
+  width: 100vw;
   margin: 0 auto;
   color: white;
   z-index: 1;
+  border-bottom: 0.0001rem solid var(--light-0-2);
+  z-index: 200;
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    mix-blend-mode: overlay;
+    z-index: 99;
+    transform: translate3D(0, 50%,0);
+  }
+  to {
+    opacity: 1;
+    mix-blend-mode: overlay;
+    z-index: 99;
+    transform: translate3D(0, 0 ,0);
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -27,34 +45,22 @@ const TitleContainer = styled.div`
 const Span = styled.span`
   font-family: "Biryani", sans-serif;
   font-size: ${({fontSize}) => fontSize};
-  z-index: 9999;
+  z-index: 99;
   font-weight: 300;
   word-wrap: break-word;
   mix-blend-mode: overlay;
   filter: brightness(2);
-`;
-
-const Link = styled.a`
-  cursor: pointer;
-  display: block;
-  height: 4rem;
-  width: 4rem;
-  display: flex;
-  align-items: center;
-  fill: var(--light-0-95);
-  mix-blend-mode: overlay;
-  transition: var(--transition-1);
-  z-index: 9999;
-  &:hover {
-    mix-blend-mode: normal;
-  }
+  animation-name: ${fadeIn};
+  animation-duration: ${({fadeintime}) => fadeintime}s;
+  animation-iteration-count: 1;
 `;
 
 const ButtonContainer = styled.div`
+  margin: 0 auto;
+  width: 85vw;
   height: 5rem;
   display: flex;
   justify-content: end;
-  margin-right: 10rem;
   margin-top: 10rem;
   gap: 8rem;
 `;
@@ -66,24 +72,6 @@ const LinkContainer = styled.div`
   margin-right: auto;
   gap: 5rem;
   align-items: center;
-`;
-
-const Highlight = styled.div`
-  will-change: transform;
-  transform: translate(-50%, -50%) translate3d(${({x}) => x}vw, ${({y}) => y}vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
-    skew(0deg, 0deg);
-  transform-style: preserve-3d;
-  filter: blur(55px);
-  z-index: 5;
-  width: 90vh;
-  height: 90vh;
-  opacity: ${({opacity}) => opacity};
-  background-image: radial-gradient(circle farthest-side at 20% 20%, var(--highlight-1), var(--blue)),
-    radial-gradient(circle closest-corner at 60% 70%, var(--blue), var(--purple-0));
-  filter: blur(35px);
-  border-radius: 1000px;
-  position: absolute;
-  transition: ${({transition}) => transition};
 `;
 
 function Hero() {
@@ -113,13 +101,35 @@ function Hero() {
   }
 
   return (
-    <Section id="hero" onMouseOver={handleMouseOver}>
-      <Highlight x={position.x} y={position.y} transition="all 7s cubic-bezier(.19,.93,.93,.6)" opacity="100%" />
-      <Highlight x={position.x} y={position.y} transition="all 17s cubic-bezier(.19,.93,.93,.6)" opacity="60%" />
+    <Section id="hero" onMouseMove={handleMouseOver}>
+      <Highlight
+        x={position.x}
+        y={position.y}
+        transition="all 7s cubic-bezier(.19,.93,.93,.6)"
+        opacity="100%"
+        colorA="--highlight-1"
+        colorB="--blue"
+        size="80vh"
+      />
+      <Highlight
+        x={position.x}
+        y={position.y}
+        transition="all 17s cubic-bezier(.19,.93,.93,.6)"
+        opacity="60%"
+        colorA="--highlight-1"
+        colorB="--blue"
+        size="70vh"
+      />
       <TitleContainer>
-        <Span fontSize="9rem">Hi, I am</Span>
-        <Span fontSize="15rem">Jovin Liu</Span>
-        <Span fontSize="9rem">Full Stack Web Developer</Span>
+        <Span fontSize="9rem" fadeintime="3">
+          Hi, I am
+        </Span>
+        <Span fontSize="15rem" fadeintime="4">
+          Jovin Liu
+        </Span>
+        <Span fontSize="9rem" fadeintime="5">
+          Full Stack Web Developer
+        </Span>
       </TitleContainer>
       <ButtonContainer>
         <LinkContainer>
@@ -130,8 +140,8 @@ function Hero() {
             <Icon icon="linkedin" />
           </Link>
         </LinkContainer>
-        <Button>Resume</Button>
-        <Button>Contact</Button>
+        <Button icon="download-outline">Resume</Button>
+        <Button icon="mail-outline">Contact Me</Button>
       </ButtonContainer>
     </Section>
   );

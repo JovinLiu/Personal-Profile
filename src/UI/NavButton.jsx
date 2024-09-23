@@ -3,18 +3,18 @@ import styled from "styled-components";
 import Img from "./Img";
 
 const A = styled.a`
-  color: var(--light-0-5);
-  transition: all 0.3s; /* transition-all */
+  color: var(--light-0-95);
+  transition: all 0.3s ease-in-out; /* transition-all */
   position: relative;
   &:hover {
-    color: var(--light-0-95);
+    color: var(--dark);
   }
 `;
 
-function NavButton({children}) {
+function NavButton({children, icon}) {
   const [hover, setHover] = useState(false);
 
-  function handleMouseOver() {
+  function handleMouseEnter() {
     setHover(true);
   }
 
@@ -24,9 +24,11 @@ function NavButton({children}) {
 
   return (
     <>
-      <A href="#" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
+      <A href="#" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {children}
-        <Img hover={hover} />
+        <Img hover={hover}>
+          <ion-icon name={icon}></ion-icon>
+        </Img>
       </A>
     </>
   );
