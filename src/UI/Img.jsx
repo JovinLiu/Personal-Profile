@@ -11,7 +11,7 @@ const StyledImg = styled.img`
 
 function Img({hover}) {
   const opacity = hover ? 100 : 0;
-  return <StyledImg opacity={opacity} hover={hover} src="./../../public/arrow-right.svg"></StyledImg>;
+  return <StyledImg opacity={opacity} hover={hover} src="arrow-right.svg"></StyledImg>;
 }
 
 export default Img;

@@ -23,7 +23,7 @@ const Grain = styled.div`
   z-index: 9999;
   pointer-events: none;
   mix-blend-mode: overlay;
-  background-image: url("./../../public/grain.webp");
+  background-image: url("grain.webp");
   background-position: 0 0;
   background-size: 300px;
   position: absolute;
