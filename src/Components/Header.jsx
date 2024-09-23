@@ -1,6 +1,6 @@
 import styled, {keyframes} from "styled-components";
 import NavButton from "../UI/NavButton";
-import Slash from "../UI/slash";
+import Slash from "../UI/Slash";
 
 const dropdown = keyframes`
   from {
