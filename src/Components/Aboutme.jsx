@@ -17,10 +17,10 @@ const Section = styled.section`
 
 const P = styled.p`
   margin: 0 auto;
-  margin-top: 15vh;
-  width: 65vw;
+  margin-top: 10vh;
+  width: 70vw;
   height: 10vh;
-  font-size: 1.7rem;
+  font-size: 1.75rem;
   color: var(--light-0-75);
   text-align: center;
   line-height: 3vh;
@@ -52,9 +52,10 @@ const Img = styled.img`
 `;
 
 const Span = styled.span`
-  font-size: 2rem;
+  font-size: 2.75rem;
   font-weight: 500;
   color: var(--orange-0-5);
+  filter: brightness(1.2);
 `;
 
 const TagsAndImages = styled.div`
@@ -120,7 +121,7 @@ function Aboutme() {
     <>
       <Highlight
         x={10}
-        y={120}
+        y={105}
         opacity="100%"
         colorA="--turquoise"
         colorB="--orange-0-15"
@@ -130,7 +131,7 @@ function Aboutme() {
       />
       <Section id="aboutme" ref={ref}>
         <P>
-          <Span>Greetings, My name is Jovin Liu.</Span>
+          <Span>Greetings, I am Jovin Liu.</Span>
           <br />
           <br />I am a Full Stack Web Developer with a focus on creating web applications that seamlessly integrate functionality with visual appeal.
           My primary technical stack revolves around React for front-end development and Node.js for back-end services. Through a broad range of
@@ -154,7 +155,9 @@ function Aboutme() {
             {open === 3 ? <Img src="aesthetics.webp" id="accordin-image" /> : null}
             <TagsContainer>
               {words[open].map((word, i) => (
-                <SmallTag key={i}>{word}</SmallTag>
+                <SmallTag key={i} index={i}>
+                  {word}
+                </SmallTag>
               ))}
             </TagsContainer>
           </TagsAndImages>

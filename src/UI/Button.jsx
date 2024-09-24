@@ -9,7 +9,6 @@ const StyledButton = styled.button`
   cursor: pointer;
   color: var(--dark);
   border: 0.001px solid var(--blue-0-5);
-  background: none;
   height: 5vh;
   padding: 0 2vw 0 1vw;
   font-size: 1.5vh;

@@ -18,6 +18,7 @@ const TitleContainer = styled.span`
   width: 30rem;
   gap: 2rem;
   color: var(${({color}) => color});
+  filter: brightness(1.2);
 `;
 
 const Title = styled.span`

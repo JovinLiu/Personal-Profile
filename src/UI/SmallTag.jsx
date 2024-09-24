@@ -26,7 +26,7 @@ const StyledButton = styled.button`
   }
 `;
 
-function SmallTag({children}) {
+function SmallTag({children, index}) {
   function calcX() {
     return (Math.random() * 100).toFixed(0) * 1;
   }
@@ -46,7 +46,7 @@ function SmallTag({children}) {
   }
 
   return (
-    <StyledButton x={x} y={y}>
+    <StyledButton x={x} y={y} fadeintime={index}>
       <span>{children}</span>
     </StyledButton>
   );

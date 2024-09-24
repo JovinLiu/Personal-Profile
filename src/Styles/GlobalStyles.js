@@ -162,7 +162,7 @@ img {
 @keyframes moveUpFadeIn {
     0% {
         opacity: 0; 
-        transform: translateY(100%);
+        transform: translateY(50%);
     }
     100% {
         opacity: 1; 
