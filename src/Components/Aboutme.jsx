@@ -66,7 +66,11 @@ const TagsAndImages = styled.div`
 `;
 
 const TagsContainer = styled.div`
-  /* position: absolute; */
+  width: 30vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 function Aboutme() {

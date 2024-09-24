@@ -2,21 +2,24 @@ import styled from "styled-components";
 import TechTag from "./TechTag";
 
 const CardLink = styled.a`
-  height: 25vw; //14.4
   width: 23vw;
+  height: 45.4vh; //14.4
   position: relative;
   z-index: 100;
   transform: translateY(${({transform}) => transform});
+  transition: var(--transition-2);
+  filter: opacity(0.6);
+  /* filter: grayscale(0.5); */
   &:hover {
+    filter: none;
+    scale: 1.05;
   }
 `;
 
 const Mask = styled.div`
   position: absolute;
   width: 23vw;
-  height: 14vw;
-  background-image: linear-gradient(to right bottom, var(--highlight-2), var(--highlight-1));
-  opacity: 0.5;
+  height: calc(23vw * 9.73 / 16);
   z-index: 2;
 `;
 
@@ -29,7 +32,7 @@ const Img = styled.img`
 
 const TextBox = styled.div`
   width: 23vw;
-  height: 11vw;
+  height: calc(45.4vh - 14vw);
   border-top: 0.001px solid var(--blue-0-5);
   color: var(--light-0-95);
   background-color: var(--light-0-03);
