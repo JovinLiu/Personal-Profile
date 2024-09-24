@@ -13,6 +13,7 @@ const Section = styled.section`
   border-bottom: 0.0001rem solid var(--light-0-2);
   z-index: 150;
   transition: var(--transition-4);
+  position: relative;
 `;
 
 const P = styled.p`
@@ -54,7 +55,7 @@ const Img = styled.img`
 const Span = styled.span`
   font-size: 2.75rem;
   font-weight: 500;
-  color: var(--orange-0-5);
+  color: var(--orange);
   filter: brightness(1.2);
 `;
 
@@ -128,6 +129,7 @@ function Aboutme() {
         size="75vh"
         transition="var(--transition-4)"
         event="none"
+        position="absolute"
       />
       <Section id="aboutme" ref={ref}>
         <P>

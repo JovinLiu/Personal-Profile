@@ -112,6 +112,7 @@ function Hero() {
         colorA="--highlight-1"
         colorB="--blue"
         size="80vh"
+        position="absolute"
       />
       <Highlight
         x={position.x}
@@ -121,6 +122,7 @@ function Hero() {
         colorA="--highlight-1"
         colorB="--blue"
         size="70vh"
+        position="absolute"
       />
       <Highlight
         x={position.x}
@@ -130,6 +132,7 @@ function Hero() {
         colorA="--highlight-1"
         colorB="--blue"
         size="60vh"
+        position="absolute"
       />
       <TitleContainer>
         <Span fontSize="5.2vw" fadeintime="5">

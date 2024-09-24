@@ -39,13 +39,13 @@ function Main({children}) {
     <MainContainer>
       <Grain />
       <Line transform="translateX(-50%)" left="50%">
-        .
+        &nbsp;
       </Line>
       <Line transform="translateX(50%)" left="10%">
-        .
+        &nbsp;
       </Line>
       <Line transform="translateX(50%)" left="90%">
-        .
+        &nbsp;
       </Line>
       {children}
     </MainContainer>

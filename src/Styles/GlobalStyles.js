@@ -171,9 +171,8 @@ img {
 }
 
 .move-up-fade-in {
-    animation: moveUpFadeIn 2s ease-in-out;
+    animation: moveUpFadeIn 1.25s ease-in-out;
     opacity: 1; 
-    transform: translateY(0%);
 }
 
 

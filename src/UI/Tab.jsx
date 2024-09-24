@@ -42,7 +42,7 @@ const Icon = styled.div`
 function Tab({children, open, setOpen, index, content, icon}) {
   const height = open === index ? "24vh" : "7vh";
   const bg = open === index ? "--light-0-03" : "";
-  const blur = open === index ? 1 : 0;
+  const blur = open === index ? 5 : 0;
   const color = open === index ? "--orange-0-5" : "--light-0-75";
   const weight = open === index ? 900 : 300;
 

@@ -13,7 +13,6 @@ const StyledLink = styled.a`
   border: 0.001px solid var(--blue-0-5);
   z-index: 100;
   &:hover {
-    color: var(--dark);
     background-color: var(--blue-0-5);
   }
 `;

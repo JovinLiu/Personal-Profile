@@ -1,18 +1,30 @@
 import styled from "styled-components";
 import TechTag from "./TechTag";
 
-const Div = styled.div`
+const CardLink = styled.a`
   height: 25vw; //14.4
   width: 23vw;
-  transform: translateY(${({transform}) => transform});
   position: relative;
   z-index: 100;
+  transform: translateY(${({transform}) => transform});
+  &:hover {
+  }
+`;
+
+const Mask = styled.div`
+  position: absolute;
+  width: 23vw;
+  height: 14vw;
+  background-image: linear-gradient(to right bottom, var(--highlight-2), var(--highlight-1));
+  opacity: 0.5;
+  z-index: 2;
 `;
 
 const Img = styled.img`
   width: 23vw;
-  z-index: 100;
-  /* aspect-ratio: 0.8; */
+  height: auto;
+  z-index: 1;
+  position: absolute;
 `;
 
 const TextBox = styled.div`
@@ -21,7 +33,7 @@ const TextBox = styled.div`
   border-top: 0.001px solid var(--blue-0-5);
   color: var(--light-0-95);
   background-color: var(--light-0-03);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
   position: absolute;
   bottom: 0;
   padding: 1vh 1vw 2vh 1vw;
@@ -30,6 +42,7 @@ const TextBox = styled.div`
   align-items: start;
   justify-content: space-between;
   z-index: 100;
+  mix-blend-mode: overlay;
 `;
 
 const Title = styled.span`
@@ -55,10 +68,11 @@ const Tech = styled.span`
   gap: 1rem;
 `;
 
-function Card({index, content: {title, description, skills}}) {
+function Card({index, content: {title, description, skills, translate, href}}) {
   return (
-    <Div>
-      <Img src={`card${index}.jpg`} />
+    <CardLink transform={translate} href={href}>
+      <Mask />
+      <Img src={`card${index}.webp`} />
       <TextBox>
         <Title>{title}</Title>
         <Description>{description}</Description>
@@ -68,7 +82,7 @@ function Card({index, content: {title, description, skills}}) {
           ))}
         </Tech>
       </TextBox>
-    </Div>
+    </CardLink>
   );
 }
 

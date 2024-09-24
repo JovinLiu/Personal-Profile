@@ -14,13 +14,15 @@ const StyledDiv = styled.div`
     radial-gradient(circle closest-corner at 60% 70%, var(--blue), var(--purple-0));
   filter: blur(35px);
   border-radius: 1000px;
-  position: absolute;
+  position: ${({position}) => position};
   transition: ${({transition}) => transition};
   pointer-events: ${({event}) => event};
 `;
 
-function Highlight({x, y, transition, opacity, colorA, colorB, size, event}) {
-  return <StyledDiv x={x} y={y} transition={transition} opacity={opacity} colorA={colorA} colorB={colorB} size={size} event={event} />;
+function Highlight({x, y, transition, opacity, colorA, colorB, size, event, position}) {
+  return (
+    <StyledDiv x={x} y={y} transition={transition} opacity={opacity} colorA={colorA} colorB={colorB} size={size} event={event} position={position} />
+  );
 }
 
 export default Highlight;

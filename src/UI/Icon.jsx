@@ -5,6 +5,9 @@ const Svg = styled.svg`
   mix-blend-mode: overlay;
   z-index: 99;
   transition: all 0.3s ease-in-out;
+  &:hover {
+    fill: var(--dark);
+  }
 `;
 
 function Icon({icon}) {
