@@ -3,23 +3,24 @@ import styled from "styled-components";
 import Img from "./Img";
 
 const StyledButton = styled.button`
-  font-size: 2rem;
   z-index: 99;
   background: none;
   border: none;
   cursor: pointer;
   color: var(--dark);
-  border: 0.001px solid var(--orange-0-5);
+  border: 0.001px solid var(--blue-0-5);
   background: none;
-  padding: 1rem 5rem 1rem 3rem;
-  font-size: 2rem;
+  height: 5vh;
+  padding: 0 2vw 0 1vw;
+  font-size: 1.5vh;
   color: var(--light-0-95);
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(5px);
   transition: var(--transition-1);
+  white-space: nowrap;
   &:hover {
     color: var(--dark);
-    background-color: var(--orange-0-5);
+    background-color: var(--blue-0-5);
   }
 `;
 

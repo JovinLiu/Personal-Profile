@@ -16,10 +16,11 @@ const StyledDiv = styled.div`
   border-radius: 1000px;
   position: absolute;
   transition: ${({transition}) => transition};
+  pointer-events: ${({event}) => event};
 `;
 
-function Highlight({x, y, transition, opacity, colorA, colorB, size}) {
-  return <StyledDiv x={x} y={y} transition={transition} opacity={opacity} colorA={colorA} colorB={colorB} size={size} />;
+function Highlight({x, y, transition, opacity, colorA, colorB, size, event}) {
+  return <StyledDiv x={x} y={y} transition={transition} opacity={opacity} colorA={colorA} colorB={colorB} size={size} event={event} />;
 }
 
 export default Highlight;

@@ -5,14 +5,20 @@ const GlobalStyles = createGlobalStyle`
   --dark: #1d1b22;
   --highlight-1: #e65b9a;
   --highlight-2: #3e7cd6;
-  --blue: #789bce;
   --orange: #f2887e;
+  --blue: rgb(120, 155, 206);
+  --blue-0-15: rgb(120, 155, 206, 0.15);
+  --blue-0-5: rgb(120, 155, 206, 0.5);
+  --blue-0-75: rgb(120, 155, 206, 0.75);
+  --blue-0-95: rgb(120, 155, 206, 0.95);
   --orange-0-05: rgb(242, 136, 126, 0.05);
   --orange-0-15: rgb(242, 136, 126, 0.15);
   --orange-0-5: rgb(242, 136, 126, 0.5);
   --orange-0-75: rgb(242, 136, 126, 0.65);
   --purple: #8768a6;
-  --turquoise: #5bdfe7;
+  --turquoise: rgb(91, 223, 231);
+  --turquoise-0-75: rgb(91, 223, 231, 0.75);
+  --turquoise-0-5: rgb(91, 223, 231, 0.5);
   --yellow: #f2ae72;
   --grey: #5c5c5c;
   --light-0-75: rgba(255, 255, 255, .75);
@@ -30,6 +36,7 @@ const GlobalStyles = createGlobalStyle`
   --transition-1: all 0.2s ease-in-out;
   --transition-2: all 0.4s ease-out;
   --transition-3: all 3s ease-in-out;
+  --transition-4: all 2s ease-in;
   --border-radius-tiny: 3px;
   --border-radius-sm: 5px;
   --border-radius-md: 7px;
@@ -137,6 +144,41 @@ h6 {
 img {
   max-width: 100%;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+    opacity: 1; 
+}
+
+@keyframes moveUpFadeIn {
+    0% {
+        opacity: 0; 
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1; 
+        transform: translateY(0%);
+    }
+}
+
+.move-up-fade-in {
+    animation: moveUpFadeIn 2s ease-in-out;
+    opacity: 1; 
+    transform: translateY(0%);
+}
+
+
+
+
 `;
 
 export default GlobalStyles;

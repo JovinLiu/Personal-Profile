@@ -14,12 +14,12 @@ const dropdown = keyframes`
 `;
 
 const Nav = styled.nav`
-  font-size: 1.6rem;
+  font-size: 1vw;
   position: fixed;
   bottom: auto;
   left: 0;
   right: 0;
-  top: 2rem;
+  top: 1.2vh;
   z-index: 200;
   margin: 0 auto;
   padding-left: 2rem;
@@ -30,20 +30,21 @@ const Nav = styled.nav`
 `;
 
 const Navlist = styled.div`
-  margin: 1.25rem auto;
+  margin: 1.2vh auto;
   display: flex;
+  height: 5vh;
   max-width: 70vw;
   align-items: center;
   justify-content: space-between;
   /* border-radius: 9999px; */
-  padding: 2rem 4rem;
+  padding: 0 3vw 0 3vw;
   color: var(--light-0-85);
   box-shadow: 0 px 5px rgba(0, 0, 0, 0.03);
-  border: 0.001px solid var(--orange-0-5);
+  border: 0.001px solid var(--blue-0-5);
   backdrop-filter: blur(5px);
   background-color: var(--light-0-03);
   &:hover {
-    background-color: var(--orange-0-5);
+    background-color: var(--blue-0-5);
   }
 `;
 

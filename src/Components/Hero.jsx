@@ -34,15 +34,16 @@ const fadeIn = keyframes`
 
 const TitleContainer = styled.div`
   margin: 0 auto;
-  width: 85vw;
-  padding-top: 23vh;
+  width: 80vw;
+  padding-top: 25vh;
   display: flex;
   flex-direction: column;
-  line-height: 18rem;
+  line-height: 20vh;
   position: relative;
 `;
 
 const Span = styled.span`
+  margin: 0 auto;
   font-family: "Biryani", sans-serif;
   font-size: ${({fontSize}) => fontSize};
   z-index: 99;
@@ -53,22 +54,23 @@ const Span = styled.span`
   animation-name: ${fadeIn};
   animation-duration: ${({fadeintime}) => fadeintime}s;
   animation-iteration-count: 1;
+  width: 80vw;
+  text-transform: uppercase;
 `;
 
 const ButtonContainer = styled.div`
   margin: 0 auto;
-  width: 85vw;
+  width: 75vw;
   height: 5rem;
   display: flex;
   justify-content: end;
-  margin-top: 10rem;
+  margin-top: 12vh;
   gap: 8rem;
 `;
 
 const LinkContainer = styled.div`
   display: flex;
   justify-content: end;
-  margin-left: 3vw;
   margin-right: auto;
   gap: 5rem;
   align-items: center;
@@ -120,15 +122,21 @@ function Hero() {
         colorB="--blue"
         size="70vh"
       />
+      <Highlight
+        x={position.x}
+        y={position.y}
+        transition="all 30s cubic-bezier(.19,.93,.93,.6)"
+        opacity="30%"
+        colorA="--highlight-1"
+        colorB="--blue"
+        size="60vh"
+      />
       <TitleContainer>
-        <Span fontSize="9rem" fadeintime="3">
-          Hi, I am
-        </Span>
-        <Span fontSize="15rem" fadeintime="4">
-          Jovin Liu
-        </Span>
-        <Span fontSize="9rem" fadeintime="5">
+        <Span fontSize="5.2vw" fadeintime="5">
           Full Stack Web Developer
+        </Span>
+        <Span fontSize="12vw" fadeintime="4">
+          Jovin Liu
         </Span>
       </TitleContainer>
       <ButtonContainer>

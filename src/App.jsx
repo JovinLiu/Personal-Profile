@@ -8,11 +8,18 @@ import Footer from "./Components/Footer";
 import GlobalStyles from "./Styles/GlobalStyles";
 import Main from "./UI/Main";
 import Curtain from "./Components/Curtain";
+import {useEffect, useState} from "react";
 
 function App() {
+  const [showCurtain, setShowCurtain] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setShowCurtain(false), 2000);
+  }, []);
+
   return (
     <>
-      <Curtain />
+      {showCurtain ? <Curtain /> : null}
       <GlobalStyles />
       <Header />
       <Main>

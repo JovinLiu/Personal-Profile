@@ -41,10 +41,10 @@ function Main({children}) {
       <Line transform="translateX(-50%)" left="50%">
         .
       </Line>
-      <Line transform="translateX(50%)" left="5%">
+      <Line transform="translateX(50%)" left="10%">
         .
       </Line>
-      <Line transform="translateX(50%)" left="95%">
+      <Line transform="translateX(50%)" left="90%">
         .
       </Line>
       {children}

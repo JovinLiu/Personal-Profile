@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledTab = styled.div`
   width: 40rem;
   height: ${({height}) => height};
-  border-bottom: 0.0001rem solid var(--light-0-2);
+  border-bottom: 0.0001rem solid var(--blue-0-5);
   transition: var(--transition-2);
   backdrop-filter: blur(${({blur}) => blur}px);
   background-color: var(${({bg}) => bg});
@@ -11,22 +11,27 @@ const StyledTab = styled.div`
 `;
 
 const TitleContainer = styled.span`
-  margin-left: 3rem;
-  padding-top: 1.5rem;
+  margin-left: 10%;
+  padding-top: 5%;
   display: flex;
   align-items: center;
   width: 30rem;
   gap: 2rem;
+  color: var(${({color}) => color});
 `;
 
 const Title = styled.span`
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: ${({weight}) => weight};
 `;
 
 const P = styled.p`
-  margin-left: 3rem;
-  margin-right: 3rem;
-  font-size: 1.25rem;
+  margin-left: 10%;
+  margin-top: 5%;
+  font-size: 1.5rem;
+  line-height: 3.5vh;
+  width: 80%;
+  font-weight: 300;
 `;
 
 const Icon = styled.div`
@@ -34,9 +39,11 @@ const Icon = styled.div`
 `;
 
 function Tab({children, open, setOpen, index, content, icon}) {
-  const height = open === index ? "12rem" : "6rem";
+  const height = open === index ? "24vh" : "7vh";
   const bg = open === index ? "--light-0-03" : "";
   const blur = open === index ? 1 : 0;
+  const color = open === index ? "--orange-0-5" : "--light-0-75";
+  const weight = open === index ? 900 : 300;
 
   function handleMouseOver() {
     setOpen(index);
@@ -44,11 +51,11 @@ function Tab({children, open, setOpen, index, content, icon}) {
 
   return (
     <StyledTab height={height} bg={bg} blur={blur} onMouseOver={handleMouseOver}>
-      <TitleContainer>
+      <TitleContainer color={color}>
         <Icon>
           <ion-icon name={icon} />
         </Icon>
-        <Title>{children}</Title>
+        <Title weight={weight}>{children}</Title>
       </TitleContainer>
       <P>{open === index && content}</P>
     </StyledTab>
