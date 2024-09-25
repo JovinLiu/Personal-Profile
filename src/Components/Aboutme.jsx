@@ -21,7 +21,7 @@ const P = styled.p`
   margin-top: 10vh;
   width: 70vw;
   height: 10vh;
-  font-size: 1.75rem;
+  font-size: 1.15vw;
   color: var(--light-0-75);
   text-align: center;
   line-height: 3vh;
@@ -30,10 +30,18 @@ const P = styled.p`
   transition: var(--transition-4);
 `;
 
+const Span = styled.span`
+  font-size: 1.75vw;
+  font-weight: 500;
+  color: var(--orange);
+  filter: brightness(1.2);
+`;
+
 const AccordinDiv = styled.div`
   margin: 0 auto;
-  margin-top: 25vh;
-  width: 70vw;
+  margin-top: 30vh;
+  height: 50vh;
+  width: 80vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -42,7 +50,7 @@ const AccordinDiv = styled.div`
 `;
 
 const Tabs = styled.div`
-  width: 30vw;
+  width: 25vw;
   height: 50vh;
   z-index: 200;
 `;
@@ -50,13 +58,9 @@ const Tabs = styled.div`
 const Img = styled.img`
   transition: all 1s ease;
   z-index: 200;
-`;
-
-const Span = styled.span`
-  font-size: 2.75rem;
-  font-weight: 500;
-  color: var(--orange);
-  filter: brightness(1.2);
+  margin-top: 5vh;
+  height: 40vh;
+  width: auto;
 `;
 
 const TagsAndImages = styled.div`
@@ -66,8 +70,9 @@ const TagsAndImages = styled.div`
 `;
 
 const TagsContainer = styled.div`
-  width: 30vw;
-  height: 50vh;
+  margin-top: 10vh;
+  width: 25vw;
+  height: 30vh;
   position: absolute;
   top: 0;
   left: 0;

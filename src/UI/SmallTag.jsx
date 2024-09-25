@@ -4,15 +4,10 @@ const StyledButton = styled.button`
   position: absolute;
   top: ${({x}) => x}%;
   left: ${({y}) => y}%;
-  font-size: 2rem;
+  font-size: 75%;
   z-index: 99;
-  background: none;
-  border: none;
-  color: var(--dark);
   border: 0.001px solid var(--blue-0-5);
-  background: none;
   padding: 1rem;
-  font-size: 1.5rem;
   color: var(--light-0-95);
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(5px);

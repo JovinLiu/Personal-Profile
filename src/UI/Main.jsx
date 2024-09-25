@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const MainContainer = styled.main`
   max-width: 100vw;
-  height: 550vh;
+  height: 600vh;
   position: relative;
   overflow: hidden;
   background-color: var(--dark);
@@ -10,12 +10,12 @@ const MainContainer = styled.main`
 `;
 
 const Line = styled.div`
-  height: 550vh;
+  height: 600vh;
   z-index: 100;
   position: absolute;
   left: ${({left}) => left};
   transform: ${({transform}) => transform};
-  box-shadow: -0.0001rem 0 0 var(--light-0-5);
+  box-shadow: 0.01px 0 0 var(--light-0-5);
   color: var(--dark);
 `;
 

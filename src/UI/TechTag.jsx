@@ -5,7 +5,7 @@ const StyledButton = styled.button`
   z-index: 99;
   border: 0.001px solid var(--blue-0-5);
   padding: 0.3rem 0.5rem;
-  font-size: 1.25vh;
+  font-size: 1.15vh;
   color: var(--light-0-95);
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(5px);

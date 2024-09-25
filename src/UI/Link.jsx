@@ -4,7 +4,7 @@ const StyledLink = styled.a`
   cursor: pointer;
   display: block;
   height: 5vh;
-  width: 3vw;
+  width: 5vh;
   padding: 1vh;
   display: flex;
   align-items: center;

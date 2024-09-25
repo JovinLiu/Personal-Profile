@@ -21,13 +21,13 @@ const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin-top: 15vh;
+  margin-top: 12vh;
   margin-bottom: 15vh;
-  row-gap: 3vh;
+  row-gap: 5.5vh;
 `;
 
 const Span = styled.span`
-  font-size: 4rem;
+  font-size: 1.75vw;
   font-weight: 500;
   color: var(--orange);
 `;
@@ -37,9 +37,9 @@ const P = styled.p`
   margin-top: 10vh;
   width: ${({width}) => width};
   height: 10vh;
-  font-size: 1.75rem;
+  font-size: 1.15vw;
   color: var(--light-0-75);
-  text-align: left;
+  text-align: ${({align}) => align};
   line-height: 5vh;
   font-weight: 300;
   z-index: 300;
@@ -51,65 +51,65 @@ function Projects() {
   const cardArr = [
     {
       title: "my Web Dev Hub",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
-      skills: ["React", "Redux", "RTK Query", "Styled Components", "NodeJS", "Express", "MongoDB", "Mongoose"],
-      translate: "-5vh",
+      description: `A lightweight and highly efficient blog platform tailored to document and share your ongoing web development learning experiences. This blog is optimized for speed and simplicity, offering a seamless user experience.`,
+      skills: ["React", "Redux", "RTK Query", "Styled Components", "NodeJS", "Express", "MongoDB", "Mongoose", "React-Markdown"],
+      top: "-5vh",
       href: "https://my-web-dev-hub.vercel.app/"
     },
     {
       title: "The Wild Oasis",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
+      description: `A comprehensive hospitality administration system specifically designed to streamline staff operations, featuring an intuitive user interface that emphasizes both ease of use and an elegant, modern aesthetic.`,
       skills: ["React", "Style Components", "React Query", "React Router", "Supabase", "Recharts"],
-      translate: "-9vh",
+      top: "-9vh",
       href: "https://the-wild-oasis-management-system-jovin.vercel.app/dashboard"
     },
     {
       title: "Natours",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
+      description: `A server side renderred dynamic tourism web application designed to cater to both tourists and administrators, enabling users to seamlessly book tours, make secure payments, and manage travel itineraries all within one platform. `,
       skills: ["NodeJS", "Express", "Sass", "MongoDB", "Mongoose", "Json Web Token", "Pug", "Stripe"],
-      translate: "-1vh",
+      top: "-1vh",
       href: "https://natours-api-ssr.onrender.com/"
     },
     {
       title: "WorldWise",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
+      description: `An interactive application featuring a world map, allowing users to effortlessly record and visually track their travel history, including when and where they've been. With this app, users can mark destinations, add travel dates, and even include personal notes or memories for each location. `,
       skills: ["React", "React Router", "Context API", "Leaflet"],
-      translate: "-5vh",
+      top: "-5vh",
       href: "https://worldwise-jovin.vercel.app/"
     },
     {
       title: "Fast React Pizza Co.",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
+      description: `A user-friendly pizza ordering website that allows customers to quickly browse available menu options and place their orders online. The platform features a seamless interface, offering geo-positioning feature, real-time order tracking, and options for prioritizing orders, providing a convenient and efficient way to order pizza with just a few clicks.`,
       skills: ["React", "Redux", "React Router", "Tailwind CSS"],
-      translate: "-9vh",
+      top: "-9vh",
       href: "https://fast-react-pizza-jovin.vercel.app/"
     },
     {
       title: "Forkify",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
+      description: `A comprehensive food recipe web app designed for everyone built using object-oriented programming principles. Type in what you want to cook, then you will see the recipt, Whether you're a beginner or an experienced cook, the website offers a seamless way to discover, save, and share delicious recipes.`,
       skills: ["Javascript", "HTML", "Sass"],
-      translate: "-1vh",
+      top: "-1vh",
       href: "https://forkify-jovin.vercel.app/"
     },
     {
       title: "Omnifood",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
+      description: `A revolutionary 365-days-per-year smart food subscription website designed to help you eat well and healthy. This website is tailored to your personal tastes and nutritional needs, ensuring that every meal is both delicious and nutritionally balanced.`,
       skills: ["HTML", "CSS"],
-      translate: "-5vh",
+      top: "-5vh",
       href: "https://omnifood-jovin.vercel.app/"
     },
     {
       title: "Minimalist bank",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
+      description: `A modern bank website featuring dynamic animations and traditional DOM manipulation techniques. Without a modern web development framework to streamline functionality, traditional DOM manipulation still remains essential for certain website interactivity.`,
       skills: ["Javascript", "HTML", "CSS"],
-      translate: "-9vh",
+      top: "-9vh",
       href: "#"
     },
     {
       title: "usePopCorn",
-      description: `Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.`,
+      description: `A movie review application that allows you to effortlessly record the films you've watched while providing an intuitive interface for rating each movie.`,
       skills: ["React"],
-      translate: "-1vh",
+      top: "-1vh",
       hreef: "https://use-popcorn-jovin.vercel.app/"
     }
   ];
@@ -144,7 +144,7 @@ function Projects() {
     <>
       <Highlight
         x={90}
-        y={150}
+        y={210}
         opacity="90%"
         colorB="--highlight-2"
         colorA="--orange-0-75"
@@ -155,7 +155,7 @@ function Projects() {
       />
       <Section id="projects">
         <CardsContainer ref={ref}>
-          <P width="23vw">
+          <P width="23vw" align="left">
             <Span>Selected Projects</Span>
             <br />
             <br />
@@ -164,7 +164,7 @@ function Projects() {
           {cardArr.map((content, i) => (
             <Card index={i + 1} key={i} content={content} />
           ))}
-          <P column="2 / -1" width="40vw">
+          <P column="2 / -1" width="40vw" align="right">
             With continuous effort and exploration in web development, more projects are on the way. These new ventures will showcase my growing
             skills and passion for innovation in the future, reflecting my dedication to pushing the boundaries of web development. Stay tuned!
           </P>

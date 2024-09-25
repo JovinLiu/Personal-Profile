@@ -6,10 +6,11 @@ const CardLink = styled.a`
   height: 45.4vh; //14.4
   position: relative;
   z-index: 100;
-  transform: translateY(${({transform}) => transform});
+  top: ${({top}) => top};
   transition: var(--transition-2);
+  border-top: 0.001px solid var(--blue-0-5);
+  border-bottom: 0.001px solid var(--blue-0-5);
   filter: opacity(0.6);
-  /* filter: grayscale(0.5); */
   &:hover {
     filter: none;
     scale: 1.05;
@@ -39,7 +40,7 @@ const TextBox = styled.div`
   backdrop-filter: blur(10px);
   position: absolute;
   bottom: 0;
-  padding: 1vh 1vw 2vh 1vw;
+  padding: 0.5vh 1vw 1.5vh 1vw;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -58,7 +59,7 @@ const Description = styled.p`
   font-size: 1.25vh;
   color: var(--light-0-75);
   text-align: left;
-  line-height: 2.5vh;
+  line-height: 2vh;
   font-weight: 300;
   z-index: 300;
   transition: var(--transition-4);
@@ -68,12 +69,12 @@ const Tech = styled.span`
   width: 18vw;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 
-function Card({index, content: {title, description, skills, translate, href}}) {
+function Card({index, content: {title, description, skills, top, href}}) {
   return (
-    <CardLink transform={translate} href={href}>
+    <CardLink top={top} href={href}>
       <Mask />
       <Img src={`card${index}.webp`} />
       <TextBox>

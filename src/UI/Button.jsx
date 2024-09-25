@@ -19,6 +19,7 @@ const StyledButton = styled.button`
   white-space: nowrap;
   &:hover {
     color: var(--dark);
+    fill: var(--dark);
     background-color: var(--blue-0-5);
   }
 `;

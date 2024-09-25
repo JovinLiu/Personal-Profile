@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledTab = styled.div`
-  width: 40rem;
+  width: 25vw;
   height: ${({height}) => height};
   border-bottom: 0.0001rem solid var(--blue-0-5);
   transition: var(--transition-2);
@@ -22,14 +22,14 @@ const TitleContainer = styled.span`
 `;
 
 const Title = styled.span`
-  font-size: 2rem;
+  font-size: 1.25vw;
   font-weight: ${({weight}) => weight};
 `;
 
 const P = styled.p`
   margin-left: 10%;
   margin-top: 5%;
-  font-size: 1.5rem;
+  font-size: 0.85vw;
   line-height: 3.5vh;
   width: 80%;
   font-weight: 300;
