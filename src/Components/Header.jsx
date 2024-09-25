@@ -1,11 +1,13 @@
 import styled, {keyframes} from "styled-components";
 import NavButton from "../UI/NavButton";
 import Slash from "../UI/Slash";
+import Row from "../UI/Row";
+import {useRef} from "react";
 
 const dropdown = keyframes`
   from {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-150%);
   }
   to {
     opacity: 1;
@@ -14,7 +16,7 @@ const dropdown = keyframes`
 `;
 
 const Nav = styled.nav`
-  font-size: 1vw;
+  font-size: 1.75rem;
   position: fixed;
   bottom: auto;
   left: 0;
@@ -36,7 +38,6 @@ const Navlist = styled.div`
   max-width: 70vw;
   align-items: center;
   justify-content: space-between;
-  /* border-radius: 9999px; */
   padding: 0 3vw 0 3vw;
   color: var(--light-0-85);
   box-shadow: 0 px 5px rgba(0, 0, 0, 0.03);
@@ -48,28 +49,42 @@ const Navlist = styled.div`
   }
 `;
 
-const Div = styled.div`
-  margin-left: auto;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  gap: 4rem;
-`;
-
 function Header() {
+  const aboutmeBtn = useRef(null);
+  const projectsBtn = useRef(null);
+  const skillsBtn = useRef(null);
+  const contactBtn = useRef(null);
+
+  function handleClick(e) {
+    e.preventDefault();
+    const aboutme = document.querySelector("#aboutme");
+    const projects = document.querySelector("#projects");
+    const skills = document.querySelector("#skills");
+    const contact = document.querySelector("#contact");
+    aboutme.scrollIntoView({behavior: "smooth"});
+  }
+
   return (
     <Nav id="navbar">
-      <Navlist>
+      <Navlist onClick={handleClick}>
         <NavButton icon="home-outline">Home</NavButton>
-        <Div>
-          <NavButton icon="person-outline">About Me</NavButton>
+        <Row gap="4rem">
+          <NavButton icon="person-outline" href="#aboutme" ref={aboutmeBtn}>
+            About Me
+          </NavButton>
           <Slash>/</Slash>
-          <NavButton icon="code-working-outline">Projects</NavButton>
+          <NavButton icon="code-working-outline" href="#projects" ref={projectsBtn}>
+            Projects
+          </NavButton>
           <Slash>/</Slash>
-          <NavButton icon="hammer-outline">Skills</NavButton>
+          <NavButton icon="hammer-outline" href="#skills" ref={skillsBtn}>
+            Skills
+          </NavButton>
           <Slash>/</Slash>
-          <NavButton icon="call-outline">Contact</NavButton>
-        </Div>
+          <NavButton icon="call-outline" href="#contact" ref={contactBtn}>
+            Contact
+          </NavButton>
+        </Row>
       </Navlist>
     </Nav>
   );

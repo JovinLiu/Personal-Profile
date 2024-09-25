@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Column from "./Column";
 
 const StyledTab = styled.div`
   width: 25vw;
@@ -14,7 +15,7 @@ const TitleContainer = styled.span`
   margin-left: 10%;
   padding-top: 5%;
   display: flex;
-  align-items: center;
+  align-items: base;
   width: 30rem;
   gap: 2rem;
   color: var(${({color}) => color});
@@ -24,15 +25,18 @@ const TitleContainer = styled.span`
 const Title = styled.span`
   font-size: 1.25vw;
   font-weight: ${({weight}) => weight};
+  white-space: nowrap;
+  text-align: left;
 `;
 
 const P = styled.p`
   margin-left: 10%;
-  margin-top: 5%;
-  font-size: 0.85vw;
-  line-height: 3.5vh;
+  margin-right: 10%;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
   width: 80%;
   font-weight: 300;
+  text-align: left;
 `;
 
 const Icon = styled.div`
@@ -52,13 +56,15 @@ function Tab({children, open, setOpen, index, content, icon}) {
 
   return (
     <StyledTab height={height} bg={bg} blur={blur} onMouseOver={handleMouseOver}>
-      <TitleContainer color={color}>
-        <Icon>
-          <ion-icon name={icon} />
-        </Icon>
-        <Title weight={weight}>{children}</Title>
-      </TitleContainer>
-      <P>{open === index && content}</P>
+      <Column gap="2rem">
+        <TitleContainer color={color}>
+          <Icon>
+            <ion-icon name={icon} />
+          </Icon>
+          <Title weight={weight}>{children}</Title>
+        </TitleContainer>
+        <P>{open === index && content}</P>
+      </Column>
     </StyledTab>
   );
 }

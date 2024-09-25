@@ -3,40 +3,10 @@ import {useEffect, useRef, useState} from "react";
 import Tab from "../UI/Tab";
 import Highlight from "../UI/Highlight";
 import SmallTag from "../UI/SmallTag";
-
-const Section = styled.section`
-  height: 100vh;
-  width: 100vw;
-  box-shadow:
-    -0.5px 0 0 var(--light-0-95),
-    0.5px 0 0 var(--light-0-95);
-  border-bottom: 0.0001rem solid var(--light-0-2);
-  z-index: 150;
-  transition: var(--transition-4);
-  position: relative;
-`;
-
-const P = styled.p`
-  margin: 0 auto;
-  margin-top: 10vh;
-  width: 70vw;
-  height: 10vh;
-  font-size: 1.15vw;
-  color: var(--light-0-75);
-  text-align: center;
-  line-height: 3vh;
-  font-weight: 300;
-  z-index: 300;
-  transition: var(--transition-4);
-`;
-
-const Span = styled.span`
-  font-size: 1.75vw;
-  font-weight: 500;
-  color: var(--orange);
-  filter: brightness(1.2);
-  text-transform: uppercase;
-`;
+import Span from "../UI/TitleSpan";
+import P from "../UI/TextContent";
+import Section from "../UI/Section";
+import Column from "../UI/Column";
 
 const AccordinDiv = styled.div`
   margin: 0 auto;
@@ -78,15 +48,6 @@ const TagsContainer = styled.div`
   left: 0;
 `;
 
-const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  margin-top: 25vh;
-  height: 50vh;
-`;
-
 const Strong = styled.strong``;
 
 function Aboutme() {
@@ -102,7 +63,7 @@ function Aboutme() {
   ];
   const tagContent = [
     "Responsive design involves developing web applications that dynamically adjust to different screen sizes and devices, ensuring accessibility for all users.",
-    "Combining the eye of beauty with the web development expertise, offering unique user-oriented experiences that merge both form and function in a balanced, aesthetically pleasing way.",
+    "Combining the eye of beauty with the web dev expertise, offering unique user-oriented experiences that merge both form and function in a balanced, aesthetically pleasing way.",
     "The event-driven model operates by facilitating asynchronous operations, enabling versatile and responsive web services that enhance user interactions.",
     "Minimalist design principles emphasize a clean, simple user interface, focusing on essential elements to enhance usability and provide a more intuitive experience across platforms."
   ];
@@ -151,20 +112,23 @@ function Aboutme() {
         event="none"
         position="absolute"
       />
-      <Section id="aboutme" ref={ref}>
-        <P>
+      <Section id="aboutme" height="110vh" ref={ref}>
+        <Column align="center" height="30vh" gap="1vh" margintop="10vh">
           <Span>Greetings, I am Jovin Liu.</Span>
-          <br />
-          <br />I am a Full Stack Web Developer with a focus on creating web applications that seamlessly integrate functionality with visual appeal.
-          My primary technical stack revolves around <Strong>React</Strong> for front-end development, <Strong>Node.js</Strong> for back-end services,
-          <Strong> MongoDB</Strong> for NoSQL database, and <Strong>Supabase</Strong> for PostgreSQL database. Through a broad range of project
-          experiences, I have honed my ability to design efficient solutions and tackle complex coding challenges. My passion for web development,
-          enriched by these experiences, drives me to continually enhance the user experience in every project I undertake. I remain dedicated to
-          staying current with industry trends, continuously expanding my knowledge and skill set in the ever-evolving field of technology. I invite
-          you to explore my portfolio and connect with me.
-        </P>
-        <Div>
-          <Span>Philosophy</Span>
+          <P width="70vw" align="center" fontsize="1.75rem" lineheight="4rem">
+            <br />
+            <br />I am a Full Stack Web Developer with a focus on creating web applications that seamlessly integrate functionality with visual
+            appeal. My primary technical stack revolves around <Strong>React</Strong> for front-end development, <Strong>Node.js</Strong> for back-end
+            services,
+            <Strong> MongoDB</Strong> for NoSQL database, and <Strong>Supabase</Strong> for PostgreSQL database. Through a broad range of project
+            experiences, I have honed my ability to design efficient solutions and tackle complex coding challenges. My passion for web development,
+            enriched by these experiences, drives me to continually enhance the user experience in every project I undertake. I remain dedicated to
+            staying current with industry trends, continuously expanding my knowledge and skill set in the ever-evolving field of technology. I invite
+            you to explore my portfolio and connect with me.
+          </P>
+        </Column>
+        <Column align="center" height="30vh" gap="1vh" margintop="10vh">
+          <Span>My Philosophy</Span>
           <AccordinDiv>
             <Tabs>
               {tagName.map((tag, i) => (
@@ -187,7 +151,7 @@ function Aboutme() {
               </TagsContainer>
             </TagsAndImages>
           </AccordinDiv>
-        </Div>
+        </Column>
       </Section>
     </>
   );

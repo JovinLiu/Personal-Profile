@@ -1,20 +1,9 @@
-import styled from "styled-components";
 import Highlight from "../UI/Highlight";
-
-const Section = styled.section`
-  height: 50vh;
-  width: 100vw;
-  position: relative;
-  box-shadow:
-    -0.5px 0 0 var(--light-0-95),
-    0.5px 0 0 var(--light-0-95);
-  border-bottom: 0.0001rem solid var(--light-0-2);
-  z-index: 150;
-`;
+import Section from "../UI/Section";
 
 function Contact() {
   return (
-    <Section id="contact">
+    <Section id="contact" height="50vh">
       {" "}
       <Highlight
         x={10}

@@ -11,7 +11,7 @@ const A = styled.a`
   }
 `;
 
-function NavButton({children, icon}) {
+function NavButton({children, icon, href}) {
   const [hover, setHover] = useState(false);
 
   function handleMouseEnter() {
@@ -24,7 +24,7 @@ function NavButton({children, icon}) {
 
   return (
     <>
-      <A href="#" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <A href={href} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         {children}
         <Img hover={hover}>
           <ion-icon name={icon}></ion-icon>

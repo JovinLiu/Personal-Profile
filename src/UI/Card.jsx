@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import TechTag from "./TechTag";
+import Column from "./Column";
+import P from "./TextContent";
+import CardTitle from "./CardTitle";
 
 const CardLink = styled.a`
   width: 23vw;
@@ -10,6 +13,7 @@ const CardLink = styled.a`
   transition: var(--transition-2);
   border-top: 0.001px solid var(--blue-0-5);
   border-bottom: 0.001px solid var(--blue-0-5);
+  overflow: hidden;
   filter: opacity(0.6);
   &:hover {
     filter: none;
@@ -25,7 +29,7 @@ const Mask = styled.div`
 `;
 
 const Img = styled.img`
-  width: 23vw;
+  width: 23vw; //1.65:1
   height: auto;
   z-index: 1;
   position: absolute;
@@ -40,29 +44,8 @@ const TextBox = styled.div`
   backdrop-filter: blur(10px);
   position: absolute;
   bottom: 0;
-  padding: 0.5vh 1vw 1.5vh 1vw;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
+  padding: 1vh 1vw 1.5vh 1vw;
   z-index: 100;
-  mix-blend-mode: overlay;
-`;
-
-const Title = styled.span`
-  font-size: 2vh;
-  font-weight: 500;
-  color: var(--orange);
-`;
-const Description = styled.p`
-  margin: 0 auto;
-  font-size: 1.25vh;
-  color: var(--light-0-75);
-  text-align: left;
-  line-height: 2vh;
-  font-weight: 300;
-  z-index: 300;
-  transition: var(--transition-4);
 `;
 
 const Tech = styled.span`
@@ -78,13 +61,17 @@ function Card({index, content: {title, description, skills, top, href}}) {
       <Mask />
       <Img src={`card${index}.webp`} />
       <TextBox>
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-        <Tech>
-          {skills?.map((skill, i) => (
-            <TechTag key={i}>{skill}</TechTag>
-          ))}
-        </Tech>
+        <Column height="calc(45.4vh - 2.5vh - 14.375vw);" align="start" justify="space-between">
+          <CardTitle fontsize="2rem">{title}</CardTitle>
+          <P fontsize="1.25rem" display="flex" alignitems="center">
+            {description}
+          </P>
+          <Tech>
+            {skills?.map((skill, i) => (
+              <TechTag key={i}>{skill}</TechTag>
+            ))}
+          </Tech>
+        </Column>
       </TextBox>
     </CardLink>
   );

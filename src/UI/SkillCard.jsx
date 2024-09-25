@@ -1,35 +1,15 @@
 import styled from "styled-components";
 import Icon from "./Icon";
-
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  align-items: center;
-`;
+import CardTitle from "./CardTitle";
+import Row from "./Row";
+import P from "../UI/TextContent";
+import Column from "./Column";
 
 const SkillCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 13vh;
+  height: 14vh;
   width: 22vw;
-  gap: 2rem;
-`;
-
-const Title = styled.span`
-  font-size: 2vh;
-  font-weight: 500;
-  color: var(--orange);
-`;
-const Description = styled.p`
-  margin: 0 auto;
-  font-size: 1.25vh;
-  color: var(--light-0-75);
-  text-align: left;
-  line-height: 2vh;
-  font-weight: 300;
-  z-index: 300;
-  transition: var(--transition-4);
+  padding: 0.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
 `;
 
 const Round = styled.div`
@@ -41,18 +21,23 @@ const Round = styled.div`
   z-index: 1;
   background-image: url("grain.webp");
   mix-blend-mode: overlay;
+  scale: 0.8;
 `;
 
 function Card({content: {category, title, description, top, left, scale, bgcolor}}) {
   return (
     <SkillCard>
-      <Row>
-        <Round bgcolor={bgcolor}>
-          <Icon category={category} position="absolute" top={top} left={left} scale={scale} />
-        </Round>
-        <Title>{title}</Title>
-      </Row>
-      <Description>{description}</Description>
+      <Column>
+        <Row gap="2rem" align="center">
+          <Round bgcolor={bgcolor}>
+            <Icon category={category} position="absolute" top={top} left={left} scale={scale} />
+          </Round>
+          <CardTitle fontsize="2rem">{title}</CardTitle>
+        </Row>
+        <P fontsize="1.25rem" display="flex" alignitems="start" lineheight="2rem" margintop="1rem">
+          {description}
+        </P>
+      </Column>
     </SkillCard>
   );
 }

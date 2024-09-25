@@ -2,34 +2,35 @@ import {createGlobalStyle} from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root {
-  --dark: #1d1b22;
   --highlight-1: #e65b9a;
-  --red: #e65b5b;
   --highlight-2: #3e7cd6;
-  --orange: #f2887e;
   --blue: rgb(120, 155, 206);
-  --blue-0-15: rgb(120, 155, 206, 0.15);
-  --blue-0-5: rgb(120, 155, 206, 0.5);
-  --blue-0-75: rgb(120, 155, 206, 0.75);
   --blue-0-95: rgb(120, 155, 206, 0.95);
-  --orange-0-05: rgb(242, 136, 126, 0.05);
-  --orange-0-15: rgb(242, 136, 126, 0.15);
-  --orange-0-5: rgb(242, 136, 126, 0.5);
+  --blue-0-75: rgb(120, 155, 206, 0.75);
+  --blue-0-5: rgb(120, 155, 206, 0.5);
+  --blue-0-15: rgb(120, 155, 206, 0.15);
+  --orange: #f2887e;
   --orange-0-75: rgb(242, 136, 126, 0.65);
-  --purple: #8768a6;
+  --orange-0-5: rgb(242, 136, 126, 0.5);
+  --orange-0-15: rgb(242, 136, 126, 0.15);
+  --orange-0-05: rgb(242, 136, 126, 0.05);
   --turquoise: rgb(91, 223, 231);
   --turquoise-0-75: rgb(91, 223, 231, 0.75);
   --turquoise-0-5: rgb(91, 223, 231, 0.5);
+  --light: rgba(255, 255, 255);
+  --light-0-95: rgba(255, 255, 255, .95);
+  --light-0-85: rgba(255, 255, 255, .85);
+  --light-0-75: rgba(255, 255, 255, .75);
+  --light-0-5: rgba(255, 255, 255, .5);
+  --light-0-3: rgba(255, 255, 255, .3);
+  --light-0-2: rgba(255, 255, 255, .2);
+  --light-0-1: rgba(255, 255, 255, .1);
+  --light-0-03: rgba(255, 255, 255, .03);
+  --purple: #8768a6;
+  --red: #e65b5b;
   --yellow: #f2ae72;
   --grey: #5c5c5c;
-  --light-0-75: rgba(255, 255, 255, .75);
-  --light-0-85: rgba(255, 255, 255, .85);
-  --light-0-95: rgba(255, 255, 255, .95);
-  --light-0-1: rgba(255, 255, 255, .1);
-  --light-0-2: rgba(255, 255, 255, .2);
-  --light-0-3: rgba(255, 255, 255, .3);
-  --light-0-03: rgba(255, 255, 255, .03);
-  --light-0-5: rgba(255, 255, 255, .5);
+  --dark: #1d1b22;
   --react: #4ab8d4;
   --reactrouter: #d11f2e;
   --reactquery: #f32440;
@@ -72,15 +73,15 @@ html {
 *::-webkit-scrollbar {
   width: 5px;
   height:5px;
-  background-color: none
+  background:none
 }
 
 *::-webkit-scrollbar-track {
-    background-color: none
+    background-color: var(--dark);
   }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--color-blue-1);
+  background: var(--light);
   border-radius: 10px;
 }
 

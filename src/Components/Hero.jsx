@@ -104,7 +104,7 @@ function Hero() {
   }
 
   function handleClickEmailMe() {
-    window.location.href = `mailto:liujovin@gmail.com?subject=Hello&body=Hi Jovin`;
+    window.location.href = "mailto:liujovin@gmail.com?subject=Hello&body=Hi Jovin";
   }
 
   return (

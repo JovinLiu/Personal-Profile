@@ -11,7 +11,7 @@ const StyledButton = styled.button`
   border: 0.001px solid var(--blue-0-5);
   height: 5vh;
   padding: 0 2vw 0 1vw;
-  font-size: 1.5vh;
+  font-size: 1.75rem;
   color: var(--light-0-95);
   background-color: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(5px);
