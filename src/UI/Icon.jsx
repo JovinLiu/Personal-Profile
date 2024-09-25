@@ -188,6 +188,9 @@ function Icon({icon, category, position, top, left, scale}) {
     return (
       <Svg
         position={position}
+        top={top}
+        left={left}
+        scale={scale}
         width="45"
         height="45"
         viewBox="0 0 256 230"
@@ -275,7 +278,7 @@ function Icon({icon, category, position, top, left, scale}) {
         />
         <defs>
           <linearGradient id="paint0_linear" x1="53.9738" y1="54.974" x2="94.1635" y2="71.8295" gradientUnits="userSpaceOnUse">
-            <stop stopColor="grey" />
+            <stop stopColor="white" />
             <stop offset="1" stopColor="white" />
           </linearGradient>
           <linearGradient id="paint1_linear" x1="36.1558" y1="30.578" x2="54.4844" y2="65.0806" gradientUnits="userSpaceOnUse">
@@ -291,7 +294,7 @@ function Icon({icon, category, position, top, left, scale}) {
       <Svg scale={scale} top={top} left={left} position={position} xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 32 32">
         <path
           d="M15.9.087l.854 1.604c.192.296.4.558.645.802.715.715 1.394 1.464 2.004 2.266 1.447 1.9 2.423 4.01 3.12 6.292.418 1.394.645 2.824.662 4.27.07 4.323-1.412 8.035-4.4 11.12-.488.488-1.01.94-1.57 1.342-.296 0-.436-.227-.558-.436-.227-.383-.366-.82-.436-1.255-.105-.523-.174-1.046-.14-1.586v-.244C16.057 24.21 15.796.21 15.9.087z"
-          fill="#c2bfbf"
+          fill="white"
         />
         <path
           d="M15.9.034c-.035-.07-.07-.017-.105.017.017.35-.105.662-.296.96-.21.296-.488.523-.767.767-1.55 1.342-2.77 2.963-3.747 4.776-1.3 2.44-1.97 5.055-2.16 7.808-.087.993.314 4.497.627 5.508.854 2.684 2.388 4.933 4.375 6.885.488.47 1.01.906 1.55 1.325.157 0 .174-.14.21-.244a4.78 4.78 0 0 0 .157-.68l.35-2.614L15.9.034z"
@@ -345,6 +348,9 @@ function Icon({icon, category, position, top, left, scale}) {
   if (category === "copilot")
     return (
       <Svg
+        scale={scale}
+        top={top}
+        left={left}
         position={position}
         width="40"
         height="40"

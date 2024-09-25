@@ -4,6 +4,7 @@ const GlobalStyles = createGlobalStyle`
 :root {
   --dark: #1d1b22;
   --highlight-1: #e65b9a;
+  --red: #e65b5b;
   --highlight-2: #3e7cd6;
   --orange: #f2887e;
   --blue: rgb(120, 155, 206);
@@ -29,6 +30,17 @@ const GlobalStyles = createGlobalStyle`
   --light-0-3: rgba(255, 255, 255, .3);
   --light-0-03: rgba(255, 255, 255, .03);
   --light-0-5: rgba(255, 255, 255, .5);
+  --react: #4ab8d4;
+  --reactrouter: #d11f2e;
+  --reactquery: #f32440;
+  --heroku: #514a8f;
+  --redux: #472a75;
+  --node: #346d2b;
+  --supabase: #38c87b;
+  --mongodb: #5ba039;
+  --mongoose: #740002;
+  --postman: #f3512a;
+  --git: #e13626;
   --pink-0: rgba(230, 91, 154, 0);
   --purple-0: rgba(135, 104, 166, 0);
   --turquoise-0: rgba(91, 223, 231, 0);

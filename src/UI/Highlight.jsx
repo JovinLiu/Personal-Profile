@@ -17,6 +17,7 @@ const StyledDiv = styled.div`
   position: ${({position}) => position};
   transition: ${({transition}) => transition};
   pointer-events: ${({event}) => event};
+  /* mix-blend-mode: overlay; */
 `;
 
 function Highlight({x, y, transition, opacity, colorA, colorB, size, event, position}) {

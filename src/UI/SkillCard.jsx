@@ -4,15 +4,16 @@ import Icon from "./Icon";
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 0.75vh;
+  gap: 2rem;
   align-items: center;
 `;
 
 const SkillCard = styled.div`
   display: flex;
   flex-direction: column;
-  height: 12vh;
-  gap: 0.75vh;
+  height: 13vh;
+  width: 22vw;
+  gap: 2rem;
 `;
 
 const Title = styled.span`
@@ -34,8 +35,8 @@ const Description = styled.p`
 const Round = styled.div`
   position: relative;
   background-color: ${({bgcolor}) => bgcolor};
-  width: 3vw;
-  height: 3vw;
+  width: 5.5rem;
+  height: 5.5rem;
   border-radius: 50%;
   z-index: 1;
   background-image: url("grain.webp");

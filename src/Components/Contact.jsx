@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import Highlight from "../UI/Highlight";
 
 const Section = styled.section`
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
   position: relative;
   box-shadow:
@@ -12,7 +13,22 @@ const Section = styled.section`
 `;
 
 function Contact() {
-  return <Section id="contact">contact</Section>;
+  return (
+    <Section id="contact">
+      {" "}
+      <Highlight
+        x={10}
+        y={10}
+        opacity="80%"
+        colorA="--turquoise-0-75"
+        colorB="--red"
+        size="100vh"
+        transition="var(--transition-4)"
+        event="none"
+        position="absolute"
+      />
+    </Section>
+  );
 }
 
 export default Contact;

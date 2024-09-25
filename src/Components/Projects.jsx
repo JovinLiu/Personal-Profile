@@ -30,6 +30,7 @@ const Span = styled.span`
   font-size: 1.75vw;
   font-weight: 500;
   color: var(--orange);
+  text-transform: uppercase;
 `;
 
 const P = styled.p`

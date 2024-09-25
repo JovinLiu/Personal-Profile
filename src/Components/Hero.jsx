@@ -103,6 +103,10 @@ function Hero() {
     setPosition({x, y});
   }
 
+  function handleClickEmailMe() {
+    window.location.href = `mailto:liujovin@gmail.com?subject=Hello&body=Hi Jovin`;
+  }
+
   return (
     <Section id="hero" onMouseMove={handleMouseOver}>
       <Highlight
@@ -153,7 +157,9 @@ function Hero() {
           </Link>
         </LinkContainer>
         <Button icon="download-outline">Resume</Button>
-        <Button icon="mail-outline">Contact Me</Button>
+        <Button icon="mail-outline" onClick={handleClickEmailMe}>
+          Email Me
+        </Button>
       </ButtonContainer>
     </Section>
   );

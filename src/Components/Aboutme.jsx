@@ -35,12 +35,12 @@ const Span = styled.span`
   font-weight: 500;
   color: var(--orange);
   filter: brightness(1.2);
+  text-transform: uppercase;
 `;
 
 const AccordinDiv = styled.div`
   margin: 0 auto;
-  margin-top: 30vh;
-  height: 50vh;
+  margin-top: 5vh;
   width: 80vw;
   display: flex;
   align-items: center;
@@ -77,6 +77,17 @@ const TagsContainer = styled.div`
   top: 0;
   left: 0;
 `;
+
+const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 25vh;
+  height: 50vh;
+`;
+
+const Strong = styled.strong``;
 
 function Aboutme() {
   const [open, setOpen] = useState(0);
@@ -131,7 +142,7 @@ function Aboutme() {
     <>
       <Highlight
         x={10}
-        y={105}
+        y={120}
         opacity="100%"
         colorA="--turquoise"
         colorB="--orange-0-15"
@@ -145,34 +156,38 @@ function Aboutme() {
           <Span>Greetings, I am Jovin Liu.</Span>
           <br />
           <br />I am a Full Stack Web Developer with a focus on creating web applications that seamlessly integrate functionality with visual appeal.
-          My primary technical stack revolves around React for front-end development and Node.js for back-end services. Through a broad range of
-          project experiences, I have honed my ability to design efficient solutions and tackle complex coding challenges. My passion for web
-          development, enriched by these experiences, drives me to continually enhance the user experience in every project I undertake. I remain
-          dedicated to staying current with industry trends, continuously expanding my knowledge and skill set in the ever-evolving field of
-          technology. I invite you to explore my portfolio and connect with me.
+          My primary technical stack revolves around <Strong>React</Strong> for front-end development, <Strong>Node.js</Strong> for back-end services,
+          <Strong> MongoDB</Strong> for NoSQL database, and <Strong>Supabase</Strong> for PostgreSQL database. Through a broad range of project
+          experiences, I have honed my ability to design efficient solutions and tackle complex coding challenges. My passion for web development,
+          enriched by these experiences, drives me to continually enhance the user experience in every project I undertake. I remain dedicated to
+          staying current with industry trends, continuously expanding my knowledge and skill set in the ever-evolving field of technology. I invite
+          you to explore my portfolio and connect with me.
         </P>
-        <AccordinDiv>
-          <Tabs>
-            {tagName.map((tag, i) => (
-              <Tab key={i} open={open} setOpen={setOpen} index={i} content={tagContent[i]} icon={icon[i]}>
-                {tag}
-              </Tab>
-            ))}
-          </Tabs>
-          <TagsAndImages>
-            {open === 0 ? <Img src="frontend.webp" id="accordin-image" /> : null}
-            {open === 1 ? <Img src="backend.webp" id="accordin-image" /> : null}
-            {open === 2 ? <Img src="database.webp" id="accordin-image" /> : null}
-            {open === 3 ? <Img src="aesthetics.webp" id="accordin-image" /> : null}
-            <TagsContainer>
-              {words[open].map((word, i) => (
-                <SmallTag key={i} index={i}>
-                  {word}
-                </SmallTag>
+        <Div>
+          <Span>Philosophy</Span>
+          <AccordinDiv>
+            <Tabs>
+              {tagName.map((tag, i) => (
+                <Tab key={i} open={open} setOpen={setOpen} index={i} content={tagContent[i]} icon={icon[i]}>
+                  {tag}
+                </Tab>
               ))}
-            </TagsContainer>
-          </TagsAndImages>
-        </AccordinDiv>
+            </Tabs>
+            <TagsAndImages>
+              {open === 0 ? <Img src="frontend.webp" id="accordin-image" /> : null}
+              {open === 1 ? <Img src="backend.webp" id="accordin-image" /> : null}
+              {open === 2 ? <Img src="database.webp" id="accordin-image" /> : null}
+              {open === 3 ? <Img src="aesthetics.webp" id="accordin-image" /> : null}
+              <TagsContainer>
+                {words[open].map((word, i) => (
+                  <SmallTag key={i} index={i}>
+                    {word}
+                  </SmallTag>
+                ))}
+              </TagsContainer>
+            </TagsAndImages>
+          </AccordinDiv>
+        </Div>
       </Section>
     </>
   );
