@@ -92,7 +92,6 @@ html {
 
 body {
   position: relative; /* relative */
-  min-height: 100vh; /* min-h-[100vh] */
   max-width: 100vw; /* max-w-[100vw] */
   overflow-X: hidden;
   transition: color 0.3s, background-color 0.3s;

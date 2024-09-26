@@ -22,8 +22,8 @@ const SkillsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin-top: 15vh;
-  margin-bottom: 15vh;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
   row-gap: 4rem;
 `;
 
@@ -31,7 +31,7 @@ function Skills() {
   const ref = useLazyLoad();
 
   return (
-    <Section id="skills" minheight="190rem">
+    <Section id="skills" minheight="200rem">
       <SkillsContainer ref={ref}>
         {skillArr.map((skill, i) => (
           <SkillsCard content={skill} key={i} />

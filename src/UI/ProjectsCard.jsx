@@ -112,7 +112,7 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
         </Front>
         <Back>
           <TextBox height="calc(14vw + 12rem)">
-            <Column height="calc(14vw + 12rem - 2.5vh)" align="start" justify="space-between">
+            <Column height="calc(14vw + 12rem - 2.5rem)" align="start" justify="space-between">
               <CardTitle fontsize="2rem">{title}</CardTitle>
               <P fontsize="1.25rem" display="flex" alignitems="center" align="justify" lineheight="2rem">
                 {description}

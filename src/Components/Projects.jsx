@@ -46,7 +46,7 @@ function Projects() {
           {projectsArr.map((content, i) => (
             <ProjectsCard index={i + 1} key={i} content={content} />
           ))}
-          <P column="2 / -1" width="45vw" align="right" fontsize="1.75rem" margintop="2vh" lineheight="6rem">
+          <P column="2 / -1" width="45vw" align="right" fontsize="1.75rem" margintop="2rem" lineheight="6rem">
             With continuous effort and exploration in web development, more projects are on the way. These new ventures will showcase my growing
             skills and passion for innovation in the future, reflecting my dedication to pushing the boundaries of web development. Stay tuned!
           </P>
