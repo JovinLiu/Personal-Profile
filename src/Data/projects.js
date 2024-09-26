@@ -13,7 +13,7 @@ const projectsArr = [
     description: `A comprehensive hospitality administration system specifically designed to streamline staff operations, featuring an intuitive user interface that emphasizes both ease of use and an elegant, modern aesthetic.`,
     skills: ["React", "Style Components", "React Query", "React Router", "Supabase", "Recharts"],
     top: "-9vh",
-    href: "https://the-wild-oasis-management-system-jovin.vercel.app/dashboard"
+    href: "https://the-wild-oasis-management-system-jovin.vercel.app"
   },
   {
     title: "Natours",
@@ -61,7 +61,7 @@ const projectsArr = [
     description: `A modern bank website featuring dynamic animations and traditional DOM manipulation techniques. Without a modern web development framework to streamline functionality, traditional DOM manipulation still remains essential for certain website interactivity.`,
     skills: ["Javascript", "HTML", "CSS"],
     top: "-9vh",
-    href: "#"
+    href: "https://bankist-dom.netlify.app/"
   },
   {
     title: "usePopCorn",
@@ -69,7 +69,7 @@ const projectsArr = [
     description: `A movie review application that allows you to effortlessly record the films you've watched while providing an intuitive interface for rating each movie.`,
     skills: ["React"],
     top: "-1vh",
-    hreef: "https://use-popcorn-jovin.vercel.app/"
+    href: "https://use-popcorn-jovin.vercel.app/"
   }
 ];
 
