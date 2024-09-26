@@ -3,9 +3,9 @@ import styled from "styled-components";
 const StyledLink = styled.a`
   cursor: pointer;
   display: block;
-  height: 5vh;
-  width: 5vh;
-  padding: 1vh;
+  height: 5rem;
+  width: 5rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   backdrop-filter: ${({backdrop}) => backdrop};

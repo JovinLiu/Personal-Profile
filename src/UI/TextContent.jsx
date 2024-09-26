@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 const P = styled.p`
   z-index: 300;
-  height: 10vh;
   font-weight: 300;
   color: var(--light-0-75);
+  height: ${({height}) => height};
   margin-top: ${({margintop}) => margintop};
   margin-left: ${({marginleft}) => marginleft};
   margin-right: ${({marginright}) => marginright};
@@ -31,7 +31,8 @@ function TextContent({
   gridcolumn,
   gridrow,
   marginleft,
-  marginright
+  marginright,
+  height
 }) {
   return (
     <P
@@ -47,6 +48,7 @@ function TextContent({
       gridcolumn={gridcolumn}
       marginleft={marginleft}
       marginright={marginright}
+      height={height}
     >
       {children}
     </P>

@@ -31,7 +31,7 @@ function Skills() {
   const ref = useLazyLoad();
 
   return (
-    <Section id="skills" height="180vh">
+    <Section id="skills" minheight="190rem">
       <SkillsContainer ref={ref}>
         {skillArr.map((skill, i) => (
           <SkillsCard content={skill} key={i} />

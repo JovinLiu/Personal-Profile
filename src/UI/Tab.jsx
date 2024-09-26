@@ -14,9 +14,9 @@ const StyledTab = styled.div`
 
 const TitleContainer = styled.span`
   margin-left: 10%;
-  padding-top: 5%;
+  padding-top: 1.5rem;
   display: flex;
-  align-items: base;
+  align-items: center;
   width: 30rem;
   gap: 2rem;
   color: var(${({color}) => color});
@@ -24,7 +24,7 @@ const TitleContainer = styled.span`
 `;
 
 const Title = styled.span`
-  font-size: 1.25vw;
+  font-size: 2.25rem;
   font-weight: ${({weight}) => weight};
   white-space: nowrap;
   text-align: left;
@@ -35,7 +35,7 @@ const Icon = styled.div`
 `;
 
 function Tab({children, open, setOpen, index, content, icon}) {
-  const height = open === index ? "24vh" : "7vh";
+  const height = open === index ? "24rem" : "7rem";
   const bg = open === index ? "--light-0-03" : "";
   const blur = open === index ? 5 : 0;
   const color = open === index ? "--orange-0-5" : "--light-0-75";

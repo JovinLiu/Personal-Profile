@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Div = styled.div`
-  font-size: 1vw; /* text-xs */
+  font-size: 2rem; /* text-xs */
   font-weight: 100; /* font-thin */
   color: var(--light-0-95); /* text-light-0-2 */
 `;

@@ -15,8 +15,8 @@ const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin-top: 20vh;
-  row-gap: 5.5vh;
+  margin-top: 20rem;
+  row-gap: 5.5rem;
 `;
 
 function Projects() {
@@ -35,7 +35,7 @@ function Projects() {
         event="none"
         position="absolute"
       />
-      <Section id="projects" height="160vh">
+      <Section id="projects" minheight="calc(54vw + 84.5rem)">
         <CardsContainer ref={ref}>
           <Column gap="5rem">
             <Span>Selected Projects</Span>

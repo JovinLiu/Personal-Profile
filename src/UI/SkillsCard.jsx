@@ -6,7 +6,7 @@ import P from "./TextContent";
 import Column from "./Column";
 
 const Card = styled.div`
-  height: 15.5vh;
+  min-height: 18rem;
   width: 22vw;
   padding: 0.5rem 2rem;
   border-top: 0.001px solid var(--blue-0-5);

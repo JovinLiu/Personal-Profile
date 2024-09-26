@@ -11,7 +11,7 @@ import useLazyLoad from "../Hooks/useLazyLoad";
 
 const AccordinDiv = styled.div`
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 5rem;
   width: 80vw;
   display: flex;
   align-items: center;
@@ -22,34 +22,36 @@ const AccordinDiv = styled.div`
 
 const Tabs = styled.div`
   width: 25vw;
-  height: 50vh;
+  min-height: 45rem;
   z-index: 200;
 `;
 
 const Img = styled.img`
   transition: all 1s ease;
   z-index: 200;
-  margin-top: 5vh;
-  height: 40vh;
+  margin-top: 3rem;
+  height: 40rem;
   width: auto;
 `;
 
 const TagsAndImages = styled.div`
   width: 30vw;
-  height: 50vh;
+  height: 50rem;
   position: relative;
 `;
 
 const TagsContainer = styled.div`
-  margin-top: 10vh;
+  margin-top: 10rem;
   width: 25vw;
-  height: 30vh;
+  height: 30rem;
   position: absolute;
   top: 0;
   left: 0;
 `;
 
-const Strong = styled.strong``;
+const Strong = styled.strong`
+  color: var(--orange);
+`;
 
 function Aboutme() {
   const [open, setOpen] = useState(0);
@@ -87,8 +89,8 @@ function Aboutme() {
         event="none"
         position="absolute"
       />
-      <Section id="aboutme" height="110vh" ref={ref}>
-        <Column align="center" height="30vh" gap="1vh" margintop="10vh">
+      <Section id="aboutme" minheight="120rem" ref={ref}>
+        <Column align="center" height="40rem" gap="2rem" margintop="10rem">
           <Span>Greetings, I am Jovin Liu.</Span>
           <P width="70vw" align="center" fontsize="1.75rem" lineheight="4rem">
             <br />
@@ -102,7 +104,7 @@ function Aboutme() {
             you to explore my portfolio and connect with me.
           </P>
         </Column>
-        <Column align="center" height="30vh" gap="1vh" margintop="15vh">
+        <Column align="center" height="40rem" gap="2rem" margintop="10rem">
           <Span>My Philosophy</Span>
           <AccordinDiv>
             <Tabs>

@@ -21,7 +21,7 @@ const Nav = styled.nav`
   bottom: auto;
   left: 0;
   right: 0;
-  top: 1.2vh;
+  top: 1.2rem;
   z-index: 200;
   margin: 0 auto;
   padding-left: 2rem;
@@ -32,13 +32,13 @@ const Nav = styled.nav`
 `;
 
 const Navlist = styled.div`
-  margin: 1.2vh auto;
+  margin: 1.2rem auto;
   display: flex;
-  height: 5vh;
+  height: 5rem;
   max-width: 70vw;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3vw 0 3vw;
+  padding: 0 5rem 0 5rem;
   color: var(--light-0-85);
   box-shadow: 0 px 5px rgba(0, 0, 0, 0.03);
   border: 0.001px solid var(--blue-0-5);
@@ -68,7 +68,7 @@ function Header() {
     <Nav id="navbar">
       <Navlist onClick={handleClick}>
         <NavButton icon="home-outline">Home</NavButton>
-        <Row gap="4rem">
+        <Row gap="4rem" align="center">
           <NavButton icon="person-outline" href="#aboutme" ref={aboutmeBtn}>
             About Me
           </NavButton>

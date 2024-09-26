@@ -4,6 +4,7 @@ import TechTag from "./TechTag";
 import Column from "./Column";
 import P from "./TextContent";
 import CardTitle from "./CardTitle";
+import {useState} from "react";
 // import {useState} from "react";
 
 const CardLink = styled.a`
@@ -20,11 +21,9 @@ const Card = styled.div`
   will-change: transform;
   width: 23vw;
   height: ${({height}) => height};
-  transition: all 0.8s ease-out;
+  transition: all 1.2s ease-out;
   transform-style: preserve-3d;
-  &:hover {
-    transform: rotateY(180deg);
-  }
+  transform: ${({transform}) => transform};
 `;
 
 const Front = styled.div`
@@ -56,7 +55,7 @@ const TextBox = styled.div`
   color: var(--light-0-95);
   background-color: var(--light-0-03);
   backdrop-filter: blur(10px);
-  padding: 1vh 1vw 1.5vh 1vw;
+  padding: 1rem 1vw 1.5rem 1vw;
   z-index: 130;
   overflow: hidden;
 `;
@@ -69,9 +68,28 @@ const Tech = styled.span`
 `;
 
 function ProjectsCard({index, content: {title, short, description, skills, top, href}}) {
+  const [hover, setHover] = useState(false);
+
+  const transform = hover ? "rotateY(180deg)" : "null";
+
+  function handleMouseEnter() {
+    setHover(true);
+  }
+
+  function handleMouseLeave() {
+    setHover(false);
+  }
+
   return (
-    <CardLink top={top} height="calc(14vw + 12rem)" href={href} aria-label={`View project: ${title}`}>
-      <Card>
+    <CardLink
+      top={top}
+      height="calc(14vw + 12rem)"
+      href={href}
+      aria-label={`View project: ${title}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Card transform={transform} height="calc(14vw + 12rem)">
         <Front>
           <Column height="calc(14vw + 12rem)">
             <Img
@@ -85,7 +103,7 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
             <TextBox height="12rem">
               <Column height="12rem">
                 <CardTitle fontsize="2rem">{title}</CardTitle>
-                <P fontsize="1.5rem" display="flex" alignitems="center">
+                <P fontsize="1.25rem" display="flex" alignitems="center" height="10rem">
                   {short}
                 </P>
               </Column>
@@ -96,7 +114,7 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
           <TextBox height="calc(14vw + 12rem)">
             <Column height="calc(14vw + 12rem - 2.5vh)" align="start" justify="space-between">
               <CardTitle fontsize="2rem">{title}</CardTitle>
-              <P fontsize="1.5rem" display="flex" alignitems="center" align="justify">
+              <P fontsize="1.25rem" display="flex" alignitems="center" align="justify" lineheight="2rem">
                 {description}
               </P>
               <Tech>

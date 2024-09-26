@@ -8,7 +8,7 @@ import Highlight from "../UI/Highlight";
 const Section = styled.section`
   inset: 0;
   z-index: 150;
-  height: 100vh;
+  min-height: 100rem;
   width: 100vw;
   margin: 0 auto;
   color: white;
@@ -35,10 +35,10 @@ const fadeIn = keyframes`
 const TitleContainer = styled.div`
   margin: 0 auto;
   width: 80vw;
-  padding-top: 25vh;
+  padding-top: 25rem;
   display: flex;
   flex-direction: column;
-  line-height: 20vh;
+  line-height: 20rem;
   position: relative;
 `;
 

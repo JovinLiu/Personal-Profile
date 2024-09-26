@@ -6,7 +6,7 @@ import Row from "../UI/Row";
 
 const StyledFooter = styled.div`
   font-size: 1.75rem;
-  top: 1.2vh;
+  top: 1.2rem;
   z-index: 200;
   margin: 0 auto;
   padding-left: 2rem;
@@ -15,13 +15,13 @@ const StyledFooter = styled.div`
 `;
 
 const Footerlist = styled.div`
-  margin: 2vh auto;
+  margin: 2rem auto;
   display: flex;
-  height: 6vh;
+  height: 6rem;
   width: 90vw;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3vw 0 3vw;
+  padding: 0 3rem 0 3rem;
   color: var(--light-0-85);
   box-shadow: 0 px 5px rgba(0, 0, 0, 0.03);
   border: 0.001px solid var(--blue-0-5);
@@ -37,7 +37,7 @@ const Span = styled.div`
 function Footer() {
   const year = new Date(Date.now()).getFullYear();
   return (
-    <Section id="footer" height="10vh">
+    <Section id="footer" height="10rem">
       <StyledFooter>
         <Footerlist>
           <Row align="center" width="90vw">
@@ -49,7 +49,7 @@ function Footer() {
                 <Icon icon="linkedin" />
               </Link>
             </Row>
-            <Span>{`Design and Coded by Jovin Liu. © ${year} Jovin Liu. All Rights Reserved.`}</Span>
+            <Span>{`Coded by Jovin Liu. © ${year} Jovin Liu. All Rights Reserved.`}</Span>
           </Row>
         </Footerlist>
       </StyledFooter>
