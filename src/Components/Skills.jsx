@@ -5,6 +5,7 @@ import P from "./../UI/TextContent";
 import GridPosition from "../UI/GridPosition";
 import Column from "../UI/Column";
 import skillArr from "../Data/skills";
+import useLazyLoad from "../Hooks/useLazyLoad";
 
 const Span = styled.span`
   font-size: 1.75vw;
