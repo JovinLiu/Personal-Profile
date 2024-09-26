@@ -21,7 +21,7 @@ const projectsArr = [
     description: `A server side renderred dynamic tourism web application designed to cater to both tourists and administrators, enabling users to seamlessly book tours, make secure payments, and manage travel itineraries all within one platform. `,
     skills: ["NodeJS", "Express", "Sass", "MongoDB", "Mongoose", "Json Web Token", "Pug", "Stripe"],
     top: "-1rem",
-    href: "https://natours-api-ssr.onrender.com/"
+    href: "https://natours-api-ssr.onrender.com"
   },
   {
     title: "WorldWise",

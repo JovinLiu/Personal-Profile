@@ -3,10 +3,12 @@ import {useEffect, useRef} from "react";
 function useLazyLoad() {
   const ref = useRef(null);
 
+  console.log(ref.current);
+
   useEffect(function () {
     if (!ref?.current?.childNodes) return;
 
-    const revealCard = (entries, observer) => {
+    const reveal = (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add("move-up-fade-in");
@@ -17,15 +19,15 @@ function useLazyLoad() {
 
     const options = {root: null, thresholds: 0.1, rootMargin: "-100px"};
 
-    const cardObserver = new IntersectionObserver(revealCard, options);
+    const elementObserver = new IntersectionObserver(reveal, options);
 
-    Array.from(ref?.current?.childNodes).forEach((card) => {
-      card.style.opacity = 0;
-      cardObserver.observe(card);
+    Array.from(ref?.current?.childNodes).forEach((el) => {
+      el.style.opacity = 0;
+      elementObserver.observe(el);
     });
 
     return () => {
-      if (cardObserver) cardObserver.disconnect();
+      if (elementObserver) elementObserver.disconnect();
     };
   }, []);
 

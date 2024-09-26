@@ -64,6 +64,8 @@ const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: Overpass, sans-serif;
+  font-weight: 100;
   transition: background-color 0.3s, border 0.3s;
 }
 

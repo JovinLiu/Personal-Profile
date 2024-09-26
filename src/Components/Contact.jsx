@@ -5,22 +5,47 @@ import P from "../UI/TextContent";
 import Column from "../UI/Column";
 import Button from "../UI/Button";
 import Row from "../UI/Row";
-import {useState} from "react";
+import {useEffect} from "react";
 import useLazyLoad from "../Hooks/useLazyLoad";
 
 function Contact() {
-  const [show, setShow] = useState(false);
   const ref = useLazyLoad();
+  console.log(ref.current);
+
+  useEffect(function () {
+    if (!ref?.current?.childNodes) return;
+
+    console.log(ref.current);
+
+    const revealCard = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("move-up-fade-in");
+        entry.target.style.opacity = 1;
+        observer.unobserve(entry.target);
+      });
+    };
+
+    const options = {root: null, thresholds: 0.1, rootMargin: "-100px"};
+
+    const cardObserver = new IntersectionObserver(revealCard, options);
+
+    ref?.current?.childNodes.forEach((el) => {
+      el.style.opacity = 0;
+      cardObserver.observe(card);
+    });
+
+    return () => {
+      if (cardObserver) cardObserver.disconnect();
+    };
+  }, []);
 
   function handleClickEmailMe() {
     window.location.href = "mailto:liujovin@gmail.com";
   }
 
-  function handleClickPhoneNumber() {
-    setShow(!show);
-  }
   return (
-    <Section id="contact" minheight="60rem">
+    <Section id="contact" minheight="60rem" ref={ref}>
       {" "}
       <Highlight
         x={10}
@@ -33,7 +58,7 @@ function Contact() {
         event="none"
         position="absolute"
       />
-      <Column align="center" gap="3rem" height="50rem" margintop="15rem" ref={ref}>
+      <Column align="center" gap="3rem" height="50rem" margintop="15rem">
         <Span>Contact</Span>
         <P width="70vw" align="center" fontsize="1.75rem" lineheight="4rem">
           {`Thank you for taking the time to view my portfolio. As a web developer passionate about innovation and growth, I’m always eager to take on new challenges and collaborate with teams to achieve impactful results. Every project helps refine my skills and drives my enthusiasm for this field even further.`}
@@ -42,10 +67,7 @@ function Contact() {
           {`If you'd like to connect, discuss opportunities, or simply chat about web development, feel free to reach out via LinkedIn, phone call, or email. I look forward to connecting and exploring how we can create something great together.`}
         </P>
         <Row margintop="5rem" gap="6vw">
-          <Button padding="0 2rem 0 2rem" onClick={handleClickPhoneNumber}>
-            {show ? "0413 685 018" : "Mobile Number"}
-          </Button>
-          <Button padding="0 2rem 0 2rem" onClick={handleClickEmailMe}>
+          <Button padding="0 4rem 0 4rem" onClick={handleClickEmailMe}>
             Email Me
           </Button>
         </Row>
