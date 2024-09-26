@@ -35,7 +35,7 @@ const Span = styled.div`
 `;
 
 function Footer() {
-  const currentYear = new Date(Date.now()).getFullYear();
+  const year = new Date(Date.now()).getFullYear();
   return (
     <Section id="footer" height="10vh">
       <StyledFooter>
@@ -49,7 +49,7 @@ function Footer() {
                 <Icon icon="linkedin" />
               </Link>
             </Row>
-            <Span>{`Design and Coded by Jovin Liu. All Rights Reserved.`}</Span>
+            <Span>{`Design and Coded by Jovin Liu. © ${year} Jovin Liu. All Rights Reserved.`}</Span>
           </Row>
         </Footerlist>
       </StyledFooter>

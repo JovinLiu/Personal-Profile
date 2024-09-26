@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import Tab from "../UI/Tab";
 import Highlight from "../UI/Highlight";
 import SmallTag from "../UI/SmallTag";
@@ -7,6 +7,7 @@ import Span from "../UI/TitleSpan";
 import P from "../UI/TextContent";
 import Section from "../UI/Section";
 import Column from "../UI/Column";
+import useLazyLoad from "../Hooks/useLazyLoad";
 
 const AccordinDiv = styled.div`
   margin: 0 auto;
@@ -52,7 +53,7 @@ const Strong = styled.strong``;
 
 function Aboutme() {
   const [open, setOpen] = useState(0);
-  const ref = useRef(null);
+  const ref = useLazyLoad();
   const tagName = ["Responsive Design", "User Oriented Experience", "Event Driven Philosophy", "Aesthetics"];
   const icon = ["brush-outline", "people-outline", "analytics-outline", "flower-outline"];
   const words = [
@@ -67,32 +68,6 @@ function Aboutme() {
     "The event-driven model operates by facilitating asynchronous operations, enabling versatile and responsive web services that enhance user interactions.",
     "Minimalist design principles emphasize a clean, simple user interface, focusing on essential elements to enhance usability and provide a more intuitive experience across platforms."
   ];
-
-  useEffect(function () {
-    if (!ref?.current?.childNodes) return;
-
-    const revealCard = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("move-up-fade-in");
-        entry.target.style.opacity = 1;
-        observer.unobserve(entry.target);
-      });
-    };
-
-    const options = {root: null, thresholds: 0.1, rootMargin: "-100px"};
-
-    const cardObserver = new IntersectionObserver(revealCard, options);
-
-    Array.from(ref?.current?.childNodes).forEach((card) => {
-      card.style.opacity = 0;
-      cardObserver.observe(card);
-    });
-
-    return () => {
-      if (cardObserver) cardObserver.disconnect();
-    };
-  }, []);
 
   useEffect(() => {
     const img = document.getElementById("accordin-image");

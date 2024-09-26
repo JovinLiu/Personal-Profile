@@ -6,9 +6,11 @@ import Column from "../UI/Column";
 import Button from "../UI/Button";
 import Row from "../UI/Row";
 import {useState} from "react";
+import useLazyLoad from "../Hooks/useLazyLoad";
 
 function Contact() {
   const [show, setShow] = useState(false);
+  const ref = useLazyLoad();
 
   function handleClickEmailMe() {
     window.location.href = "mailto:liujovin@gmail.com";
@@ -31,7 +33,7 @@ function Contact() {
         event="none"
         position="absolute"
       />
-      <Column align="center" gap="4rem" height="50vh" margintop="5vh">
+      <Column align="center" gap="4rem" height="50vh" margintop="5vh" ref={ref}>
         <Span>Contact</Span>
         <P width="70vw" align="center" fontsize="1.75rem" lineheight="4rem">
           {`Thank you for taking the time to view my portfolio. As a web developer passionate about innovation and growth, I’m always eager to take on new challenges and collaborate with teams to achieve impactful results. Every project helps refine my skills and drives my enthusiasm for this field even further.`}
