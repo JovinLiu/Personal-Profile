@@ -6,6 +6,8 @@ const P = styled.p`
   font-weight: 300;
   color: var(--light-0-75);
   margin-top: ${({margintop}) => margintop};
+  margin-left: ${({marginleft}) => marginleft};
+  margin-right: ${({marginright}) => marginright};
   font-size: ${({fontsize}) => fontsize};
   line-height: ${({lineheight}) => lineheight};
   width: ${({width}) => width};
@@ -16,7 +18,21 @@ const P = styled.p`
   align-items: ${({alignitems}) => alignitems};
 `;
 
-function TextContent({children, width, align, column, margintop, fontsize, lineheight, display, alignitems, gridcolumn, gridrow}) {
+function TextContent({
+  children,
+  width,
+  align,
+  column,
+  margintop,
+  fontsize,
+  lineheight,
+  display,
+  alignitems,
+  gridcolumn,
+  gridrow,
+  marginleft,
+  marginright
+}) {
   return (
     <P
       width={width}
@@ -29,6 +45,8 @@ function TextContent({children, width, align, column, margintop, fontsize, lineh
       alignitems={alignitems}
       gridrow={gridrow}
       gridcolumn={gridcolumn}
+      marginleft={marginleft}
+      marginright={marginright}
     >
       {children}
     </P>

@@ -2,7 +2,8 @@ const skillArr = [
   {
     category: "javascript",
     title: `JavaScript`,
-    description: "Proficiently skilled in this fundamental web language, facilitating the development of interactive and dynamic websites.",
+    description:
+      "Skilled in this core web language, enabling the development of interactive and dynamic websites that enhance user engagement and provide a seamless browsing experience.",
     top: "0.65rem",
     left: "0.65rem",
     scale: "0.8",
@@ -30,7 +31,7 @@ const skillArr = [
     category: "react",
     title: `React`,
     description:
-      "Proficient in developing efficient and dynamic user interfaces using this widely adopted JavaScript library, utilizing its component-based architecture and state management from micro to macro.",
+      "Proficiently skilled in building efficient and dynamic user interfaces with this widely used JavaScript library, leveraging its component-based architecture and state management for both micro and macro levels.",
     top: "0.52rem",
     left: "0.54rem",
     scale: "0.8",
@@ -39,7 +40,8 @@ const skillArr = [
   {
     category: "sass",
     title: `Sass`,
-    description: "",
+    description:
+      "Experienced in leveraging this advanced CSS preprocessor to craft reusable and maintainable styles, streamlining the process of writing and managing CSS.",
     top: "0.65rem",
     left: "0.9rem",
     scale: "0.8",
@@ -48,7 +50,8 @@ const skillArr = [
   {
     category: "tailwindcss",
     title: `Tailwind CSS`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in utilizing this utility-first CSS framework, enabling the creation of highly customizable designs directly within the markup.",
     top: "0.55rem",
     left: "0.6rem",
     scale: "0.8",
@@ -57,7 +60,8 @@ const skillArr = [
   {
     category: "styledcomponents",
     title: `Styled Components`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Proficiently Skilled in this CSS-in-JS library, to seamlessly integrate styles within React applications, able to build dynamic styling based on props and state, improving workflow, scalability and user interface. ",
     top: "0.6rem",
     left: "0.6rem",
     scale: "1",
@@ -66,7 +70,8 @@ const skillArr = [
   {
     category: "reactrouter",
     title: `React Router`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in using this React library to develop single-page applications with smooth transitions between pages and components, enhancing user experience and facilitating organized code structure.",
     top: "0.55rem",
     left: "0.75rem",
     scale: "0.8",
@@ -75,7 +80,8 @@ const skillArr = [
   {
     category: "reactquery",
     title: `React Query`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in utilizing this remote state management library to fetch and validate data, enabling the development of applications that synchronize with the database in real time.",
     top: "0.5rem",
     left: "0.53rem",
     scale: "0.8",
@@ -84,7 +90,8 @@ const skillArr = [
   {
     category: "redux",
     title: `Redux`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Proficient in leveraging this library for both classic Redux and RTK to efficiently manage global UI state, ensuring a consistent and responsive user experience throughout the application.",
     top: "0.72rem",
     left: "0.76rem",
     scale: "0.8",
@@ -93,7 +100,8 @@ const skillArr = [
   {
     category: "redux",
     title: `RTK Query`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in utilizing this remote state management library to fetch and update data in real time, facilitating dynamic application functionality and enhancing user engagement.",
     top: "0.72rem",
     left: "0.76rem",
     scale: "0.8",
@@ -102,7 +110,8 @@ const skillArr = [
   {
     category: "nodejs",
     title: `Node JS`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Skilled in using Node.js to develop backend services, able to develope scalable backend services and RESTful APIs, effectively handling data management and real-time interactions",
     top: "0.7rem",
     left: "0.72rem",
     scale: "0.8",
@@ -111,7 +120,8 @@ const skillArr = [
   {
     category: "express",
     title: `Express`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Proficient in utilizing this library built on top of Node.js, effectively leveraging the request-response cycle and integrate various libraries to streamline server-side operations.",
     top: "0.8rem",
     left: "0.8rem",
     scale: "0.8",
@@ -120,7 +130,8 @@ const skillArr = [
   {
     category: "supabase",
     title: `Supabase`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in using this PostgreSQL backend web services, leveraging its database, authentication, and real-time capabilities to streamline front end application.",
     top: "0.78rem",
     left: "0.78rem",
     scale: "0.8",
@@ -129,7 +140,8 @@ const skillArr = [
   {
     category: "mongodb",
     title: `MongoDB`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Proficient in utilizing this NoSQL database, enabling efficient data storage and retrieval for applications that require flexible schema design and scalability.",
     top: "0.72rem",
     left: "0.72rem",
     scale: "0.8",
@@ -138,7 +150,8 @@ const skillArr = [
   {
     category: "mongoose",
     title: `Mongoose`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Proficient in using this library with MongoDB, possessing a good understanding of its schema design, model definitions, document management, and features like aggregation and querying for efficient data handling.",
     top: "0.58rem",
     left: "0.55rem",
     scale: "0.95",
@@ -147,7 +160,7 @@ const skillArr = [
   {
     category: "chatgpt",
     title: `ChatGPT`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description: "Capable to integrate AI assistance into the programming workflow to enhance productivity and streamline development processes.",
     top: "1rem",
     left: "1.05rem",
     scale: "1.1",
@@ -156,7 +169,8 @@ const skillArr = [
   {
     category: "postman",
     title: `Postman`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in utilizing this API testing software to execute queries and generate comprehensive API documentation, ensuring effective communication of functionality and usage to developers.",
     top: "0.74rem",
     left: "0.75rem",
     scale: "1",
@@ -165,7 +179,8 @@ const skillArr = [
   {
     category: "git",
     title: `Git`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in managing both local and remote repositories, ensuring efficient version control and collaboration within development teams.",
     top: "0.7rem",
     left: "0.75rem",
     scale: "0.8",
@@ -174,7 +189,8 @@ const skillArr = [
   {
     category: "github",
     title: `GitHub`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in using this Git repository hosting service, facilitating seamless code sharing, effective version control, and collaboration, thereby fostering a productive team development environment.",
     top: "0.6rem",
     left: "0.7rem",
     scale: "1",
@@ -183,7 +199,8 @@ const skillArr = [
   {
     category: "copilot",
     title: `Github Copilot`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in utilizing GitHub Copilot, leveraging its AI-powered code suggestions to enhance productivity and streamline the coding process. ",
     top: "0.65rem",
     left: "0.7rem",
     scale: "0.8",
@@ -192,7 +209,8 @@ const skillArr = [
   {
     category: "vercel",
     title: `Vercel`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in deploying and managing frontend applications with Vercel, ensuring optimal performance and stability for web applications.",
     top: "0.7rem",
     left: "0.9rem",
     scale: "0.8",
@@ -201,7 +219,8 @@ const skillArr = [
   {
     category: "heroku",
     title: `Heroku`,
-    description: "asdjasdhahsdhahsdhacxhhsdjhdsklsdkasdkjajsdjasjdasd",
+    description:
+      "Experienced in deploying and managing backend applications on Heroku, ensuring reliable performance and stability for web applications.",
     top: "1rem",
     left: "1.1rem",
     scale: "0.8",

@@ -127,7 +127,7 @@ function Aboutme() {
             you to explore my portfolio and connect with me.
           </P>
         </Column>
-        <Column align="center" height="30vh" gap="1vh" margintop="10vh">
+        <Column align="center" height="30vh" gap="1vh" margintop="15vh">
           <Span>My Philosophy</Span>
           <AccordinDiv>
             <Tabs>

@@ -4,17 +4,12 @@ const StyledButton = styled.button`
   cursor: pointer;
   z-index: 99;
   border: 0.001px solid var(--blue-0-5);
-  padding: 0.3rem 0.3rem;
-  font-size: 1.15vh;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
   color: var(--light-0-95);
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: var(--blue-0-5);
   backdrop-filter: blur(5px);
   white-space: nowrap;
-  &:hover {
-    color: var(--dark);
-    background-color: var(--blue-0-5);
-    z-index: 200;
-  }
 `;
 
 function TechTag({children}) {

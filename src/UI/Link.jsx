@@ -8,17 +8,21 @@ const StyledLink = styled.a`
   padding: 1vh;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(5px);
+  backdrop-filter: ${({backdrop}) => backdrop};
   transition: var(--transition-1);
-  border: 0.001px solid var(--blue-0-5);
+  border: ${({border}) => border};
   z-index: 100;
   &:hover {
     background-color: var(--blue-0-5);
   }
 `;
 
-function Link({children, href}) {
-  return <StyledLink href={href}>{children}</StyledLink>;
+function Link({children, href, border, backdrop}) {
+  return (
+    <StyledLink href={href} border={border} backdrop={backdrop}>
+      {children}
+    </StyledLink>
+  );
 }
 
 export default Link;

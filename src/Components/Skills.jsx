@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SkillCard from "./../UI/SkillCard";
+import SkillsCard from "./../UI/SkillsCard";
 import {useEffect, useRef} from "react";
 import Section from "./../UI/Section";
 import P from "./../UI/TextContent";
@@ -57,10 +57,10 @@ function Skills() {
   }, []);
 
   return (
-    <Section id="skills" height="170vh">
+    <Section id="skills" height="180vh">
       <SkillsContainer ref={ref}>
         {skillArr.map((skill, i) => (
-          <SkillCard content={skill} key={i} />
+          <SkillsCard content={skill} key={i} />
         ))}
         <GridPosition column="-2 / -1" row="1 / 4">
           <Column align="end" gap="10rem">

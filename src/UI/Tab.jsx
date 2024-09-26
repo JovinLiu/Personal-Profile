@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Column from "./Column";
+import P from "./TextContent";
 
 const StyledTab = styled.div`
   width: 25vw;
@@ -29,16 +30,6 @@ const Title = styled.span`
   text-align: left;
 `;
 
-const P = styled.p`
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  width: 80%;
-  font-weight: 300;
-  text-align: left;
-`;
-
 const Icon = styled.div`
   font-size: 2rem;
 `;
@@ -63,7 +54,9 @@ function Tab({children, open, setOpen, index, content, icon}) {
           </Icon>
           <Title weight={weight}>{children}</Title>
         </TitleContainer>
-        <P>{open === index && content}</P>
+        <P align="justify" marginleft="10%" marginright="10%" fontsize="1.5rem" lineheight="3.5rem" width="80%">
+          {open === index && content}
+        </P>
       </Column>
     </StyledTab>
   );

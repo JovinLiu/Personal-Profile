@@ -10,7 +10,7 @@ const StyledButton = styled.button`
   color: var(--dark);
   border: 0.001px solid var(--blue-0-5);
   height: 5vh;
-  padding: 0 2vw 0 1vw;
+  padding: ${({padding}) => padding};
   font-size: 1.75rem;
   color: var(--light-0-95);
   background-color: rgba(255, 255, 255, 0.03);
@@ -28,7 +28,7 @@ const Span = styled.span`
   position: relative;
 `;
 
-function Button({children, icon}) {
+function Button({children, icon, padding}) {
   const [hover, setHover] = useState(false);
 
   function handleMouseEnter() {
@@ -40,7 +40,7 @@ function Button({children, icon}) {
   }
 
   return (
-    <StyledButton onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <StyledButton padding={padding} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Span>
         {children}
         <Img hover={hover}>

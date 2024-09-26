@@ -50,6 +50,7 @@ const GlobalStyles = createGlobalStyle`
   --transition-2: all 0.4s ease-out;
   --transition-3: all 3s ease-in-out;
   --transition-4: all 2s ease-in;
+  --transition-5: all 1s ease;
   --border-radius-tiny: 3px;
   --border-radius-sm: 5px;
   --border-radius-md: 7px;
@@ -187,8 +188,6 @@ img {
     animation: moveUpFadeIn 1.25s ease-in-out;
     opacity: 1; 
 }
-
-
 
 
 `;

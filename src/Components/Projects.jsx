@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Card from "./../UI/Card";
+import ProjectsCard from "./../UI/ProjectsCard";
 import Highlight from "../UI/Highlight";
 import {useEffect, useRef} from "react";
 import Span from "../UI/TitleSpan";
@@ -15,8 +15,7 @@ const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin-top: 12vh;
-  margin-bottom: 15vh;
+  margin-top: 20vh;
   row-gap: 5.5vh;
 `;
 
@@ -53,7 +52,7 @@ function Projects() {
     <>
       <Highlight
         x={90}
-        y={210}
+        y={170}
         opacity="90%"
         colorB="--highlight-2"
         colorA="--orange-0-75"
@@ -62,18 +61,18 @@ function Projects() {
         event="none"
         position="absolute"
       />
-      <Section id="projects" height="200vh">
+      <Section id="projects" height="160vh">
         <CardsContainer ref={ref}>
-          <Column gap="10rem" margintop="10rem">
+          <Column gap="5rem">
             <Span>Selected Projects</Span>
-            <P width="23vw" align="left" fontsize="1.75rem" lineheight="4rem">
+            <P width="23vw" align="left" fontsize="1.75rem" lineheight="6rem">
               Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.
             </P>
           </Column>
           {projectsArr.map((content, i) => (
-            <Card index={i + 1} key={i} content={content} />
+            <ProjectsCard index={i + 1} key={i} content={content} />
           ))}
-          <P column="2 / -1" width="45vw" align="right" fontsize="1.75rem" margintop="20vh" lineheight="4rem">
+          <P column="2 / -1" width="45vw" align="right" fontsize="1.75rem" margintop="2vh" lineheight="6rem">
             With continuous effort and exploration in web development, more projects are on the way. These new ventures will showcase my growing
             skills and passion for innovation in the future, reflecting my dedication to pushing the boundaries of web development. Stay tuned!
           </P>

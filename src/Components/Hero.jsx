@@ -1,7 +1,7 @@
 import styled, {keyframes} from "styled-components";
+import {useEffect, useRef, useState} from "react";
 import Button from "../UI/Button";
 import Icon from "../UI/Icon";
-import {useEffect, useRef, useState} from "react";
 import Link from "../UI/Link";
 import Highlight from "../UI/Highlight";
 
@@ -103,10 +103,6 @@ function Hero() {
     setPosition({x, y});
   }
 
-  function handleClickEmailMe() {
-    window.location.href = "mailto:liujovin@gmail.com?subject=Hello&body=Hi Jovin";
-  }
-
   return (
     <Section id="hero" onMouseMove={handleMouseOver}>
       <Highlight
@@ -149,16 +145,18 @@ function Hero() {
       </TitleContainer>
       <ButtonContainer>
         <LinkContainer>
-          <Link href="https://github.com/JovinLiu">
+          <Link href="https://github.com/JovinLiu" border="0.001px solid var(--blue-0-5)" backdrop="blur(5px)">
             <Icon icon="github" />
           </Link>
-          <Link href="https://www.linkedin.com/in/jovin-liu-b173b0128/">
+          <Link href="https://www.linkedin.com/in/jovin-liu-b173b0128/" border="0.001px solid var(--blue-0-5)" backdrop="blur(5px)">
             <Icon icon="linkedin" />
           </Link>
         </LinkContainer>
-        <Button icon="download-outline">Resume</Button>
-        <Button icon="mail-outline" onClick={handleClickEmailMe}>
-          Email Me
+        <Button padding="0 2vw 0 1vw" icon="download-outline">
+          Resume
+        </Button>
+        <Button padding="0 2vw 0 1vw" icon="mail-outline">
+          Contact
         </Button>
       </ButtonContainer>
     </Section>

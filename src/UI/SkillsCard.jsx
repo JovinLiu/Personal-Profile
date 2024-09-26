@@ -2,14 +2,19 @@ import styled from "styled-components";
 import Icon from "./Icon";
 import CardTitle from "./CardTitle";
 import Row from "./Row";
-import P from "../UI/TextContent";
+import P from "./TextContent";
 import Column from "./Column";
 
-const SkillCard = styled.div`
-  height: 14vh;
+const Card = styled.div`
+  height: 15.5vh;
   width: 22vw;
   padding: 0.5rem 2rem;
-  background-color: rgba(255, 255, 255, 0.03);
+  border-top: 0.001px solid var(--blue-0-5);
+  border-bottom: 0.001px solid var(--blue-0-5);
+  overflow: hidden;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
 `;
 
 const Round = styled.div`
@@ -24,9 +29,9 @@ const Round = styled.div`
   scale: 0.8;
 `;
 
-function Card({content: {category, title, description, top, left, scale, bgcolor}}) {
+function SkillsCard({content: {category, title, description, top, left, scale, bgcolor}}) {
   return (
-    <SkillCard>
+    <Card>
       <Column>
         <Row gap="2rem" align="center">
           <Round bgcolor={bgcolor}>
@@ -34,12 +39,12 @@ function Card({content: {category, title, description, top, left, scale, bgcolor
           </Round>
           <CardTitle fontsize="2rem">{title}</CardTitle>
         </Row>
-        <P fontsize="1.25rem" display="flex" alignitems="start" lineheight="2rem" margintop="1rem">
+        <P fontsize="1.25rem" display="flex" alignitems="start" lineheight="2rem" margintop="1rem" align="justify">
           {description}
         </P>
       </Column>
-    </SkillCard>
+    </Card>
   );
 }
 
-export default Card;
+export default SkillsCard;
