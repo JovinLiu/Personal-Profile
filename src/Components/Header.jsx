@@ -1,9 +1,11 @@
+//Library
 import styled, {keyframes} from "styled-components";
+import {useRef} from "react";
+//Components
 import NavButton from "../UI/NavButton";
 import Slash from "../UI/Slash";
 import Row from "../UI/Row";
-import {useRef} from "react";
-
+//Style
 const dropdown = keyframes`
   from {
     opacity: 0;
@@ -57,11 +59,10 @@ function Header() {
 
   function handleClick(e) {
     e.preventDefault();
-    const aboutme = document.querySelector("#aboutme");
-    const projects = document.querySelector("#projects");
-    const skills = document.querySelector("#skills");
-    const contact = document.querySelector("#contact");
-    aboutme.scrollIntoView({behavior: "smooth"});
+    const id = e.target.textContent.split(" ").join("").toLowerCase();
+    const section = document.getElementById(id);
+
+    section.scrollIntoView({behavior: "smooth"});
   }
 
   return (

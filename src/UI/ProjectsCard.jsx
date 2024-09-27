@@ -85,6 +85,7 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
       top={top}
       height="calc(14vw + 12rem)"
       href={href}
+      target="_blank"
       aria-label={`View project: ${title}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

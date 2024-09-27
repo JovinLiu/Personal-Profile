@@ -12,7 +12,7 @@ const StyledImg = styled.div`
 
 function Img({hover, children}) {
   const opacity = hover ? 100 : 0;
-  const scale = hover ? 1.3 : 1;
+  const scale = hover ? 1.1 : 1;
   const right = hover ? "-1.5rem" : "0rem";
   const top = hover ? "0.3rem" : "2.5rem";
 

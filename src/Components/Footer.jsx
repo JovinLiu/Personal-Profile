@@ -1,9 +1,11 @@
+//Library
 import styled from "styled-components";
+//Components
 import Section from "../UI/Section";
 import Icon from "../UI/Icon";
 import Link from "../UI/Link";
 import Row from "../UI/Row";
-
+//Style
 const StyledFooter = styled.div`
   font-size: 1.75rem;
   top: 1.2rem;
@@ -37,7 +39,7 @@ const Span = styled.div`
 function Footer() {
   const year = new Date(Date.now()).getFullYear();
   return (
-    <Section id="footer" height="10rem">
+    <Section id="footer" height="10rem" position="relative">
       <StyledFooter>
         <Footerlist>
           <Row align="center" width="90vw">

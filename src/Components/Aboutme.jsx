@@ -1,5 +1,7 @@
+//Library
+import {useEffect, useRef, useState} from "react";
 import styled from "styled-components";
-import {useEffect, useState} from "react";
+//Components
 import Tab from "../UI/Tab";
 import Highlight from "../UI/Highlight";
 import SmallTag from "../UI/SmallTag";
@@ -7,11 +9,13 @@ import Span from "../UI/TitleSpan";
 import P from "../UI/TextContent";
 import Section from "../UI/Section";
 import Column from "../UI/Column";
-import useLazyLoad from "../Hooks/useLazyLoad";
-
-const AccordinDiv = styled.div`
+// import useLazyLoad from "../Hooks/useLazyLoad";
+//Data
+import {tagName, icon, words, tagContent} from "../Data/Aboutme";
+//Style
+const MyPhilosophy = styled.div`
   margin: 0 auto;
-  margin-top: 5rem;
+  margin-top: 7.5rem;
   width: 80vw;
   display: flex;
   align-items: center;
@@ -21,29 +25,27 @@ const AccordinDiv = styled.div`
 `;
 
 const Tabs = styled.div`
+  height: 45rem;
   width: 25vw;
-  min-height: 45rem;
   z-index: 200;
+`;
+
+const TagsAndImages = styled.div`
+  height: 45rem;
+  width: 25vw;
+  position: relative;
 `;
 
 const Img = styled.img`
   transition: all 1s ease;
   z-index: 200;
-  margin-top: 3rem;
-  height: 40rem;
-  width: auto;
-`;
-
-const TagsAndImages = styled.div`
-  width: 30vw;
-  height: 50rem;
-  position: relative;
+  height: 45rem;
+  width: 25vw;
 `;
 
 const TagsContainer = styled.div`
-  margin-top: 10rem;
+  height: 45rem;
   width: 25vw;
-  height: 30rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -55,21 +57,39 @@ const Strong = styled.strong`
 
 function Aboutme() {
   const [open, setOpen] = useState(0);
-  const ref = useLazyLoad();
-  const tagName = ["Responsive Design", "User Oriented Experience", "Event Driven Philosophy", "Aesthetics"];
-  const icon = ["brush-outline", "people-outline", "analytics-outline", "flower-outline"];
-  const words = [
-    ["Testing and Optimization", "Mobile-First", "Responsive Frameworks", "Adaptive Design"],
-    ["User Experience", "Usability", "Accessibility", "Engagement"],
-    ["Non-blocking I/O", "Event Loop", "Request Rsponse Cycle", "Concurrency"],
-    ["Visual Hierarchy", "Minimalist", "Consistency", "Branding"]
-  ];
-  const tagContent = [
-    "Responsive design involves developing web applications that dynamically adjust to different screen sizes and devices, ensuring accessibility for all users.",
-    "Combining the eye of beauty with the web dev expertise, offering unique user-oriented experiences that merge both form and function in a balanced, aesthetically pleasing way.",
-    "The event-driven model operates by facilitating asynchronous operations, enabling versatile and responsive web services that enhance user interactions.",
-    "Minimalist design principles emphasize a clean, simple user interface, focusing on essential elements to enhance usability and provide a more intuitive experience across platforms."
-  ];
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const revealCard = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("move-up-fade-in");
+          entry.target.style.opacity = 1;
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const options = {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "-100px"
+    };
+
+    const cardObserver = new IntersectionObserver(revealCard, options);
+
+    if (ref.current) {
+      ref.current.childNodes.forEach((el) => {
+        el.style.opacity = 0;
+        cardObserver.observe(el); // 这里使用 el 代替 card
+      });
+    }
+
+    return () => {
+      cardObserver.disconnect();
+    };
+  }, [ref]);
 
   useEffect(() => {
     const img = document.getElementById("accordin-image");
@@ -89,8 +109,8 @@ function Aboutme() {
         event="none"
         position="absolute"
       />
-      <Section id="aboutme" minheight="120rem" ref={ref}>
-        <Column align="center" height="40rem" gap="2rem" margintop="10rem">
+      <Section id="aboutme" minheight="120rem" position="relative">
+        <Column align="center" height="40rem" gap="2rem" margintop="10rem" ref={ref}>
           <Span>Greetings, I am Jovin Liu.</Span>
           <P width="70vw" align="center" fontsize="1.75rem" lineheight="4rem">
             <br />
@@ -106,10 +126,10 @@ function Aboutme() {
         </Column>
         <Column align="center" height="40rem" gap="2rem" margintop="10rem">
           <Span>My Philosophy</Span>
-          <AccordinDiv>
+          <MyPhilosophy>
             <Tabs>
               {tagName.map((tag, i) => (
-                <Tab key={i} open={open} setOpen={setOpen} index={i} content={tagContent[i]} icon={icon[i]}>
+                <Tab key={i} open={open} setOpen={setOpen} index={i} width="25vw" content={tagContent[i]} icon={icon[i]}>
                   {tag}
                 </Tab>
               ))}
@@ -127,7 +147,7 @@ function Aboutme() {
                 ))}
               </TagsContainer>
             </TagsAndImages>
-          </AccordinDiv>
+          </MyPhilosophy>
         </Column>
       </Section>
     </>

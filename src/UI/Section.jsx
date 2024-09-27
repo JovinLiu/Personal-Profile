@@ -1,19 +1,22 @@
 import styled from "styled-components";
 
 const StyledSection = styled.section`
+  inset: 0;
+  z-index: 150;
   min-height: ${({minheight}) => minheight};
   width: 100vw;
-  box-shadow:
-    -0.5px 0 0 var(--light-0-95),
-    0.5px 0 0 var(--light-0-95);
-  border-bottom: 0.0001rem solid var(--light-0-2);
-  z-index: 150;
+  margin: 0 auto;
   transition: var(--transition-4);
-  position: relative;
+  border-bottom: 0.0001rem solid var(--light-0-2);
+  position: ${({position}) => position};
 `;
 
-function Section({children, minheight}) {
-  return <StyledSection minheight={minheight}>{children}</StyledSection>;
+function Section({children, minheight, position, id, onMouseMove, ref}) {
+  return (
+    <StyledSection minheight={minheight} position={position} id={id} onMouseMove={onMouseMove} ref={ref}>
+      {children}
+    </StyledSection>
+  );
 }
 
 export default Section;

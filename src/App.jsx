@@ -35,3 +35,6 @@ function App() {
 }
 
 export default App;
+
+//压缩图片
+//media query

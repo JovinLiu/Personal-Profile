@@ -28,7 +28,7 @@ const Span = styled.span`
   position: relative;
 `;
 
-function Button({children, icon, padding}) {
+function Button({children, icon, padding, onClick}) {
   const [hover, setHover] = useState(false);
 
   function handleMouseEnter() {
@@ -40,7 +40,7 @@ function Button({children, icon, padding}) {
   }
 
   return (
-    <StyledButton padding={padding} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <StyledButton padding={padding} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={onClick}>
       <Span>
         {children}
         <Img hover={hover}>

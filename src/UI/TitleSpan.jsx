@@ -6,6 +6,7 @@ const Span = styled.span`
   color: var(--orange);
   filter: brightness(1.2);
   text-transform: uppercase;
+  letter-spacing: 0.5rem;
 `;
 
 function TitleSpan({children}) {

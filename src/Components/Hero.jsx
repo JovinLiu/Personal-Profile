@@ -1,22 +1,13 @@
+//Library
 import styled, {keyframes} from "styled-components";
-import {useEffect, useRef, useState} from "react";
+import useMouseTrack from "../Hooks/useMouseTrack";
+//Components
 import Button from "../UI/Button";
 import Icon from "../UI/Icon";
 import Link from "../UI/Link";
 import Highlight from "../UI/Highlight";
-
-const Section = styled.section`
-  inset: 0;
-  z-index: 150;
-  min-height: 100rem;
-  width: 100vw;
-  margin: 0 auto;
-  color: white;
-  z-index: 1;
-  border-bottom: 0.0001rem solid var(--light-0-2);
-  z-index: 200;
-`;
-
+import Section from "../UI/Section";
+//Style
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -40,12 +31,14 @@ const TitleContainer = styled.div`
   flex-direction: column;
   line-height: 20rem;
   position: relative;
+  user-select: none;
 `;
 
 const Span = styled.span`
   margin: 0 auto;
   font-family: "Biryani", sans-serif;
   font-size: ${({fontSize}) => fontSize};
+  color: var(--light);
   z-index: 99;
   font-weight: 300;
   word-wrap: break-word;
@@ -78,33 +71,10 @@ const LinkContainer = styled.div`
 `;
 
 function Hero() {
-  const [position, setPosition] = useState({x: 25, y: 50});
-  const windowWidth = useRef(null);
-  const windowHeight = useRef(null);
-
-  useEffect(() => {
-    const handleResize = () => {
-      windowWidth.current = window.innerWidth;
-      windowHeight.current = window.innerHeight;
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  function handleMouseOver(e) {
-    const x = Math.floor((e.clientX / windowWidth.current) * 100);
-    const y = Math.floor((e.clientY / windowHeight.current) * 100);
-    setPosition({x, y});
-  }
+  const {handleMouseOver, position} = useMouseTrack();
 
   return (
-    <Section id="hero" onMouseMove={handleMouseOver}>
+    <Section id="home" minheight="100rem" position="normal" onMouseMove={handleMouseOver}>
       <Highlight
         x={position.x}
         y={position.y}

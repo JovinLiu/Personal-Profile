@@ -3,7 +3,7 @@ import Column from "./Column";
 import P from "./TextContent";
 
 const StyledTab = styled.div`
-  width: 25vw;
+  width: ${({width}) => width};
   height: ${({height}) => height};
   border-bottom: 0.0001rem solid var(--blue-0-5);
   transition: var(--transition-2);
@@ -31,22 +31,22 @@ const Title = styled.span`
 `;
 
 const Icon = styled.div`
-  font-size: 2rem;
+  font-size: 2.5rem;
 `;
 
-function Tab({children, open, setOpen, index, content, icon}) {
+function Tab({children, open, setOpen, index, content, icon, width}) {
   const height = open === index ? "24rem" : "7rem";
   const bg = open === index ? "--light-0-03" : "";
   const blur = open === index ? 5 : 0;
   const color = open === index ? "--orange-0-5" : "--light-0-75";
-  const weight = open === index ? 900 : 300;
+  const weight = open === index ? 600 : 300;
 
   function handleMouseOver() {
     setOpen(index);
   }
 
   return (
-    <StyledTab height={height} bg={bg} blur={blur} onMouseOver={handleMouseOver}>
+    <StyledTab height={height} bg={bg} blur={blur} width={width} onMouseOver={handleMouseOver}>
       <Column gap="2rem">
         <TitleContainer color={color}>
           <Icon>

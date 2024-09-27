@@ -1,13 +1,16 @@
+//Library
 import styled from "styled-components";
+import useLazyLoad from "../Hooks/useLazyLoad";
+//Components
 import ProjectsCard from "./../UI/ProjectsCard";
 import Highlight from "../UI/Highlight";
 import Span from "../UI/TitleSpan";
 import P from "../UI/TextContent";
 import Section from "../UI/Section";
 import Column from "../UI/Column";
+//Data
 import projectsArr from "../Data/projects";
-import useLazyLoad from "../Hooks/useLazyLoad";
-
+//Style
 const CardsContainer = styled.div`
   width: 80vw;
   margin: 0 auto;
@@ -35,7 +38,7 @@ function Projects() {
         event="none"
         position="absolute"
       />
-      <Section id="projects" minheight="calc(54vw + 84.5rem)">
+      <Section id="projects" minheight="calc(54vw + 84.5rem)" position="relative">
         <CardsContainer ref={ref}>
           <Column gap="5rem">
             <Span>Selected Projects</Span>

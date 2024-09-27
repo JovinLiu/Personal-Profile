@@ -1,19 +1,16 @@
+//Library
 import styled from "styled-components";
+import useLazyLoad from "../Hooks/useLazyLoad";
+//Components
 import SkillsCard from "./../UI/SkillsCard";
 import Section from "./../UI/Section";
 import P from "./../UI/TextContent";
 import GridPosition from "../UI/GridPosition";
 import Column from "../UI/Column";
+import Span from "../UI/TitleSpan";
+//Data
 import skillArr from "../Data/skills";
-import useLazyLoad from "../Hooks/useLazyLoad";
-
-const Span = styled.span`
-  font-size: 1.75vw;
-  font-weight: 500;
-  color: var(--orange);
-  filter: brightness(1.2);
-  text-transform: uppercase;
-`;
+//Style
 
 const SkillsContainer = styled.div`
   width: 80vw;
@@ -31,7 +28,7 @@ function Skills() {
   const ref = useLazyLoad();
 
   return (
-    <Section id="skills" minheight="200rem">
+    <Section id="skills" minheight="200rem" position="relative">
       <SkillsContainer ref={ref}>
         {skillArr.map((skill, i) => (
           <SkillsCard content={skill} key={i} />

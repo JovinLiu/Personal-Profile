@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 const MainContainer = styled.main`
   max-width: 100vw;
-  min-height: 721rem;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
   background-color: var(--dark);
   background-image: linear-gradient(to top, var(--dark), #2f2c30);
 `;
 
 const Line = styled.div`
-  min-height: 800rem;
+  height: 100%;
   z-index: 100;
   position: absolute;
   left: ${({left}) => left};

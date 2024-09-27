@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const StyledTag = styled.div`
   position: absolute;
   top: ${({x}) => x}%;
   left: ${({y}) => y}%;
   font-size: 75%;
+  width: fit-content;
   z-index: 99;
   border: 0.001px solid var(--blue-0-5);
   padding: 1rem;
@@ -13,6 +14,7 @@ const StyledButton = styled.button`
   backdrop-filter: blur(5px);
   transition: var(--transition-1);
   white-space: nowrap;
+  text-transform: uppercase;
   &:hover {
     color: var(--dark);
     background-color: var(--blue-0-5);
@@ -31,19 +33,19 @@ function SmallTag({children, index}) {
   }
 
   let x = calcX();
-  while (x < 20 || x > 80) {
+  while (x < 0 || x > 100) {
     x = calcX();
   }
 
   let y = calcY();
-  while (y < 20 || y > 80) {
+  while (y < 0 || y > 100) {
     y = calcY();
   }
 
   return (
-    <StyledButton x={x} y={y} fadeintime={index}>
+    <StyledTag x={x} y={y} fadeintime={index}>
       <span>{children}</span>
-    </StyledButton>
+    </StyledTag>
   );
 }
 

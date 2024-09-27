@@ -19,7 +19,7 @@ const StyledLink = styled.a`
 
 function Link({children, href, border, backdrop}) {
   return (
-    <StyledLink href={href} border={border} backdrop={backdrop}>
+    <StyledLink href={href} target="_blank" border={border} backdrop={backdrop}>
       {children}
     </StyledLink>
   );

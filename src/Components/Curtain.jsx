@@ -1,6 +1,7 @@
+//Library
 import {useEffect, useState} from "react";
 import styled from "styled-components";
-
+//Style
 const StyledCurtain = styled.div`
   width: 100vw;
   height: 50vh;

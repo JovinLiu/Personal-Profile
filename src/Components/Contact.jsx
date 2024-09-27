@@ -1,3 +1,7 @@
+//Library
+import {useState} from "react";
+// import useLazyLoad from "../Hooks/useLazyLoad";
+//Components
 import Highlight from "../UI/Highlight";
 import Section from "../UI/Section";
 import Span from "../UI/TitleSpan";
@@ -5,47 +9,17 @@ import P from "../UI/TextContent";
 import Column from "../UI/Column";
 import Button from "../UI/Button";
 import Row from "../UI/Row";
-import {useEffect} from "react";
-import useLazyLoad from "../Hooks/useLazyLoad";
 
 function Contact() {
-  const ref = useLazyLoad();
-  console.log(ref.current);
-
-  useEffect(function () {
-    if (!ref?.current?.childNodes) return;
-
-    console.log(ref.current);
-
-    const revealCard = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("move-up-fade-in");
-        entry.target.style.opacity = 1;
-        observer.unobserve(entry.target);
-      });
-    };
-
-    const options = {root: null, thresholds: 0.1, rootMargin: "-100px"};
-
-    const cardObserver = new IntersectionObserver(revealCard, options);
-
-    ref?.current?.childNodes.forEach((el) => {
-      el.style.opacity = 0;
-      cardObserver.observe(card);
-    });
-
-    return () => {
-      if (cardObserver) cardObserver.disconnect();
-    };
-  }, []);
+  const [show, setShow] = useState(false);
 
   function handleClickEmailMe() {
     window.location.href = "mailto:liujovin@gmail.com";
+    setShow(true);
   }
 
   return (
-    <Section id="contact" minheight="60rem" ref={ref}>
+    <Section id="contact" minheight="60rem">
       {" "}
       <Highlight
         x={10}
@@ -68,7 +42,7 @@ function Contact() {
         </P>
         <Row margintop="5rem" gap="6vw">
           <Button padding="0 4rem 0 4rem" onClick={handleClickEmailMe}>
-            Email Me
+            {show ? "liujovin@gmail.com" : "Email Me"}
           </Button>
         </Row>
       </Column>
