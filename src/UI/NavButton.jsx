@@ -6,6 +6,7 @@ const A = styled.a`
   color: var(--light-0-95);
   transition: all 0.3s ease-in-out; /* transition-all */
   position: relative;
+  cursor: pointer;
   &:hover {
     color: var(--dark);
   }
