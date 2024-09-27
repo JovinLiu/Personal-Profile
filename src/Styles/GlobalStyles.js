@@ -190,7 +190,6 @@ img {
     opacity: 1; 
 }
 
-
 `;
 
 export default GlobalStyles;

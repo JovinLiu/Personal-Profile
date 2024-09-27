@@ -8,6 +8,10 @@ const StyledImg = styled.div`
   opacity: ${({opacity}) => opacity};
   scale: ${({scale}) => scale};
   transition: var(--transition-1);
+
+  @media (max-width: 950px) {
+    display: none;
+  }
 `;
 
 function Img({hover, children}) {

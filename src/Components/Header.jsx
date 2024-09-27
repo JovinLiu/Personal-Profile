@@ -31,6 +31,17 @@ const Nav = styled.nav`
   animation-name: ${dropdown};
   animation-duration: 4s;
   animation-iteration-count: 1;
+
+  @media (max-width: 1000px) {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    top: 0;
+    padding: 0;
+  }
 `;
 
 const Navlist = styled.div`
@@ -48,6 +59,21 @@ const Navlist = styled.div`
   background-color: var(--light-0-03);
   &:hover {
     background-color: var(--blue-0-5);
+  }
+
+  @media (max-width: 1100px) {
+    max-width: 80vw;
+  }
+
+  @media (max-width: 800px) {
+    max-width: 90vw;
+    height: 6rem;
+  }
+
+  @media (max-width: 600px) {
+    margin: 0rem auto;
+    max-width: 100vw;
+    height: 7rem;
   }
 `;
 

@@ -9,6 +9,10 @@ const Div = styled.div`
   margin-top: ${({margintop}) => margintop};
   height: ${({height}) => height};
   gap: ${({gap}) => gap};
+
+  @media (max-width: 950px) {
+    gap: 2rem;
+  }
 `;
 
 function Row({children, align, height, gap, margintop, justify, width}) {

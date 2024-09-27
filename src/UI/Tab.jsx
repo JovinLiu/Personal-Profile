@@ -28,6 +28,18 @@ const Title = styled.span`
   font-weight: ${({weight}) => weight};
   white-space: nowrap;
   text-align: left;
+
+  @media (max-width: 1500px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 1350px) {
+    font-size: 1.75rem;
+  }
+
+  @media (max-width: 1150px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Icon = styled.div`

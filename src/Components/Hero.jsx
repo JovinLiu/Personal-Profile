@@ -32,6 +32,10 @@ const TitleContainer = styled.div`
   line-height: 20rem;
   position: relative;
   user-select: none;
+
+  @media (max-width: 750px) {
+    padding-top: 20rem;
+  }
 `;
 
 const Span = styled.span`
@@ -72,6 +76,12 @@ const LinkContainer = styled.div`
 
 function Hero() {
   const {handleMouseOver, position} = useMouseTrack();
+
+  function handleClick(e) {
+    e.preventDefault();
+    const section = document.getElementById("contact");
+    section.scrollIntoView({behavior: "smooth"});
+  }
 
   return (
     <Section id="home" minheight="100rem" position="normal" onMouseMove={handleMouseOver}>
@@ -125,7 +135,7 @@ function Hero() {
         <Button padding="0 2vw 0 1vw" icon="download-outline">
           Resume
         </Button>
-        <Button padding="0 2vw 0 1vw" icon="mail-outline">
+        <Button padding="0 2vw 0 1vw" icon="mail-outline" onClick={handleClick}>
           Contact
         </Button>
       </ButtonContainer>

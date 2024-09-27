@@ -12,16 +12,17 @@ import Column from "../UI/Column";
 // import useLazyLoad from "../Hooks/useLazyLoad";
 //Data
 import {tagName, icon, words, tagContent} from "../Data/Aboutme";
+import Row from "../UI/Row";
 //Style
 const MyPhilosophy = styled.div`
   margin: 0 auto;
-  margin-top: 7.5rem;
   width: 80vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   transition: var(--transition-4);
   z-index: 300;
+
+  @media (max-width: 750px) {
+    margin-top: 7.5rem;
+  }
 `;
 
 const Tabs = styled.div`
@@ -125,28 +126,32 @@ function Aboutme() {
           </P>
         </Column>
         <Column align="center" height="40rem" gap="2rem" margintop="10rem">
-          <Span>My Philosophy</Span>
           <MyPhilosophy>
-            <Tabs>
-              {tagName.map((tag, i) => (
-                <Tab key={i} open={open} setOpen={setOpen} index={i} width="25vw" content={tagContent[i]} icon={icon[i]}>
-                  {tag}
-                </Tab>
-              ))}
-            </Tabs>
-            <TagsAndImages>
-              {open === 0 ? <Img src="frontend.webp" id="accordin-image" /> : null}
-              {open === 1 ? <Img src="backend.webp" id="accordin-image" /> : null}
-              {open === 2 ? <Img src="database.webp" id="accordin-image" /> : null}
-              {open === 3 ? <Img src="aesthetics.webp" id="accordin-image" /> : null}
-              <TagsContainer>
-                {words[open].map((word, i) => (
-                  <SmallTag key={i} index={i}>
-                    {word}
-                  </SmallTag>
-                ))}
-              </TagsContainer>
-            </TagsAndImages>
+            <Column margintop="2.5rem" align="center">
+              <Span>My Philosophy</Span>
+              <Row margintop="5rem" align="center" gap="10vw">
+                <Tabs>
+                  {tagName.map((tag, i) => (
+                    <Tab key={i} open={open} setOpen={setOpen} index={i} width="25vw" content={tagContent[i]} icon={icon[i]}>
+                      {tag}
+                    </Tab>
+                  ))}
+                </Tabs>
+                <TagsAndImages>
+                  {open === 0 ? <Img src="frontend.webp" id="accordin-image" /> : null}
+                  {open === 1 ? <Img src="backend.webp" id="accordin-image" /> : null}
+                  {open === 2 ? <Img src="database.webp" id="accordin-image" /> : null}
+                  {open === 3 ? <Img src="aesthetics.webp" id="accordin-image" /> : null}
+                  <TagsContainer>
+                    {words[open].map((word, i) => (
+                      <SmallTag key={i} index={i}>
+                        {word}
+                      </SmallTag>
+                    ))}
+                  </TagsContainer>
+                </TagsAndImages>
+              </Row>
+            </Column>
           </MyPhilosophy>
         </Column>
       </Section>
