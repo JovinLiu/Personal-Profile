@@ -36,6 +36,14 @@ const TitleContainer = styled.div`
   @media (max-width: 750px) {
     padding-top: 20rem;
   }
+
+  @media (max-width: 600px) {
+    line-height: 15rem;
+  }
+
+  @media (max-width: 400px) {
+    line-height: 10rem;
+  }
 `;
 
 const Span = styled.span`
@@ -53,6 +61,14 @@ const Span = styled.span`
   animation-iteration-count: 1;
   width: 80vw;
   text-transform: uppercase;
+
+  @media (max-width: 750px) {
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 5rem;
+  }
 `;
 
 const ButtonContainer = styled.div`
@@ -64,6 +80,10 @@ const ButtonContainer = styled.div`
   justify-content: end;
   margin-top: 15rem;
   gap: 8rem;
+
+  @media (max-width: 750px) {
+    gap: 1rem;
+  }
 `;
 
 const LinkContainer = styled.div`
@@ -72,6 +92,10 @@ const LinkContainer = styled.div`
   margin-right: auto;
   gap: 5rem;
   align-items: center;
+
+  @media (max-width: 750px) {
+    gap: 1rem;
+  }
 `;
 
 function Hero() {
