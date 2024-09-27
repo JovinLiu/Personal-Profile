@@ -16,24 +16,6 @@ const P = styled.p`
   //用于快速上下居中字体
   display: ${({display}) => display};
   align-items: ${({alignitems}) => alignitems};
-
-  @media (max-width: 1500px) {
-    font-size: 2rem;
-    line-height: 3.5rem;
-  }
-
-  @media (max-width: 1350px) {
-    font-size: 1.75rem;
-  }
-
-  @media (max-width: 1150px) {
-    font-size: 1.5rem;
-    line-height: 3rem;
-  }
-
-  @media (max-width: 750px) {
-    font-size: 1.25rem;
-  }
 `;
 
 function TextContent({
