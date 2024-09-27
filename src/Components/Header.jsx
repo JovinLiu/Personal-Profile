@@ -41,6 +41,8 @@ const Nav = styled.nav`
   @media (max-width: 600px) {
     top: 0;
     padding: 0;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 `;
 
@@ -63,17 +65,20 @@ const Navlist = styled.div`
 
   @media (max-width: 1100px) {
     max-width: 80vw;
+    padding: 0 4rem 0 4rem;
   }
 
   @media (max-width: 800px) {
     max-width: 90vw;
-    height: 6rem;
+    height: 5.5rem;
+    padding: 0 3rem 0 3rem;
   }
 
   @media (max-width: 600px) {
     margin: 0rem auto;
     max-width: 100vw;
-    height: 7rem;
+    height: 6rem;
+    padding: 0 2rem 0 2rem;
   }
 `;
 

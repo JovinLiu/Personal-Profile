@@ -13,6 +13,10 @@ const Div = styled.div`
   @media (max-width: 950px) {
     gap: 2rem;
   }
+
+  @media (max-width: 600px) {
+    gap: 1rem;
+  }
 `;
 
 function Row({children, align, height, gap, margintop, justify, width}) {
