@@ -9,15 +9,11 @@ const StyledSection = styled.section`
   transition: var(--transition-4);
   border-bottom: 0.0001rem solid var(--light-0-2);
   position: ${({position}) => position};
-
-  @media (max-width: 750px) {
-    margin-top: 7.5rem;
-  }
 `;
 
-function Section({children, minheight, position, id, onMouseMove, ref}) {
+function Section({children, minheight, position, id, onMouseMove, ref, mediaMinHeight}) {
   return (
-    <StyledSection minheight={minheight} position={position} id={id} onMouseMove={onMouseMove} ref={ref}>
+    <StyledSection minheight={minheight} position={position} id={id} onMouseMove={onMouseMove} ref={ref} mediaMinHeight={mediaMinHeight}>
       {children}
     </StyledSection>
   );

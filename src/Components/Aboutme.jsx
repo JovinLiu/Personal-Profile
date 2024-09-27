@@ -1,6 +1,7 @@
 //Library
 import {useEffect, useRef, useState} from "react";
 import styled from "styled-components";
+import useWindowWidth from "../Hooks/useWindowWidth";
 //Components
 import Tab from "../UI/Tab";
 import Highlight from "../UI/Highlight";
@@ -9,7 +10,6 @@ import Span from "../UI/TitleSpan";
 import P from "../UI/TextContent";
 import Section from "../UI/Section";
 import Column from "../UI/Column";
-// import useLazyLoad from "../Hooks/useLazyLoad";
 //Data
 import {tagName, icon, words, tagContent} from "../Data/Aboutme";
 import Row from "../UI/Row";
@@ -19,22 +19,27 @@ const MyPhilosophy = styled.div`
   width: 80vw;
   transition: var(--transition-4);
   z-index: 300;
-
-  @media (max-width: 750px) {
-    margin-top: 7.5rem;
-  }
 `;
 
 const Tabs = styled.div`
   height: 45rem;
   width: 25vw;
   z-index: 200;
+
+  @media (max-width: 430px) {
+    width: 90vw;
+  }
 `;
 
 const TagsAndImages = styled.div`
   height: 45rem;
   width: 25vw;
   position: relative;
+
+  @media (max-width: 430px) {
+    width: 90vw;
+    position: absolute;
+  }
 `;
 
 const Img = styled.img`
@@ -42,6 +47,11 @@ const Img = styled.img`
   z-index: 200;
   height: 45rem;
   width: 25vw;
+
+  @media (max-width: 430px) {
+    filter: grayscale(0.6) brightness(1.2);
+    width: 90vw;
+  }
 `;
 
 const TagsContainer = styled.div`
@@ -50,6 +60,10 @@ const TagsContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+
+  @media (max-width: 430px) {
+    display: none;
+  }
 `;
 
 const Strong = styled.strong`
@@ -58,8 +72,24 @@ const Strong = styled.strong`
 
 function Aboutme() {
   const [open, setOpen] = useState(0);
-
   const ref = useRef(null);
+  const width = useWindowWidth();
+
+  let minheight = "120rem";
+  let widthP = "70vw";
+  let margintopColumn = "10rem";
+  let direction = "row";
+
+  useEffect(() => {
+    switch (true) {
+      case width <= 430:
+        minheight = "165rem";
+        widthP = "85vw";
+        margintopColumn = "60rem";
+        direction = "column";
+        break;
+    }
+  }, [width]);
 
   useEffect(() => {
     const revealCard = (entries, observer) => {
@@ -110,10 +140,10 @@ function Aboutme() {
         event="none"
         position="absolute"
       />
-      <Section id="aboutme" minheight="120rem" position="relative">
+      <Section id="aboutme" minheight={minheight} position="relative">
         <Column align="center" height="40rem" gap="2rem" margintop="10rem" ref={ref}>
-          <Span>Greetings, I am Jovin Liu.</Span>
-          <P width="70vw" align="center" fontsize="1.75rem" lineheight="4rem">
+          <Span>Greetings, I am Jovin Liu</Span>
+          <P width={widthP} align="center" fontsize="1.75rem" lineheight="4rem">
             <br />
             <br />I am a Full Stack Web Developer with a focus on creating web applications that seamlessly integrate functionality with visual
             appeal. My primary technical stack revolves around <Strong>React</Strong> for front-end development, <Strong>Node.js</Strong> for back-end
@@ -125,14 +155,14 @@ function Aboutme() {
             you to explore my portfolio and connect with me.
           </P>
         </Column>
-        <Column align="center" height="40rem" gap="2rem" margintop="10rem">
+        <Column align="center" height="40rem" gap="2rem" margintop={margintopColumn}>
           <MyPhilosophy>
             <Column margintop="2.5rem" align="center">
               <Span>My Philosophy</Span>
-              <Row margintop="5rem" align="center" gap="10vw">
+              <Row margintop="5rem" align="center" gap="10vw" direction={direction}>
                 <Tabs>
                   {tagName.map((tag, i) => (
-                    <Tab key={i} open={open} setOpen={setOpen} index={i} width="25vw" content={tagContent[i]} icon={icon[i]}>
+                    <Tab key={i} open={open} setOpen={setOpen} index={i} width="100%" content={tagContent[i]} icon={icon[i]}>
                       {tag}
                     </Tab>
                   ))}

@@ -66,7 +66,7 @@ function Tab({children, open, setOpen, index, content, icon, width}) {
           </Icon>
           <Title weight={weight}>{children}</Title>
         </TitleContainer>
-        <P align="justify" marginleft="10%" marginright="10%" fontsize="1.5rem" lineheight="3.5rem" width="80%">
+        <P align="justify" marginleft="10%" marginright="10%" fontsize="1.5rem" lineheight="3.25rem" width="80%">
           {open === index && content}
         </P>
       </Column>

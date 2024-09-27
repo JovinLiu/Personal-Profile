@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Div = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({direction}) => direction || "row"};
   width: ${({width}) => width};
   align-items: ${({align}) => align};
   justify-content: ${({justify}) => justify};
@@ -19,9 +19,9 @@ const Div = styled.div`
   }
 `;
 
-function Row({children, align, height, gap, margintop, justify, width}) {
+function Row({children, align, height, gap, margintop, justify, width, direction}) {
   return (
-    <Div align={align} justify={justify} height={height} width={width} gap={gap} margintop={margintop}>
+    <Div align={align} justify={justify} height={height} width={width} gap={gap} margintop={margintop} direction={direction}>
       {children}
     </Div>
   );

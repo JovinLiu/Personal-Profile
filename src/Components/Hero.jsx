@@ -1,6 +1,7 @@
 //Library
 import styled, {keyframes} from "styled-components";
 import useMouseTrack from "../Hooks/useMouseTrack";
+import useWindowWidth from "../Hooks/useWindowWidth";
 //Components
 import Button from "../UI/Button";
 import Icon from "../UI/Icon";
@@ -41,8 +42,12 @@ const TitleContainer = styled.div`
     line-height: 15rem;
   }
 
+  @media (max-width: 430px) {
+    padding-top: 15rem;
+  }
+
   @media (max-width: 400px) {
-    line-height: 10rem;
+    line-height: 14rem;
   }
 `;
 
@@ -81,6 +86,10 @@ const ButtonContainer = styled.div`
   margin-top: 15rem;
   gap: 8rem;
 
+  @media (max-width: 430px) {
+    margin-top: 5rem;
+  }
+
   @media (max-width: 750px) {
     gap: 1rem;
   }
@@ -100,6 +109,18 @@ const LinkContainer = styled.div`
 
 function Hero() {
   const {handleMouseOver, position} = useMouseTrack();
+  const width = useWindowWidth();
+
+  let minheight;
+
+  switch (true) {
+    case width <= 430:
+      minheight = "93.2rem";
+      break;
+    default:
+      minheight = "100rem";
+      break;
+  }
 
   function handleClick(e) {
     e.preventDefault();
@@ -108,7 +129,7 @@ function Hero() {
   }
 
   return (
-    <Section id="home" minheight="100rem" position="normal" onMouseMove={handleMouseOver}>
+    <Section id="home" minheight={minheight} position="normal" onMouseMove={handleMouseOver}>
       <Highlight
         x={position.x}
         y={position.y}

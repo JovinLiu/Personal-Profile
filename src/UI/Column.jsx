@@ -8,10 +8,6 @@ const Div = styled.div`
   margin-top: ${({margintop}) => margintop};
   height: ${({height}) => height};
   gap: ${({gap}) => gap};
-
-  @media (max-width: 750px) {
-    gap: 1rem;
-  }
 `;
 
 function Column({children, align, height, gap, margintop, justify}) {

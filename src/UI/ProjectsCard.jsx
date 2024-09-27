@@ -15,6 +15,10 @@ const CardLink = styled.a`
   top: ${({top}) => top};
   perspective: 150rem;
   -moz-perspective: 150rem;
+
+  @media (max-width: 430px) {
+    width: 90vw;
+  }
 `;
 
 const Card = styled.div`
@@ -24,6 +28,11 @@ const Card = styled.div`
   transition: all 1.2s ease-out;
   transform-style: preserve-3d;
   transform: ${({transform}) => transform};
+
+  @media (max-width: 430px) {
+    width: 90vw;
+    transform: none;
+  }
 `;
 
 const Front = styled.div`
@@ -45,6 +54,10 @@ const Img = styled.img`
   width: 23vw; // 1.65:1
   height: auto;
   z-index: 1;
+
+  @media (max-width: 430px) {
+    width: 90vw;
+  }
 `;
 
 const TextBox = styled.div`
