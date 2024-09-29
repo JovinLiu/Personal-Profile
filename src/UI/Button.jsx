@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Img from "./Img";
 
 const StyledButton = styled.button`
-  z-index: 99;
+  z-index: 500;
   background: none;
   border: none;
   cursor: pointer;

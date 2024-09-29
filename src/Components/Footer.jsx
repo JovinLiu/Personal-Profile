@@ -1,5 +1,6 @@
 //Library
 import styled from "styled-components";
+import useLazyLoad from "../Hooks/useLazyLoad";
 //Components
 import Section from "../UI/Section";
 import Icon from "../UI/Icon";
@@ -34,27 +35,33 @@ const Footerlist = styled.div`
 
 const Span = styled.div`
   margin-left: auto;
+  white-space: pre-wrap;
+  text-align: end;
 `;
 
 function Footer() {
   const year = new Date(Date.now()).getFullYear();
+  const ref = useLazyLoad();
+
   return (
     <Section id="footer" height="10rem" position="relative">
-      <StyledFooter>
-        <Footerlist>
-          <Row align="center" width="90vw">
-            <Row align="center" gap="3vw">
-              <Link href="https://github.com/JovinLiu">
-                <Icon icon="github" />
-              </Link>
-              <Link href="https://www.linkedin.com/in/jovin-liu-b173b0128/">
-                <Icon icon="linkedin" />
-              </Link>
+      <div ref={ref}>
+        <StyledFooter>
+          <Footerlist>
+            <Row align="center" width="90vw">
+              <Row align="center" gap="3vw">
+                <Link href="https://github.com/JovinLiu">
+                  <Icon icon="github" />
+                </Link>
+                <Link href="https://www.linkedin.com/in/jovin-liu-b173b0128/">
+                  <Icon icon="linkedin" />
+                </Link>
+              </Row>
+              <Span>{`Coded by Jovin Liu. © ${year} Jovin Liu. All Rights Reserved.`}</Span>
             </Row>
-            <Span>{`Coded by Jovin Liu. © ${year} Jovin Liu. All Rights Reserved.`}</Span>
-          </Row>
-        </Footerlist>
-      </StyledFooter>
+          </Footerlist>
+        </StyledFooter>
+      </div>
     </Section>
   );
 }

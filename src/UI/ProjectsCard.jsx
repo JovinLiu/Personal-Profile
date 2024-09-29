@@ -4,20 +4,27 @@ import TechTag from "./TechTag";
 import Column from "./Column";
 import P from "./TextContent";
 import CardTitle from "./CardTitle";
-import {useState} from "react";
-// import {useState} from "react";
+import {useEffect, useState} from "react";
+import useWindowWith from "./../Hooks/useWindowWidth";
 
 const CardLink = styled.a`
   width: 23vw;
-  height: ${({height}) => height}; // 14.4
+  height: ${({height}) => height}; // 14.4 // 1.6428
   z-index: 101;
   position: relative;
   top: ${({top}) => top};
   perspective: 150rem;
   -moz-perspective: 150rem;
 
-  @media (max-width: 430px) {
-    width: 90vw;
+  @media (max-width: 800px) {
+    top: 0;
+    width: 80vw;
+    height: calc(48.7vw + 20rem);
+  }
+
+  @media (max-width: 530px) {
+    width: 85vw;
+    height: calc(48.7vw + 22.5rem);
   }
 `;
 
@@ -29,9 +36,14 @@ const Card = styled.div`
   transform-style: preserve-3d;
   transform: ${({transform}) => transform};
 
-  @media (max-width: 430px) {
-    width: 90vw;
-    transform: none;
+  @media (max-width: 800px) {
+    width: 80vw;
+    height: calc(48.7vw + 20rem);
+  }
+
+  @media (max-width: 530px) {
+    width: 85vw;
+    height: calc(48.7vw + 22.5rem);
   }
 `;
 
@@ -55,8 +67,14 @@ const Img = styled.img`
   height: auto;
   z-index: 1;
 
-  @media (max-width: 430px) {
-    width: 90vw;
+  @media (max-width: 800px) {
+    width: 80vw;
+    height: calc(48.7vw + 20rem);
+  }
+
+  @media (max-width: 530px) {
+    width: 85vw;
+    height: calc(48.7vw + 22.5rem);
   }
 `;
 
@@ -71,6 +89,16 @@ const TextBox = styled.div`
   padding: 1rem 1vw 1.5rem 1vw;
   z-index: 130;
   overflow: hidden;
+
+  @media (max-width: 800px) {
+    width: 80vw;
+    height: calc(48.7vw + 20rem);
+  }
+
+  @media (max-width: 530px) {
+    width: 85vw;
+    height: calc(48.7vw + 22.5rem);
+  }
 `;
 
 const Tech = styled.span`
@@ -78,12 +106,23 @@ const Tech = styled.span`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+
+  @media (max-width: 800px) {
+    width: 80vw;
+    gap: 1rem;
+  }
+
+  @media (max-width: 530px) {
+    width: 85vw;
+    height: calc(48.7vw + 22.5rem);
+  }
 `;
 
 function ProjectsCard({index, content: {title, short, description, skills, top, href}}) {
   const [hover, setHover] = useState(false);
-
-  const transform = hover ? "rotateY(180deg)" : "null";
+  const width = useWindowWith();
+  const showBack = width > 800;
+  const transform = hover && showBack ? "rotateY(180deg)" : "null";
 
   function handleMouseEnter() {
     setHover(true);
@@ -105,7 +144,12 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
     >
       <Card transform={transform} height="calc(14vw + 12rem)">
         <Front>
-          <Column height="calc(14vw + 12rem)">
+          <Column
+            height="calc(14vw + 12rem)"
+            heightProjectCard800="calc(48.7vw + 20rem)"
+            heightProjectCard530="calc(48.7vw + 22.5rem)"
+            justify="space-between"
+          >
             <Img
               src={`card${index}.webp`}
               alt={title}
@@ -115,36 +159,44 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
               }}
             />
             <TextBox height="12rem">
-              <Column height="12rem">
+              <Column height="12rem" heightProjectCard800="18rem" heightProjectCard530="0rem">
                 <CardTitle fontsize="2rem">{title}</CardTitle>
-                <P fontsize="1.25rem" display="flex" alignitems="center" height="10rem">
-                  {short}
+                <P fontSize="1.25rem" display="flex" alignItems="center" height="10rem" color="var(--light-0-75)">
+                  {showBack ? short : description}
                 </P>
+                {showBack ? null : (
+                  <Tech>
+                    {skills?.map((skill, i) => (
+                      <TechTag key={i}>{skill}</TechTag>
+                    ))}
+                  </Tech>
+                )}
               </Column>
             </TextBox>
           </Column>
         </Front>
-        <Back>
-          <TextBox height="calc(14vw + 12rem)">
-            <Column height="calc(14vw + 12rem - 2.5rem)" align="start" justify="space-between">
-              <CardTitle fontsize="2rem">{title}</CardTitle>
-              <P fontsize="1.25rem" display="flex" alignitems="center" align="justify" lineheight="2rem">
-                {description}
-              </P>
-              <Tech>
-                {skills?.map((skill, i) => (
-                  <TechTag key={i}>{skill}</TechTag>
-                ))}
-              </Tech>
-            </Column>
-          </TextBox>
-        </Back>
+        {showBack ? (
+          <Back>
+            <TextBox height="calc(14vw + 12rem)">
+              <Column height="calc(14vw + 12rem - 2.5rem)" align="start" justify="space-between">
+                <CardTitle fontsize="2rem">{title}</CardTitle>
+                <P fontSize="1.25rem" display="flex" alignItems="center" align="justify" lineHeight="2rem" color="var(--light-0-75)">
+                  {description}
+                </P>
+                <Tech>
+                  {skills?.map((skill, i) => (
+                    <TechTag key={i}>{skill}</TechTag>
+                  ))}
+                </Tech>
+              </Column>
+            </TextBox>
+          </Back>
+        ) : null}
       </Card>
     </CardLink>
   );
 }
 
-// 定义 PropTypes
 ProjectsCard.propTypes = {
   index: PropTypes.number.isRequired,
   content: PropTypes.shape({

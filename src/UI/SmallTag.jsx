@@ -17,7 +17,7 @@ const StyledTag = styled.div`
   text-transform: uppercase;
   &:hover {
     color: var(--dark);
-    background-color: var(--blue-0-5);
+    background-color: var(--highlight-2);
     scale: 1.2;
     z-index: 200;
   }

@@ -9,7 +9,6 @@ const StyledTab = styled.div`
   transition: var(--transition-2);
   backdrop-filter: blur(${({blur}) => blur}px);
   background-color: var(${({bg}) => bg});
-  color: var(--light-0-75);
 `;
 
 const TitleContainer = styled.span`
@@ -50,7 +49,7 @@ function Tab({children, open, setOpen, index, content, icon, width}) {
   const height = open === index ? "24rem" : "7rem";
   const bg = open === index ? "--light-0-03" : "";
   const blur = open === index ? 5 : 0;
-  const color = open === index ? "--orange-0-5" : "--light-0-75";
+  const color = open === index ? "--highlight-2" : "--light-0-75";
   const weight = open === index ? 600 : 300;
 
   function handleMouseOver() {
@@ -66,7 +65,7 @@ function Tab({children, open, setOpen, index, content, icon, width}) {
           </Icon>
           <Title weight={weight}>{children}</Title>
         </TitleContainer>
-        <P align="justify" marginleft="10%" marginright="10%" fontsize="1.5rem" lineheight="3.25rem" width="80%">
+        <P align="justify" marginLeft="10%" marginRight="10%" fontSize="1.5rem" lineHeight="2.75rem" width="80%" color="var(--light-0-75)">
           {open === index && content}
         </P>
       </Column>

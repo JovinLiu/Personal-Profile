@@ -25,7 +25,7 @@ export const words = [
     "re-usability",
     "Structural Coding"
   ],
-  ["Visual Hierarchy", "Minimalist", "Consistency", "Branding", "Color", "Style"]
+  ["Visual Hierarchy", "Minimalist", "Consistency", "Branding", "Color", "Style", "Animation"]
 ];
 
 export const tagContent = [

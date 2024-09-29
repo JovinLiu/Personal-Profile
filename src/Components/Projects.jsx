@@ -1,7 +1,6 @@
 //Library
 import styled from "styled-components";
 import useLazyLoad from "../Hooks/useLazyLoad";
-import useWindowWidth from "../Hooks/useWindowWidth";
 //Components
 import ProjectsCard from "./../UI/ProjectsCard";
 import Highlight from "../UI/Highlight";
@@ -11,7 +10,6 @@ import Section from "../UI/Section";
 import Column from "../UI/Column";
 //Data
 import projectsArr from "../Data/projects";
-import {useEffect} from "react";
 //Style
 const CardsContainer = styled.div`
   display: grid;
@@ -23,61 +21,67 @@ const CardsContainer = styled.div`
   margin-top: 20rem;
   row-gap: 5.5rem;
 
-  @media (max-width: 430px) {
+  @media (max-width: 1100px) {
+    width: 90vw;
+  }
+
+  @media (max-width: 800px) {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 80vw;
     margin-top: 10rem;
-    row-gap: 3.5rem;
+    row-gap: 10rem;
   }
 `;
 
 function Projects() {
   const ref = useLazyLoad();
 
-  const width = useWindowWidth();
-
-  let widthP1 = "23vw";
-  let alignP1 = "left";
-  let widthP2 = "45vw";
-  let alignP2 = "right";
-
-  useEffect(() => {
-    switch (true) {
-      case width <= 430:
-        widthP1 = "85vw";
-        alignP1 = "center";
-        widthP2 = "85vw";
-        alignP2 = "center";
-        break;
-    }
-  }, [width]);
-
   return (
     <>
       <Highlight
         x={90}
-        y={170}
+        y={190}
         opacity="90%"
-        colorB="--highlight-2"
-        colorA="--orange-0-75"
-        size="130vh"
+        primary="--orange-0-75"
+        secondary="--blue-0-75"
+        size="100vw"
         transition="var(--transition-4)"
         event="none"
         position="absolute"
       />
-      <Section id="projects" minheight="calc(54vw + 84.5rem)" position="relative">
+      <Section id="projects" minHeight="calc(54vw + 84.5rem)" position="relative">
         <CardsContainer ref={ref}>
-          <Column gap="5rem">
-            <Span>Selected Projects</Span>
-            <P width={widthP1} align={alignP1} fontsize="1.75rem" lineheight="6rem">
+          <Column gap="5rem" gapProject800="10rem" marginLeftProject1100="5rem" marginLeftProject800="0">
+            <Span textAlignProjects800="center">Selected Projects</Span>
+            <P
+              width="23vw"
+              widthProjects800="80vw"
+              align="left"
+              alignProjects800="center"
+              fontSize="1.75rem"
+              lineHeight="4rem"
+              color="var(--light-0-75)"
+              marginTopProjects1050="-3rem"
+            >
               Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.
             </P>
           </Column>
           {projectsArr.map((content, i) => (
             <ProjectsCard index={i + 1} key={i} content={content} />
           ))}
-          <P column="2 / -1" width={widthP2} align={alignP2} fontsize="1.75rem" margintop="2rem" lineheight="6rem">
+          <P
+            column="2 / -1"
+            width="45vw"
+            align="right"
+            color="var(--light-0-75)"
+            fontSize="1.75rem"
+            marginTop="2rem"
+            marginTopProjects1050="-3rem"
+            lineHeight="4rem"
+            widthProjects800="80vw"
+            alignProjects800="center"
+          >
             With continuous effort and exploration in web development, more projects are on the way. These new ventures will showcase my growing
             skills and passion for innovation in the future, reflecting my dedication to pushing the boundaries of web development. Stay tuned!
           </P>

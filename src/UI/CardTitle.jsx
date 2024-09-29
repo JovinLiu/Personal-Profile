@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Span = styled.span`
   font-size: ${({fontsize}) => fontsize};
   font-weight: 500;
-  color: var(--orange);
+  color: var(--highlight-2);
 `;
 
 function ItemTitle({children, fontsize}) {

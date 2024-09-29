@@ -1,7 +1,6 @@
 //Library
 import styled, {keyframes} from "styled-components";
 import useMouseTrack from "../Hooks/useMouseTrack";
-import useWindowWidth from "../Hooks/useWindowWidth";
 //Components
 import Button from "../UI/Button";
 import Icon from "../UI/Icon";
@@ -34,20 +33,21 @@ const TitleContainer = styled.div`
   position: relative;
   user-select: none;
 
+  @media (max-width: 900px) {
+    padding-top: 30rem;
+  }
+
   @media (max-width: 750px) {
     padding-top: 20rem;
   }
 
   @media (max-width: 600px) {
+    line-height: 18rem;
+  }
+
+  @media (max-width: 465px) {
     line-height: 15rem;
-  }
-
-  @media (max-width: 430px) {
-    padding-top: 15rem;
-  }
-
-  @media (max-width: 400px) {
-    line-height: 14rem;
+    padding-top: 12rem;
   }
 `;
 
@@ -69,9 +69,18 @@ const Span = styled.span`
 
   @media (max-width: 750px) {
     text-align: center;
+    font-size: 9rem;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
+    font-size: 7rem;
+  }
+
+  @media (max-width: 540px) {
+    font-size: 6rem;
+  }
+
+  @media (max-width: 465px) {
     font-size: 5rem;
   }
 `;
@@ -86,11 +95,8 @@ const ButtonContainer = styled.div`
   margin-top: 15rem;
   gap: 8rem;
 
-  @media (max-width: 430px) {
-    margin-top: 5rem;
-  }
-
   @media (max-width: 750px) {
+    margin-top: 5rem;
     gap: 1rem;
   }
 `;
@@ -109,18 +115,6 @@ const LinkContainer = styled.div`
 
 function Hero() {
   const {handleMouseOver, position} = useMouseTrack();
-  const width = useWindowWidth();
-
-  let minheight;
-
-  switch (true) {
-    case width <= 430:
-      minheight = "93.2rem";
-      break;
-    default:
-      minheight = "100rem";
-      break;
-  }
 
   function handleClick(e) {
     e.preventDefault();
@@ -129,14 +123,14 @@ function Hero() {
   }
 
   return (
-    <Section id="home" minheight={minheight} position="normal" onMouseMove={handleMouseOver}>
+    <Section id="home" minHeight="100rem" minHeightHero="120rem" minHeightHero450="93.2rem" position="normal" onMouseMove={handleMouseOver}>
       <Highlight
         x={position.x}
         y={position.y}
         transition="all 7s cubic-bezier(.19,.93,.93,.6)"
         opacity="100%"
-        colorA="--highlight-1"
-        colorB="--blue"
+        primary="--highlight-1"
+        secondary="--blue"
         size="80vh"
         position="absolute"
       />
@@ -145,8 +139,8 @@ function Hero() {
         y={position.y}
         transition="all 17s cubic-bezier(.19,.93,.93,.6)"
         opacity="60%"
-        colorA="--highlight-1"
-        colorB="--blue"
+        primary="--highlight-1"
+        secondary="--blue"
         size="70vh"
         position="absolute"
       />
@@ -155,8 +149,8 @@ function Hero() {
         y={position.y}
         transition="all 30s cubic-bezier(.19,.93,.93,.6)"
         opacity="30%"
-        colorA="--highlight-1"
-        colorB="--blue"
+        primary="--highlight-1"
+        secondary="--blue"
         size="60vh"
         position="absolute"
       />

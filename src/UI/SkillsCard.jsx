@@ -15,14 +15,38 @@ const Card = styled.div`
   &:hover {
     background-color: rgba(255, 255, 255, 0.03);
   }
+
+  @media (max-width: 1200px) {
+    width: 25vw;
+  }
+
+  @media (max-width: 1100px) {
+    width: 26vw;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 27vw;
+    padding: 0rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 60vw;
+    padding: 0.5rem 2rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 75vw;
+    padding: 0.5rem 2rem;
+  }
 `;
 
 const Round = styled.div`
   position: relative;
   background-color: ${({bgcolor}) => bgcolor};
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 50%;
+  clip-path: circle();
+  width: 5.5rem !important;
+  height: 5.5rem !important;
   z-index: 1;
   background-image: url("grain.webp");
   mix-blend-mode: overlay;
@@ -39,7 +63,16 @@ function SkillsCard({content: {category, title, description, top, left, scale, b
           </Round>
           <CardTitle fontsize="2rem">{title}</CardTitle>
         </Row>
-        <P fontsize="1.25rem" display="flex" alignitems="start" lineheight="2rem" margintop="1rem" align="justify">
+        <P
+          fontSize="1.25rem"
+          display="flex"
+          alignItems="start"
+          lineHeight="2rem"
+          marginTop="1rem"
+          align="justify"
+          color="var(--light-0-5)"
+          textColorHover="var(--light)"
+        >
           {description}
         </P>
       </Column>
