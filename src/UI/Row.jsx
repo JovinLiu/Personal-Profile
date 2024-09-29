@@ -11,9 +11,9 @@ const Div = styled.div`
   gap: ${({gap}) => gap};
 `;
 
-function Row({children, align, height, gap, marginTop, justify, width}) {
+function Row({id, children, align, height, gap, marginTop, justify, width}) {
   return (
-    <Div align={align} justify={justify} height={height} width={width} gap={gap} marginTop={marginTop}>
+    <Div id={id} align={align} justify={justify} height={height} width={width} gap={gap} marginTop={marginTop}>
       {children}
     </Div>
   );

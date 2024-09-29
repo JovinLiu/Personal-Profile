@@ -11,7 +11,7 @@ const StyledSection = styled.section`
   position: ${({position}) => position};
 `;
 
-function Section({children, minHeight, position, id, onMouseMove, ref, minHeightHero}) {
+function Section({id, children, minHeight, position, onMouseMove, ref, minHeightHero}) {
   return (
     <StyledSection minHeight={minHeight} position={position} id={id} onMouseMove={onMouseMove} ref={ref} minHeightHero={minHeightHero}>
       {children}

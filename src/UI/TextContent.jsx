@@ -24,6 +24,7 @@ const P = styled.p`
 `;
 
 function TextContent({
+  id,
   children,
   width,
   align,
@@ -41,6 +42,7 @@ function TextContent({
 }) {
   return (
     <P
+      id={id}
       width={width}
       align={align}
       column={column}

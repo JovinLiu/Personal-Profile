@@ -10,8 +10,8 @@ const Span = styled.span`
   z-index: 299;
 `;
 
-function TitleSpan({children}) {
-  return <Span>{children}</Span>;
+function TitleSpan({id, children}) {
+  return <Span id={id}>{children}</Span>;
 }
 
 export default TitleSpan;

@@ -10,9 +10,9 @@ const Div = styled.div`
   gap: ${({gap}) => gap};
 `;
 
-function Column({children, align, height, gap, marginTop, justify}) {
+function Column({id, children, align, height, gap, marginTop, justify}) {
   return (
-    <Div align={align} justify={justify} height={height} gap={gap} marginTop={marginTop}>
+    <Div id={id} align={align} justify={justify} height={height} gap={gap} marginTop={marginTop}>
       {children}
     </Div>
   );

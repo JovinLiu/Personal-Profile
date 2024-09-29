@@ -49,7 +49,16 @@ function Projects() {
           {projectsArr.map((content, i) => (
             <ProjectsCard index={i + 1} key={i} content={content} />
           ))}
-          <P column="2 / -1" width="45vw" align="right" color="var(--light-0-75)" fontSize="1.75rem" marginTop="2rem" lineHeight="4rem">
+          <P
+            id="projects-text-content-b"
+            column="2 / -1"
+            width="45vw"
+            align="right"
+            color="var(--light-0-75)"
+            fontSize="1.75rem"
+            marginTop="2rem"
+            lineHeight="4rem"
+          >
             With continuous effort and exploration in web development, more projects are on the way. These new ventures will showcase my growing
             skills and passion for innovation in the future, reflecting my dedication to pushing the boundaries of web development. Stay tuned!
           </P>
