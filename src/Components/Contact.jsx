@@ -20,7 +20,7 @@ function Contact() {
   }
 
   return (
-    <Section id="contact" minHeight="60rem" minHeightContact550="70rem">
+    <Section id="contact" minHeight="60rem">
       <Highlight
         x={10}
         y={10}
@@ -33,9 +33,9 @@ function Contact() {
         position="absolute"
       />
       <div ref={ref}>
-        <Column align="center" gap="3rem" height="50rem" marginTop="15rem" marginTopContact800="10rem">
+        <Column id="contact-column" align="center" gap="3rem" height="50rem" marginTop="15rem">
           <Span>Contact</Span>
-          <P width="70vw" widthContact800="90vw" align="center" fontSize="1.75rem" lineHeight="4rem" color="var(--light-0-75)">
+          <P id="contact-text-box" width="70vw" align="center" fontSize="1.75rem" lineHeight="4rem" color="var(--light-0-75)">
             {`Thank you for taking the time to view my portfolio. As a web developer passionate about innovation and growth, I’m always eager to take on new challenges and collaborate with teams to achieve impactful results. Every project helps refine my skills and drives my enthusiasm for this field even further.`}
             <br />
             <br />

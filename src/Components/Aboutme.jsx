@@ -1,7 +1,6 @@
 //Library
 import {useEffect, useState} from "react";
 import styled from "styled-components";
-// import useWindowWidth from "../Hooks/useWindowWidth";
 import useLazyLoad from "../Hooks/useLazyLoad";
 //Components
 import Tab from "../UI/Tab";
@@ -20,10 +19,6 @@ const MyPhilosophy = styled.div`
   width: 80vw;
   transition: var(--transition-4);
   z-index: 300;
-
-  @media (max-width: 900px) {
-    width: 90vw;
-  }
 `;
 
 const Tabs = styled.div`
@@ -31,24 +26,6 @@ const Tabs = styled.div`
   height: 45rem;
   width: 25vw;
   z-index: 200;
-
-  @media (max-width: 1050px) {
-    width: 30vw;
-  }
-
-  @media (max-width: 900px) {
-    width: 35vw;
-  }
-
-  @media (max-width: 750px) {
-    margin-top: 2rem;
-    width: 70vw;
-    height: 35rem;
-  }
-
-  @media (max-width: 430px) {
-    width: 90vw;
-  }
 `;
 
 const TagsAndImages = styled.div`
@@ -56,26 +33,6 @@ const TagsAndImages = styled.div`
   height: 45rem;
   width: 25vw;
   position: relative;
-
-  @media (max-width: 1050px) {
-    width: 30vw;
-  }
-
-  @media (max-width: 900px) {
-    width: 35vw;
-  }
-
-  @media (max-width: 750px) {
-    margin-top: 2rem;
-    filter: grayscale(0.25) brightness(0.5);
-    position: absolute;
-    width: 70vw;
-    height: 35rem;
-  }
-
-  @media (max-width: 430px) {
-    width: 90vw;
-  }
 `;
 
 const Img = styled.img`
@@ -83,24 +40,6 @@ const Img = styled.img`
   z-index: 200;
   height: 45rem;
   width: 25vw;
-
-  @media (max-width: 1050px) {
-    width: 30vw;
-  }
-
-  @media (max-width: 900px) {
-    width: 35vw;
-  }
-
-  @media (max-width: 750px) {
-    width: 70vw;
-  }
-
-  @media (max-width: 430px) {
-    filter: grayscale(0.6) brightness(1.2);
-    width: 90vw;
-    height: 35rem;
-  }
 `;
 
 const TagsContainer = styled.div`
@@ -109,18 +48,6 @@ const TagsContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-
-  @media (max-width: 1050px) {
-    width: 30vw;
-  }
-
-  @media (max-width: 900px) {
-    width: 35vw;
-  }
-
-  @media (max-width: 750px) {
-    display: none;
-  }
 `;
 
 const Strong = styled.strong`
@@ -130,7 +57,6 @@ const Strong = styled.strong`
 
 function Aboutme() {
   const [open, setOpen] = useState(0);
-  // const width = useWindowWidth();
   const ref = useLazyLoad();
 
   useEffect(() => {
@@ -151,11 +77,11 @@ function Aboutme() {
         event="none"
         position="absolute"
       />
-      <Section id="aboutme" minHeight="120rem" minHeightAboutMe700="140rem" minHeightAboutMe550="160rem" position="relative">
+      <Section id="aboutme" minHeight="120rem" position="relative">
         <div ref={ref}>
-          <Column align="center" gap="2rem" marginTop="8rem" marginTopAboutMe1000="8rem" marginTopAboutMe900="4rem" marginTopAboutMe700="10rem">
+          <Column id="aboutme-column-a" align="center" gap="2rem" marginTop="8rem">
             <Span>Greetings, I am Jovin Liu</Span>
-            <P width="70vw" widthAboutMe1050="90vw" align="center" fontSize="1.75rem" lineHeight="4rem" color="var(--light-0-75)">
+            <P id="aboutme-text-box" width="70vw" align="center" fontSize="1.75rem" lineHeight="4rem" color="var(--light-0-75)">
               <br />
               <br />I am a Full Stack Web Developer with a focus on creating web applications that seamlessly integrate functionality with visual
               appeal. My primary technical stack revolves around <Strong>React</Strong> for front-end development, <Strong>Node.js</Strong> for
@@ -168,24 +94,24 @@ function Aboutme() {
             </P>
           </Column>
 
-          <Column align="center" gap="2rem" marginTop="4rem" marginTopAboutMe1000="3rem" marginTopAboutMe900="2rem" marginTopAboutMe700="10rem">
-            <MyPhilosophy>
+          <Column id="aboutme-column-b" align="center" gap="2rem" marginTop="4rem">
+            <MyPhilosophy id="aboutme-my-philosophy">
               <Column marginTop="3rem" align="center">
                 <Span>My Philosophy</Span>
-                <Row marginTop="5rem" align="center" justify="space-around" width="80vw" directionAboutMe750="column">
-                  <Tabs>
+                <Row id="aboutme-row" marginTop="5rem" align="center" justify="space-around" width="80vw">
+                  <Tabs id="aboutme-tabs">
                     {tagName.map((tag, i) => (
                       <Tab key={i} open={open} setOpen={setOpen} index={i} width="100%" content={tagContent[i]} icon={icon[i]}>
                         {tag}
                       </Tab>
                     ))}
                   </Tabs>
-                  <TagsAndImages>
+                  <TagsAndImages id="tags-and-images">
                     {open === 0 ? <Img src="frontend.webp" id="accordin-image" /> : null}
                     {open === 1 ? <Img src="backend.webp" id="accordin-image" /> : null}
                     {open === 2 ? <Img src="database.webp" id="accordin-image" /> : null}
                     {open === 3 ? <Img src="aesthetics.webp" id="accordin-image" /> : null}
-                    <TagsContainer>
+                    <TagsContainer id="tags-container ">
                       {words[open].map((word, i) => (
                         <SmallTag key={i} index={i}>
                           {word}

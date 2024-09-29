@@ -32,26 +32,9 @@ const TitleContainer = styled.div`
   line-height: 20rem;
   position: relative;
   user-select: none;
-
-  @media (max-width: 900px) {
-    padding-top: 30rem;
-  }
-
-  @media (max-width: 750px) {
-    padding-top: 20rem;
-  }
-
-  @media (max-width: 600px) {
-    line-height: 18rem;
-  }
-
-  @media (max-width: 465px) {
-    line-height: 15rem;
-    padding-top: 12rem;
-  }
 `;
 
-const Span = styled.span`
+const TitleSpan = styled.span`
   margin: 0 auto;
   font-family: "Biryani", sans-serif;
   font-size: ${({fontSize}) => fontSize};
@@ -66,23 +49,6 @@ const Span = styled.span`
   animation-iteration-count: 1;
   width: 80vw;
   text-transform: uppercase;
-
-  @media (max-width: 750px) {
-    text-align: center;
-    font-size: 9rem;
-  }
-
-  @media (max-width: 650px) {
-    font-size: 7rem;
-  }
-
-  @media (max-width: 540px) {
-    font-size: 6rem;
-  }
-
-  @media (max-width: 465px) {
-    font-size: 5rem;
-  }
 `;
 
 const ButtonContainer = styled.div`
@@ -94,11 +60,6 @@ const ButtonContainer = styled.div`
   justify-content: end;
   margin-top: 15rem;
   gap: 8rem;
-
-  @media (max-width: 750px) {
-    margin-top: 5rem;
-    gap: 1rem;
-  }
 `;
 
 const LinkContainer = styled.div`
@@ -107,10 +68,6 @@ const LinkContainer = styled.div`
   margin-right: auto;
   gap: 5rem;
   align-items: center;
-
-  @media (max-width: 750px) {
-    gap: 1rem;
-  }
 `;
 
 function Hero() {
@@ -123,7 +80,7 @@ function Hero() {
   }
 
   return (
-    <Section id="home" minHeight="100rem" minHeightHero="120rem" minHeightHero450="93.2rem" position="normal" onMouseMove={handleMouseOver}>
+    <Section id="home" minHeight="100rem" position="normal" onMouseMove={handleMouseOver}>
       <Highlight
         x={position.x}
         y={position.y}
@@ -154,16 +111,16 @@ function Hero() {
         size="60vh"
         position="absolute"
       />
-      <TitleContainer>
-        <Span fontSize="5.2vw" fadeintime="5">
+      <TitleContainer id="hero-title-container">
+        <TitleSpan className="hero-title-span" fontSize="5.2vw" fadeintime="5">
           Full Stack Web Developer
-        </Span>
-        <Span fontSize="12vw" fadeintime="4">
+        </TitleSpan>
+        <TitleSpan className="hero-title-span" fontSize="12vw" fadeintime="4">
           Jovin Liu
-        </Span>
+        </TitleSpan>
       </TitleContainer>
-      <ButtonContainer>
-        <LinkContainer>
+      <ButtonContainer id="hero-button-container">
+        <LinkContainer id="hero-link-container">
           <Link href="https://github.com/JovinLiu" border="0.001px solid var(--blue-0-5)" backdrop="blur(5px)">
             <Icon icon="github" />
           </Link>

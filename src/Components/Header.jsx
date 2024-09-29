@@ -31,19 +31,6 @@ const Nav = styled.nav`
   animation-name: ${dropdown};
   animation-duration: 4s;
   animation-iteration-count: 1;
-
-  @media (max-width: 1000px) {
-    font-size: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  @media (max-width: 600px) {
-    top: 0;
-    padding: 0;
-    padding-left: 0rem;
-    padding-right: 0rem;
-  }
 `;
 
 const Navlist = styled.div`
@@ -61,24 +48,6 @@ const Navlist = styled.div`
   background-color: var(--light-0-03);
   &:hover {
     background-color: var(--blue-0-5);
-  }
-
-  @media (max-width: 1100px) {
-    max-width: 80vw;
-    padding: 0 4rem 0 4rem;
-  }
-
-  @media (max-width: 800px) {
-    max-width: 90vw;
-    height: 5.5rem;
-    padding: 0 3rem 0 3rem;
-  }
-
-  @media (max-width: 600px) {
-    margin: 0rem auto;
-    max-width: 100vw;
-    height: 6rem;
-    padding: 0 2rem 0 2rem;
   }
 `;
 
@@ -98,7 +67,7 @@ function Header() {
 
   return (
     <Nav id="navbar">
-      <Navlist onClick={handleClick}>
+      <Navlist id="nav-list" onClick={handleClick}>
         <NavButton icon="home-outline">Home</NavButton>
         <Row gap="4rem" align="center">
           <NavButton icon="person-outline" href="#aboutme" ref={aboutmeBtn}>

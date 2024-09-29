@@ -4,7 +4,7 @@ import TechTag from "./TechTag";
 import Column from "./Column";
 import P from "./TextContent";
 import CardTitle from "./CardTitle";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import useWindowWith from "./../Hooks/useWindowWidth";
 
 const CardLink = styled.a`
@@ -15,17 +15,6 @@ const CardLink = styled.a`
   top: ${({top}) => top};
   perspective: 150rem;
   -moz-perspective: 150rem;
-
-  @media (max-width: 800px) {
-    top: 0;
-    width: 80vw;
-    height: calc(48.7vw + 20rem);
-  }
-
-  @media (max-width: 530px) {
-    width: 85vw;
-    height: calc(48.7vw + 22.5rem);
-  }
 `;
 
 const Card = styled.div`
@@ -35,16 +24,6 @@ const Card = styled.div`
   transition: all 1.2s ease-out;
   transform-style: preserve-3d;
   transform: ${({transform}) => transform};
-
-  @media (max-width: 800px) {
-    width: 80vw;
-    height: calc(48.7vw + 20rem);
-  }
-
-  @media (max-width: 530px) {
-    width: 85vw;
-    height: calc(48.7vw + 22.5rem);
-  }
 `;
 
 const Front = styled.div`
@@ -66,16 +45,6 @@ const Img = styled.img`
   width: 23vw; // 1.65:1
   height: auto;
   z-index: 1;
-
-  @media (max-width: 800px) {
-    width: 80vw;
-    height: calc(48.7vw + 20rem);
-  }
-
-  @media (max-width: 530px) {
-    width: 85vw;
-    height: calc(48.7vw + 22.5rem);
-  }
 `;
 
 const TextBox = styled.div`
@@ -89,16 +58,6 @@ const TextBox = styled.div`
   padding: 1rem 1vw 1.5rem 1vw;
   z-index: 130;
   overflow: hidden;
-
-  @media (max-width: 800px) {
-    width: 80vw;
-    height: calc(48.7vw + 20rem);
-  }
-
-  @media (max-width: 530px) {
-    width: 85vw;
-    height: calc(48.7vw + 22.5rem);
-  }
 `;
 
 const Tech = styled.span`
@@ -106,16 +65,6 @@ const Tech = styled.span`
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-
-  @media (max-width: 800px) {
-    width: 80vw;
-    gap: 1rem;
-  }
-
-  @media (max-width: 530px) {
-    width: 85vw;
-    height: calc(48.7vw + 22.5rem);
-  }
 `;
 
 function ProjectsCard({index, content: {title, short, description, skills, top, href}}) {
@@ -134,6 +83,7 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
 
   return (
     <CardLink
+      id="project-card-link"
       top={top}
       height="calc(14vw + 12rem)"
       href={href}
@@ -142,15 +92,11 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Card transform={transform} height="calc(14vw + 12rem)">
+      <Card id="project-card" transform={transform} height="calc(14vw + 12rem)">
         <Front>
-          <Column
-            height="calc(14vw + 12rem)"
-            heightProjectCard800="calc(48.7vw + 20rem)"
-            heightProjectCard530="calc(48.7vw + 22.5rem)"
-            justify="space-between"
-          >
+          <Column id="project-card-column-a" height="calc(14vw + 12rem)" justify="space-between">
             <Img
+              id="project-card-img"
               src={`card${index}.webp`}
               alt={title}
               onError={(e) => {
@@ -158,14 +104,14 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
                 e.target.src = "/path/to/fallback/image.webp";
               }}
             />
-            <TextBox height="12rem">
-              <Column height="12rem" heightProjectCard800="18rem" heightProjectCard530="0rem">
+            <TextBox id="project-text-box" height="12rem">
+              <Column id="project-card-column-b" height="12rem">
                 <CardTitle fontsize="2rem">{title}</CardTitle>
                 <P fontSize="1.25rem" display="flex" alignItems="center" height="10rem" color="var(--light-0-75)">
                   {showBack ? short : description}
                 </P>
                 {showBack ? null : (
-                  <Tech>
+                  <Tech id="project-tech">
                     {skills?.map((skill, i) => (
                       <TechTag key={i}>{skill}</TechTag>
                     ))}

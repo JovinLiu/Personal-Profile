@@ -15,30 +15,6 @@ const Card = styled.div`
   &:hover {
     background-color: rgba(255, 255, 255, 0.03);
   }
-
-  @media (max-width: 1200px) {
-    width: 25vw;
-  }
-
-  @media (max-width: 1100px) {
-    width: 26vw;
-    padding: 0.5rem;
-  }
-
-  @media (max-width: 1000px) {
-    width: 27vw;
-    padding: 0rem;
-  }
-
-  @media (max-width: 800px) {
-    width: 60vw;
-    padding: 0.5rem 2rem;
-  }
-
-  @media (max-width: 800px) {
-    width: 75vw;
-    padding: 0.5rem 2rem;
-  }
 `;
 
 const Round = styled.div`
@@ -55,7 +31,7 @@ const Round = styled.div`
 
 function SkillsCard({content: {category, title, description, top, left, scale, bgcolor}}) {
   return (
-    <Card>
+    <Card id="skill-card">
       <Column>
         <Row gap="2rem" align="center">
           <Round bgcolor={bgcolor}>

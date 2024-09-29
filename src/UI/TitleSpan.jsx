@@ -8,22 +8,10 @@ const Span = styled.span`
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   z-index: 299;
-
-  @media (max-width: 800px) {
-    text-align: ${({textAlignProjects800}) => textAlignProjects800};
-  }
-
-  @media (max-width: 800px) {
-    text-align: ${({textAlignSkills800}) => textAlignSkills800};
-  }
 `;
 
-function TitleSpan({children, textAlignProjects800, textAlignSkills800}) {
-  return (
-    <Span textAlignProjects800={textAlignProjects800} textAlignSkills800={textAlignSkills800}>
-      {children}
-    </Span>
-  );
+function TitleSpan({children}) {
+  return <Span>{children}</Span>;
 }
 
 export default TitleSpan;

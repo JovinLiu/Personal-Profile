@@ -9,23 +9,11 @@ const Div = styled.div`
   margin-top: ${({marginTop}) => marginTop};
   height: ${({height}) => height};
   gap: ${({gap}) => gap};
-
-  @media (max-width: 950px) {
-    gap: 2rem;
-  }
-
-  @media (max-width: 750px) {
-    flex-direction: ${({directionAboutMe750}) => directionAboutMe750};
-  }
-
-  @media (max-width: 600px) {
-    gap: 1rem;
-  }
 `;
 
-function Row({children, align, height, gap, marginTop, justify, width, directionAboutMe750}) {
+function Row({children, align, height, gap, marginTop, justify, width}) {
   return (
-    <Div align={align} justify={justify} height={height} width={width} gap={gap} marginTop={marginTop} directionAboutMe750={directionAboutMe750}>
+    <Div align={align} justify={justify} height={height} width={width} gap={gap} marginTop={marginTop}>
       {children}
     </Div>
   );

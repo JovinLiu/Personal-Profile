@@ -21,29 +21,6 @@ const P = styled.p`
   &:hover {
     color: ${({textColorHover}) => textColorHover};
   }
-
-  @media (max-width: 1050px) {
-    width: ${({widthAboutMe1050}) => widthAboutMe1050};
-    margin-top: ${({marginTopProjects1050}) => marginTopProjects1050};
-  }
-
-  @media (max-width: 1050px) {
-    margin-top: ${({marginTopSkills1050}) => marginTopSkills1050};
-  }
-
-  @media (max-width: 800px) {
-    width: ${({widthProjects800}) => widthProjects800};
-    text-align: ${({alignProjects800}) => alignProjects800};
-  }
-
-  @media (max-width: 800px) {
-    width: ${({widthSkills800}) => widthSkills800};
-    text-align: ${({alignSkills800}) => alignSkills800};
-  }
-
-  @media (max-width: 800px) {
-    width: ${({widthContact800}) => widthContact800};
-  }
 `;
 
 function TextContent({
@@ -60,15 +37,7 @@ function TextContent({
   marginRight,
   height,
   color,
-  textColorHover,
-  widthAboutMe1050,
-  marginTopProjects1050,
-  marginTopSkills1050,
-  widthProjects800,
-  alignProjects800,
-  widthSkills800,
-  alignSkills800,
-  widthContact800
+  textColorHover
 }) {
   return (
     <P
@@ -85,14 +54,6 @@ function TextContent({
       height={height}
       color={color}
       textColorHover={textColorHover}
-      widthAboutMe1050={widthAboutMe1050}
-      marginTopProjects1050={marginTopProjects1050}
-      marginTopSkills1050={marginTopSkills1050}
-      widthProjects800={widthProjects800}
-      alignProjects800={alignProjects800}
-      widthSkills800={widthSkills800}
-      alignSkills800={alignSkills800}
-      widthContact800={widthContact800}
     >
       {children}
     </P>

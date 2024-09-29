@@ -8,10 +8,6 @@ const StyledImg = styled.div`
   opacity: ${({opacity}) => opacity};
   scale: ${({scale}) => scale};
   transition: var(--transition-1);
-
-  @media (max-width: 950px) {
-    display: none;
-  }
 `;
 
 function Img({hover, children}) {
@@ -21,7 +17,7 @@ function Img({hover, children}) {
   const top = hover ? "0.3rem" : "2.5rem";
 
   return (
-    <StyledImg opacity={opacity} scale={scale} right={right} top={top}>
+    <StyledImg id="nav-button-img" opacity={opacity} scale={scale} right={right} top={top}>
       {children}
     </StyledImg>
   );
