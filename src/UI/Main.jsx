@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 const MainContainer = styled.main`
   max-width: 100vw;
+  height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: var(--dark);
   background-image: linear-gradient(to top, var(--dark), #2f2c30);
 `;
@@ -40,10 +41,10 @@ function Main({children}) {
       <Line transform="translateX(-50%)" left="50%">
         &nbsp;
       </Line>
-      <Line transform="translateX(50%)" left="10%">
+      <Line transform="translateX(50%)" left="7.5%">
         &nbsp;
       </Line>
-      <Line transform="translateX(50%)" left="90%">
+      <Line transform="translateX(50%)" left="92.5%">
         &nbsp;
       </Line>
       {children}

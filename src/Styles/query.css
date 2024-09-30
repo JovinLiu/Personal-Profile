@@ -165,6 +165,10 @@
 
 /* AboutMe */
 #aboutme {
+  @media (max-width: 1250px) {
+    min-height: 130rem;
+  }
+
   @media (max-width: 850px) {
     min-height: 130rem;
   }
@@ -186,15 +190,15 @@
   }
 
   @media (max-width: 400px) {
-    min-height: 180rem;
-  }
-
-  @media (max-width: 380px) {
     min-height: 190rem;
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 380px) {
     min-height: 200rem;
+  }
+
+  @media (max-width: 350px) {
+    min-height: 210rem;
   }
 }
 
@@ -365,6 +369,7 @@
 
 #projects-text-content-a {
   @media (max-width: 1100px) {
+    font-size: 1.25rem;
     margin-top: -3rem;
   }
 
@@ -375,7 +380,8 @@
 }
 
 #projects-text-content-b {
-  @media (max-width: 1050px) {
+  @media (max-width: 1100px) {
+    font-size: 1.25rem;
     margin-top: -3rem;
   }
 

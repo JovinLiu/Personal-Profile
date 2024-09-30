@@ -9,7 +9,6 @@ const StyledSection = styled.section`
   transition: var(--transition-4);
   border-bottom: 0.0001rem solid var(--light-0-2);
   position: ${({position}) => position};
-  overflow: hidden;
 `;
 
 function Section({id, children, minHeight, position, onMouseMove, ref}) {
