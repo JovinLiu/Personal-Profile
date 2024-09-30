@@ -132,21 +132,7 @@
   }
 }
 
-#hero-title-span-a {
-  @media (max-width: 750px) {
-    font-size: 9vw;
-    text-align: center;
-  }
-
-  @media (max-width: 550px) {
-    font-size: 6rem;
-  }
-
-  @media (max-width: 465px) {
-    font-size: 5rem;
-  }
-}
-
+#hero-title-span-a,
 #hero-title-span-b {
   @media (max-width: 750px) {
     font-size: 9vw;
@@ -159,6 +145,10 @@
 
   @media (max-width: 465px) {
     font-size: 5rem;
+  }
+
+  @media (max-width: 380px) {
+    font-size: 4.5rem;
   }
 }
 
@@ -429,7 +419,11 @@
     height: calc(48.7vw + 25rem);
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 380px) {
+    height: calc(48.7vw + 26rem);
+  }
+
+  @media (max-width: 350px) {
     height: calc(48.7vw + 28rem);
   }
 }

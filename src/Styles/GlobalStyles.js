@@ -188,6 +188,11 @@ img {
 .move-up-fade-in {
     animation: moveUpFadeIn 1.25s ease-in-out;
     opacity: 1; 
+
+    @media (max-width: 450px) {
+      animation: none;
+      opacity: 1; 
+  }
 }
 
 `;
