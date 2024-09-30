@@ -51,10 +51,10 @@ function Footer() {
             <Row align="center" width="90vw">
               <Row align="center" gap="3vw">
                 <Link href="https://github.com/JovinLiu">
-                  <Icon icon="github" />
+                  <Icon category="github" />
                 </Link>
                 <Link href="https://www.linkedin.com/in/jovin-liu-b173b0128/">
-                  <Icon icon="linkedin" />
+                  <Icon category="linkedin" />
                 </Link>
               </Row>
               <Span id="footer-text">{`Coded by Jovin Liu. © ${year} Jovin Liu. All Rights Reserved.`}</Span>
