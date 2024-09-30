@@ -33,7 +33,7 @@ function Projects() {
         opacity="90%"
         primary="--orange-0-75"
         secondary="--blue-0-75"
-        size="100vw"
+        size="70vw"
         transition="var(--transition-4)"
         event="none"
         position="absolute"
