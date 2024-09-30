@@ -4,10 +4,7 @@ import Img from "./Img";
 
 const StyledButton = styled.button`
   z-index: 100;
-  background: none;
-  border: none;
   cursor: pointer;
-  color: var(--dark);
   border: 0.001px solid var(--blue-0-5);
   height: 5rem;
   padding: ${({padding}) => padding};
