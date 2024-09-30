@@ -36,10 +36,7 @@ function App() {
 
 export default App;
 
-//压缩图片
-//media query
 // 准备简历
-// 主页的Media Query
 // Minimalist Bank整理一下发上去
 // myWebDevHub的bug修复一下发上去
 // fast react pizza的media query bug
