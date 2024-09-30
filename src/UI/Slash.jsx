@@ -7,7 +7,7 @@ const Div = styled.div`
 `;
 
 function Slash({children}) {
-  return <Div>{children}</Div>;
+  return <Div id="navbar-slash">{children}</Div>;
 }
 
 export default Slash;

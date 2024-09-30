@@ -112,10 +112,10 @@ function Hero() {
         position="absolute"
       />
       <TitleContainer id="hero-title-container">
-        <TitleSpan className="hero-title-span" fontSize="5.2vw" fadeintime="5">
+        <TitleSpan id="hero-title-span-a" fontSize="5.2vw" fadeintime="5">
           Full Stack Web Developer
         </TitleSpan>
-        <TitleSpan className="hero-title-span" fontSize="12vw" fadeintime="4">
+        <TitleSpan id="hero-title-span-b" fontSize="12vw" fadeintime="4">
           Jovin Liu
         </TitleSpan>
       </TitleContainer>

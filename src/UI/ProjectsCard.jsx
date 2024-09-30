@@ -105,7 +105,7 @@ function ProjectsCard({index, content: {title, short, description, skills, top, 
               }}
             />
             <TextBox id="project-text-box" height="12rem">
-              <Column id="project-card-column-b" height="12rem">
+              <Column id="project-card-column-b" height="12rem" justify="space-between">
                 <CardTitle fontsize="2rem">{title}</CardTitle>
                 <P fontSize="1.25rem" display="flex" alignItems="center" height="10rem" color="var(--light-0-75)">
                   {showBack ? short : description}

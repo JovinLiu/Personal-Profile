@@ -111,7 +111,7 @@ function Aboutme() {
                     {open === 1 ? <Img src="backend.webp" id="accordin-image" /> : null}
                     {open === 2 ? <Img src="database.webp" id="accordin-image" /> : null}
                     {open === 3 ? <Img src="aesthetics.webp" id="accordin-image" /> : null}
-                    <TagsContainer id="tags-container ">
+                    <TagsContainer id="tags-container">
                       {words[open].map((word, i) => (
                         <SmallTag key={i} index={i}>
                           {word}

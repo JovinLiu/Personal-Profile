@@ -44,7 +44,7 @@ function Footer() {
   const ref = useLazyLoad();
 
   return (
-    <Section id="footer" height="10rem" position="relative">
+    <Section id="footer" position="relative">
       <div ref={ref}>
         <StyledFooter>
           <Footerlist>
@@ -57,7 +57,7 @@ function Footer() {
                   <Icon icon="linkedin" />
                 </Link>
               </Row>
-              <Span>{`Coded by Jovin Liu. © ${year} Jovin Liu. All Rights Reserved.`}</Span>
+              <Span id="footer-text">{`Coded by Jovin Liu. © ${year} Jovin Liu. All Rights Reserved.`}</Span>
             </Row>
           </Footerlist>
         </StyledFooter>

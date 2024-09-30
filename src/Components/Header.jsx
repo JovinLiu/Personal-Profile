@@ -69,7 +69,7 @@ function Header() {
     <Nav id="navbar">
       <Navlist id="nav-list" onClick={handleClick}>
         <NavButton icon="home-outline">Home</NavButton>
-        <Row gap="4rem" align="center">
+        <Row id="nav-button-container" gap="4rem" align="center">
           <NavButton icon="person-outline" href="#aboutme" ref={aboutmeBtn}>
             About Me
           </NavButton>
