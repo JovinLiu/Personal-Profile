@@ -162,6 +162,13 @@
   }
 }
 
+#hero-button-a,
+#hero-button-b {
+  @media (max-width: 950px) {
+    padding: 0 2vw 0 2vw;
+  }
+}
+
 /* AboutMe */
 #aboutme {
   @media (max-width: 850px) {

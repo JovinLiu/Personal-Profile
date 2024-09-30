@@ -128,10 +128,10 @@ function Hero() {
             <Icon category="linkedin" />
           </Link>
         </LinkContainer>
-        <Button padding="0 2vw 0 1vw" icon="download-outline">
+        <Button id="hero-button-a" padding="0 3vw 0 1vw" icon="download-outline">
           Resume
         </Button>
-        <Button padding="0 2vw 0 1vw" icon="mail-outline" onClick={handleClick}>
+        <Button id="hero-button-b" padding="0 3vw 0 1vw" icon="mail-outline" onClick={handleClick}>
           Contact
         </Button>
       </ButtonContainer>
