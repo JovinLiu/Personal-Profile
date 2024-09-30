@@ -61,7 +61,7 @@ const projectsArr = [
     description: `A modern bank website featuring dynamic animations and traditional DOM manipulation techniques. Without a modern web development framework to streamline functionality, traditional DOM manipulation still remains essential for certain website interactivity.`,
     skills: ["Javascript", "HTML", "CSS"],
     top: "-9rem",
-    href: "https://bankist-dom.netlify.app/"
+    href: "https://minimalist-bank-jovin.vercel.app/"
   },
   {
     title: "usePopCorn",
