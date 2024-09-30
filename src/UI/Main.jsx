@@ -3,8 +3,7 @@ import styled from "styled-components";
 const MainContainer = styled.main`
   max-width: 100vw;
   position: relative;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
   background-color: var(--dark);
   background-image: linear-gradient(to top, var(--dark), #2f2c30);
 `;

@@ -35,13 +35,3 @@ function App() {
 }
 
 export default App;
-
-// 准备简历
-// Minimalist Bank整理一下发上去
-// myWebDevHub的bug修复一下发上去
-// fast react pizza的media query bug
-// natour的登陆头像
-// natour购买会员
-// onimi food的bug修复一下
-// 给需要登陆的app预设一个账号密码
-// Linkedin上的中文去掉

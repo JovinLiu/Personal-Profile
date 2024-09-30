@@ -23,11 +23,11 @@ function Contact() {
     <Section id="contact" minHeight="60rem">
       <Highlight
         x={10}
-        y={10}
+        y={-10}
         opacity="80%"
         primary="--turquoise-0-75"
         secondary="--red"
-        size="100vw"
+        size="70vw"
         transition="var(--transition-4)"
         event="none"
         position="absolute"
