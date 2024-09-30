@@ -24,7 +24,7 @@ const Nav = styled.nav`
   left: 0;
   right: 0;
   top: 1.2rem;
-  z-index: 200;
+  z-index: 800;
   margin: 0 auto;
   padding-left: 2rem;
   padding-right: 2rem;

@@ -122,10 +122,10 @@ function Hero() {
       <ButtonContainer id="hero-button-container">
         <LinkContainer id="hero-link-container">
           <Link href="https://github.com/JovinLiu" border="0.001px solid var(--blue-0-5)" backdrop="blur(5px)">
-            <Icon icon="github" />
+            <Icon category="github" />
           </Link>
           <Link href="https://www.linkedin.com/in/jovin-liu-b173b0128/" border="0.001px solid var(--blue-0-5)" backdrop="blur(5px)">
-            <Icon icon="linkedin" />
+            <Icon category="linkedin" />
           </Link>
         </LinkContainer>
         <Button padding="0 2vw 0 1vw" icon="download-outline">

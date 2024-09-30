@@ -295,13 +295,12 @@
   }
 
   @media (max-width: 750px) {
+    filter: grayscale(0.6) brightness(1.2);
     width: 70vw;
   }
 
   @media (max-width: 450px) {
-    filter: grayscale(0.6) brightness(1.2);
     width: 80vw;
-    height: 45rem;
   }
 }
 
@@ -386,74 +385,30 @@
   }
 }
 
-#project-card-link {
-  @media (max-width: 800px) {
-    top: 0;
-    width: 80vw;
-    height: calc(48.7vw + 20rem);
-  }
-
-  @media (max-width: 530px) {
-    height: calc(48.7vw + 23rem);
-  }
-
-  @media (max-width: 450px) {
-    height: calc(48.7vw + 30rem);
-  }
-}
-
-#project-card {
-  @media (max-width: 800px) {
-    width: 80vw;
-    height: calc(48.7vw + 20rem);
-  }
-
-  @media (max-width: 530px) {
-    height: calc(48.7vw + 23rem);
-  }
-
-  @media (max-width: 450px) {
-    height: calc(48.7vw + 30rem);
-  }
-}
-
 #project-card-img {
   @media (max-width: 800px) {
     width: 80vw;
-    height: calc(48.7vw + 20rem);
-  }
-
-  @media (max-width: 530px) {
-    height: calc(48.7vw + 23rem);
-  }
-
-  @media (max-width: 450px) {
-    height: calc(48.7vw + 30rem);
+    height: 48.7vw;
   }
 }
 
+#project-card-link {
+  @media (max-width: 800px) {
+    top: 0;
+  }
+}
+
+#project-card-link,
+#project-card,
 #project-text-box {
   @media (max-width: 800px) {
     width: 80vw;
-    height: calc(48.7vw + 20rem);
-  }
-
-  @media (max-width: 530px) {
-    height: calc(48.7vw + 23rem);
-  }
-
-  @media (max-width: 450px) {
-    height: calc(48.7vw + 30rem);
   }
 }
 
-#project-tech {
-  @media (max-width: 800px) {
-    width: 80vw;
-    gap: 1rem;
-  }
-}
-
+#project-card-link,
+#project-card,
+#project-text-box,
 #project-card-column-a {
   @media (max-width: 800px) {
     height: calc(48.7vw + 20rem);
@@ -463,8 +418,19 @@
     height: calc(48.7vw + 23rem);
   }
 
-  @media (max-width: 450px) {
-    height: calc(48.7vw + 30rem);
+  @media (max-width: 500px) {
+    height: calc(48.7vw + 25rem);
+  }
+
+  @media (max-width: 400px) {
+    height: calc(48.7vw + 28rem);
+  }
+}
+
+#project-tech {
+  @media (max-width: 800px) {
+    width: 80vw;
+    gap: 1rem;
   }
 }
 

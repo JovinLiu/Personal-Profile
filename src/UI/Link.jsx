@@ -11,7 +11,7 @@ const StyledLink = styled.a`
   backdrop-filter: ${({backdrop}) => backdrop};
   transition: var(--transition-1);
   border: ${({border}) => border};
-  z-index: 100;
+  z-index: 200;
   &:hover {
     background-color: var(--blue-0-5);
   }
