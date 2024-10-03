@@ -1,6 +1,6 @@
 /* Header */
 
-projects-text-content-a #navbar {
+#navbar {
   @media (max-width: 1000px) {
     font-size: 1.5rem;
     padding-left: 1rem;
