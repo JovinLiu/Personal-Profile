@@ -53,7 +53,7 @@ function Footer() {
                 <Link href="https://github.com/JovinLiu">
                   <Icon category="github" />
                 </Link>
-                <Link href="https://www.linkedin.com/in/jovin-liu-b173b0128/">
+                <Link href="https://www.linkedin.com/in/jovinliu/">
                   <Icon category="linkedin" />
                 </Link>
               </Row>

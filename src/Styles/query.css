@@ -1,5 +1,6 @@
 /* Header */
-#navbar {
+
+projects-text-content-a #navbar {
   @media (max-width: 1000px) {
     font-size: 1.5rem;
     padding-left: 1rem;
@@ -369,7 +370,8 @@
 
 #projects-text-content-a {
   @media (max-width: 1100px) {
-    font-size: 1.25rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
     margin-top: -3rem;
   }
 
@@ -381,7 +383,8 @@
 
 #projects-text-content-b {
   @media (max-width: 1100px) {
-    font-size: 1.25rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
     margin-top: -3rem;
   }
 

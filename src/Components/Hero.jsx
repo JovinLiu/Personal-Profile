@@ -79,6 +79,16 @@ function Hero() {
     section.scrollIntoView({behavior: "smooth"});
   }
 
+  function handleClickResume() {
+    window.open("https://resume-jovin-liu.vercel.app/", "_blank");
+    const link = document.createElement("a");
+    link.href = "/Resume-Jovin-Liu-Full-Stack.pdf";
+    link.download = "Resume-Jovin-Liu-Full-Stack.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <Section id="home" minHeight="100rem" position="normal" onMouseMove={handleMouseOver}>
       <Highlight
@@ -124,11 +134,11 @@ function Hero() {
           <Link href="https://github.com/JovinLiu" border="0.001px solid var(--blue-0-5)" backdrop="blur(5px)">
             <Icon category="github" />
           </Link>
-          <Link href="https://www.linkedin.com/in/jovin-liu-b173b0128/" border="0.001px solid var(--blue-0-5)" backdrop="blur(5px)">
+          <Link href="https://www.linkedin.com/in/jovinliu/" border="0.001px solid var(--blue-0-5)" backdrop="blur(5px)">
             <Icon category="linkedin" />
           </Link>
         </LinkContainer>
-        <Button id="hero-button-a" padding="0 2.5vw 0 1vw" icon="download-outline">
+        <Button id="hero-button-a" padding="0 2.5vw 0 1vw" icon="download-outline" onClick={handleClickResume}>
           Resume
         </Button>
         <Button id="hero-button-b" padding="0 2.5vw 0 1vw" icon="mail-outline" onClick={handleClick}>
