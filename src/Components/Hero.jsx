@@ -82,7 +82,7 @@ function Hero() {
   function handleClickResume() {
     window.open("https://resume-jovin-liu.vercel.app/", "_blank");
     const link = document.createElement("a");
-    link.href = "../../Resume-Jovin-Liu-Full-Stack.pdf";
+    link.href = "/resume.pdf";
     link.download = "Resume-Jovin-Liu-Full-Stack.pdf";
     document.body.appendChild(link);
     link.click();
