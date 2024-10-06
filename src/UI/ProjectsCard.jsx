@@ -9,11 +9,12 @@ import useWindowWith from "./../Hooks/useWindowWidth";
 
 const CardLink = styled.a`
   width: 23vw;
-  height: ${({height}) => height}; // 14.4 // 1.6428
+  height: ${({height}) => height || "auto"}; // 14.4 // 1.6428
   z-index: 101;
   position: relative;
   top: ${({top}) => top};
   perspective: 150rem;
+  -webkit-perspective: 150rem;
   -moz-perspective: 150rem;
 `;
 
@@ -24,8 +25,10 @@ const Card = styled.div`
   transition: all 1.2s ease-out;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
   transform: ${({transform}) => transform};
   -webkit-transform: ${({transform}) => transform};
+  -moz-transform: ${({transform}) => transform};
 `;
 
 const Front = styled.div`
@@ -34,6 +37,7 @@ const Front = styled.div`
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 `;
 
 const Back = styled.div`
@@ -44,6 +48,7 @@ const Back = styled.div`
   -webkit-transform: rotateY(180deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
 `;
 
 const Img = styled.img`
@@ -61,6 +66,7 @@ const TextBox = styled.div`
   background-color: var(--light-0-03);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
   padding: 1rem 1vw 1.5rem 1vw;
   z-index: 130;
   overflow: hidden;

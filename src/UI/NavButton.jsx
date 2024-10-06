@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Img from "./Img";
 
 const A = styled.a`
-  color: var(--light-0-95);
   transition: all 0.3s ease-in-out;
   position: relative;
   cursor: pointer;
+  font-weight: 300;
   &:hover {
     color: var(--dark);
   }

@@ -41,13 +41,14 @@ const Navlist = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 5rem 0 5rem;
-  color: var(--light-0-85);
   box-shadow: 0 px 5px rgba(0, 0, 0, 0.03);
   border: 0.001px solid var(--blue-0-5);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+  color: var(--blue-0-75);
   background-color: var(--light-0-03);
   &:hover {
+    color: var(--light-0-85);
     background-color: var(--blue-0-5);
   }
 `;
