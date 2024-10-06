@@ -45,6 +45,7 @@ const Navlist = styled.div`
   box-shadow: 0 px 5px rgba(0, 0, 0, 0.03);
   border: 0.001px solid var(--blue-0-5);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   background-color: var(--light-0-03);
   &:hover {
     background-color: var(--blue-0-5);
