@@ -23,6 +23,7 @@ const Card = styled.div`
   height: ${({height}) => height};
   transition: all 1.2s ease-out;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform: ${({transform}) => transform};
 `;
 
@@ -31,6 +32,7 @@ const Front = styled.div`
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 `;
 
 const Back = styled.div`
@@ -39,6 +41,7 @@ const Back = styled.div`
   height: 100%;
   transform: rotateY(180deg);
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 `;
 
 const Img = styled.img`
@@ -55,6 +58,7 @@ const TextBox = styled.div`
   color: var(--light-0-95);
   background-color: var(--light-0-03);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 1rem 1vw 1.5rem 1vw;
   z-index: 130;
   overflow: hidden;
