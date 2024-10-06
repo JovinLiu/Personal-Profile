@@ -25,6 +25,7 @@ const Card = styled.div`
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform: ${({transform}) => transform};
+  -webkit-transform: ${({transform}) => transform};
 `;
 
 const Front = styled.div`
@@ -40,6 +41,7 @@ const Back = styled.div`
   width: 100%;
   height: 100%;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 `;
