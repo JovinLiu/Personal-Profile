@@ -49,7 +49,7 @@ function Tab({children, open, setOpen, index, content, icon, width}) {
   const height = open === index ? "24rem" : "7rem";
   const bg = open === index ? "--light-0-03" : "";
   const blur = open === index ? 5 : 0;
-  const color = open === index ? "--highlight-2" : "--light-0-75";
+  const color = open === index ? "--indigo" : "--light-0-75";
   const weight = open === index ? 600 : 300;
 
   function handleMouseOver() {

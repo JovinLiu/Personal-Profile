@@ -51,7 +51,7 @@ const TagsContainer = styled.div`
 `;
 
 const Strong = styled.strong`
-  color: var(--highlight-2);
+  color: var(--indigo);
   font-weight: 600;
 `;
 
@@ -72,7 +72,7 @@ function Aboutme() {
         opacity="100%"
         primary="--turquoise"
         secondary="--orange-0-15"
-        size="75vw"
+        size="50vw"
         transition="var(--transition-4)"
         event="none"
         position="absolute"

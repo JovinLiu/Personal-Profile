@@ -26,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
   --light-0-2: rgba(255, 255, 255, .2);
   --light-0-1: rgba(255, 255, 255, .1);
   --light-0-03: rgba(255, 255, 255, .03);
+  --indigo: rgb(99 102 241);
   --purple: #8768a6;
   --red: #e65b5b;
   --yellow: #f2ae72;
