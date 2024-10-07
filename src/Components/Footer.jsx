@@ -1,6 +1,5 @@
 //Library
 import styled from "styled-components";
-import useLazyLoad from "../Hooks/useLazyLoad";
 //Components
 import Section from "../UI/Section";
 import Icon from "../UI/Icon";
@@ -41,11 +40,10 @@ const Span = styled.div`
 
 function Footer() {
   const year = new Date(Date.now()).getFullYear();
-  const ref = useLazyLoad();
 
   return (
     <Section id="footer" position="relative">
-      <div ref={ref}>
+      <div>
         <StyledFooter>
           <Footerlist>
             <Row align="center" width="90vw">

@@ -32,7 +32,7 @@ function Skills() {
       <SkillsContainer id="skills-container" ref={ref}>
         <GridPosition column="-2 / -1" row="1 / 4">
           <Column id="skills-column" align="end" gap="10rem">
-            <Span id="skills-title-span">Web Tech Stack</Span>
+            <Span id="skills-title-span">Web Tech Stacks</Span>
             <P id="skills-text-box-a" width="23vw" align="right" fontSize="1.75rem" lineHeight="4rem" color="var(--light-0-75)">
               This web development toolkit, which I have mastered, empowers me to build dynamic and efficient web applications that encompass
               everything from user experience to database management. This diverse skill set is what fuels my journey in web development.
