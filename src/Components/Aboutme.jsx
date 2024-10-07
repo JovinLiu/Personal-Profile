@@ -72,7 +72,7 @@ function Aboutme() {
         opacity="100%"
         primary="--turquoise"
         secondary="--orange-0-15"
-        size="50vw"
+        size="75vw"
         transition="var(--transition-4)"
         event="none"
         position="absolute"
