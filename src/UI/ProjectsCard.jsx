@@ -38,6 +38,7 @@ const Front = styled.div`
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
+  z-index: 99;
 `;
 
 const Back = styled.div`
@@ -49,6 +50,7 @@ const Back = styled.div`
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
+  z-index: 100;
 `;
 
 const Img = styled.img`
