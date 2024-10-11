@@ -25,8 +25,8 @@ function Contact() {
         x={10}
         y={-10}
         opacity="80%"
-        primary="--turquoise-0-75"
-        secondary="--red"
+        primary="--turquoise"
+        secondary="--orange-0-15"
         size="70vw"
         transition="var(--transition-4)"
         event="none"

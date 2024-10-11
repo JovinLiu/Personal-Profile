@@ -4,7 +4,7 @@ import styled from "styled-components";
 import useLazyLoad from "../Hooks/useLazyLoad";
 //Components
 import Tab from "../UI/Tab";
-import Highlight from "../UI/Highlight";
+// import Highlight from "../UI/Highlight";
 import SmallTag from "../UI/SmallTag";
 import Span from "../UI/TitleSpan";
 import P from "../UI/TextContent";
@@ -66,7 +66,7 @@ function Aboutme() {
 
   return (
     <>
-      <Highlight
+      {/* <Highlight
         x={10}
         y={120}
         opacity="100%"
@@ -76,7 +76,7 @@ function Aboutme() {
         transition="var(--transition-4)"
         event="none"
         position="absolute"
-      />
+      /> */}
       <Section id="aboutme" minHeight="120rem" position="relative">
         <div ref={ref}>
           <Column id="aboutme-column-a" align="center" gap="2rem" marginTop="8rem">
