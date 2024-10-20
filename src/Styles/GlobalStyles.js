@@ -188,7 +188,7 @@ img {
 }
 
 .move-up-fade-in {
-    animation: moveUpFadeIn 1.25s ease-in-out;
+    animation: moveUpFadeIn 0.5s ease-in-out;
     opacity: 1; 
 
     @media (max-width: 450px) {
