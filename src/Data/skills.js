@@ -10,6 +10,16 @@ const skillArr = [
     bgcolor: "var(--yellow)"
   },
   {
+    category: "typescript",
+    title: `TypeScript`,
+    description:
+      "Skilled in this core web language, enabling the development of interactive and dynamic websites that enhance user engagement and provide a seamless browsing experience.",
+    top: "0.65rem",
+    left: "0.65rem",
+    scale: "0.8",
+    bgcolor: "var(--yellow)"
+  },
+  {
     category: "css",
     title: `CSS`,
     description: "Proficient in this webpage styling, layout and animation language, producing visually attractive and responsive designs.",
