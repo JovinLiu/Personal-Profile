@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
   --purple: #8768a6;
   --red: #e65b5b;
   --yellow: #f2ae72;
+  --typescript:rgb(0, 122, 204);
   --grey: #5c5c5c;
   --dark: #1d1b22;
   --react: #4ab8d4;

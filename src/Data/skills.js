@@ -13,11 +13,11 @@ const skillArr = [
     category: "typescript",
     title: `TypeScript`,
     description:
-      "Skilled in this core web language, enabling the development of interactive and dynamic websites that enhance user engagement and provide a seamless browsing experience.",
-    top: "0.65rem",
-    left: "0.65rem",
-    scale: "0.8",
-    bgcolor: "var(--yellow)"
+      "Enhance JavaScript by incorporating types, generics, decorators, and advanced TypeScript class features, allowing seamless integration with React and TypeScript, as well as Node.js with TypeScript.",
+    top: "2rem",
+    left: "2rem",
+    scale: "0.1",
+    bgcolor: "var(--typescript)"
   },
   {
     category: "css",
