@@ -42,7 +42,7 @@ function Projects() {
         <CardsContainer id="projects-cards-container" ref={ref}>
           <Column id="projects-column" gap="5rem">
             <Span id="projects-title-span">Selected Projects</Span>
-            <P id="projects-text-content-a" width="23vw" align="left" fontSize="1.75rem" lineHeight="4rem" color="var(--light-0-75)">
+            <P id="projects-text-content-a" width="23vw" align="left" fontSize="1.5rem" lineHeight="4rem" color="var(--light-0-75)">
               Explore a curated showcase of my projects that highlight my skills, creativity, and commitment to web development.
             </P>
           </Column>
@@ -51,12 +51,12 @@ function Projects() {
           ))}
           <P
             id="projects-text-content-b"
-            column="2 / -1"
-            width="45vw"
+            column="3 / -1"
+            width="22vw"
             align="right"
             color="var(--light-0-75)"
-            fontSize="1.75rem"
-            marginTop="2rem"
+            fontSize="1.5rem"
+            marginTop="-4rem"
             lineHeight="4rem"
           >
             With continuous effort and exploration in web development, more projects are on the way. These new ventures will showcase my growing

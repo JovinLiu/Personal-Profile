@@ -85,7 +85,7 @@ function Aboutme() {
               <br />
               <br />I am a Full Stack Web Developer with a focus on creating web applications that seamlessly integrate functionality with visual
               appeal. My primary technical stack revolves around <Strong>React</Strong> for front-end development, <Strong>Node.js</Strong> for
-              back-end services,
+              back-end services, <Strong>Next.js</Strong> for full stack development,
               <Strong> MongoDB</Strong> for NoSQL database, and <Strong>Supabase</Strong> for PostgreSQL database. Through a broad range of project
               experiences, I have honed my ability to design efficient solutions and tackle complex coding challenges. My passion for web development,
               enriched by these experiences, drives me to continually enhance the user experience in every project I undertake. I remain dedicated to

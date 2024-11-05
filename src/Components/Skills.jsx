@@ -33,7 +33,7 @@ function Skills() {
         <GridPosition column="-2 / -1" row="1 / 4">
           <Column id="skills-column" align="end" gap="10rem">
             <Span id="skills-title-span">Web Tech Stack</Span>
-            <P id="skills-text-box-a" width="23vw" align="right" fontSize="1.75rem" lineHeight="4rem" color="var(--light-0-75)">
+            <P id="skills-text-box-a" width="23vw" align="right" fontSize="1.5rem" lineHeight="4rem" color="var(--light-0-75)">
               This web development toolkit, which I have mastered, empowers me to build dynamic and efficient web applications that encompass
               everything from user experience to database management. This diverse skill set is what fuels my journey in web development.
             </P>
@@ -43,7 +43,7 @@ function Skills() {
           <SkillsCard content={skill} key={i} />
         ))}
         <GridPosition column="1 / -1" row="10 / 11">
-          <P id="skills-text-box-b" width="80vw" align="center" fontSize="1.75rem" lineHeight="4rem" marginTop="1rem" color="var(--light-0-75)">
+          <P id="skills-text-box-b" width="80vw" align="center" fontSize="1.5rem" lineHeight="4rem" marginTop="5rem" color="var(--light-0-75)">
             Through my unwavering dedication, I am broadening my skill set and working towards mastering new programming languages.
           </P>
         </GridPosition>

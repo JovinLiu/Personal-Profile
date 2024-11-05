@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
   --typescript:rgb(0, 122, 204);
   --grey: #5c5c5c;
   --dark: #1d1b22;
+  --nextjs: rgb(0, 0, 0);;
   --react: #4ab8d4;
   --reactrouter: #d11f2e;
   --reactquery: #f32440;
@@ -68,7 +69,6 @@ const GlobalStyles = createGlobalStyle`
   margin: 0;
   font-family: Overpass, sans-serif;
   font-weight: 100;
-  transition: background-color 0.3s, border 0.3s;
 }
 
 html {
@@ -99,7 +99,6 @@ body {
   position: relative; /* relative */
   max-width: 100vw; /* max-w-[100vw] */
   overflow-X: hidden;
-  transition: color 0.3s, background-color 0.3s;
   line-height: 1.5;
   font-size: 1.6rem;
 }

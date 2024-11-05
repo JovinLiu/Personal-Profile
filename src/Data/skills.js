@@ -13,7 +13,7 @@ const skillArr = [
     category: "typescript",
     title: `TypeScript`,
     description:
-      "Enhance JavaScript by incorporating types, generics, decorators, and advanced TypeScript class features, allowing seamless integration with React and TypeScript, as well as Node.js with TypeScript.",
+      "Enhance JavaScript by incorporating types, generics, decorators, and advanced TypeScript class features, allowing seamless integration of TypeScript with React and Node.js.",
     top: "2rem",
     left: "2rem",
     scale: "0.1",
@@ -46,6 +46,16 @@ const skillArr = [
     left: "0.54rem",
     scale: "0.8",
     bgcolor: "var(--react)"
+  },
+  {
+    category: "nextjs",
+    title: `NextJS`,
+    description:
+      "Experienced in utilizing Next.js’s server-side rendering and static generation capabilities to build high-performance, SEO-friendly applications, enabling smooth integration with backend APIs and enhancing dynamic content management.",
+    top: "0.7rem",
+    left: "0.8rem",
+    scale: "1",
+    bgcolor: "var(--nextjs)"
   },
   {
     category: "sass",
@@ -101,17 +111,7 @@ const skillArr = [
     category: "redux",
     title: `Redux`,
     description:
-      "Proficient in leveraging this library for both classic Redux and RTK to efficiently manage global UI state, ensuring a consistent and responsive user experience throughout the application.",
-    top: "0.72rem",
-    left: "0.76rem",
-    scale: "0.8",
-    bgcolor: "var(--redux)"
-  },
-  {
-    category: "redux",
-    title: `RTK Query`,
-    description:
-      "Experienced in utilizing this remote state management library to fetch and update data in real time, facilitating dynamic application functionality and enhancing user engagement.",
+      "Proficient in leveraging this library for both classic Redux and RTK to efficiently manage global UI state and remote state, ensuring a consistent and responsive user experience throughout the application.",
     top: "0.72rem",
     left: "0.76rem",
     scale: "0.8",
