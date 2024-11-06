@@ -3,7 +3,7 @@ const projectsArr = [
     title: "The Wild Oasis Booking Website",
     short: "A boutique hotel booking site offering exclusive stays in the breathtaking Italy... ",
     description: `The Wild Oasis is a family-run retreat in the Italian Dolomites, blending natural beauty with cozy luxury since 1962. Our eight exclusive cabins offer a warm escape, inviting you to reconnect with nature and loved ones. Discover peaceful trails, starry nights, and a true sanctuary that feels like home. At The Wild Oasis, you’re more than a guest—you’re family.`,
-    skills: ["NextJS", "ContextAPI"],
+    skills: ["Next.js", "ContextAPI", "Tailwind CSS", "Auth.js"],
     top: "-5rem",
     href: "https://the-wild-oasis-website-jovin.vercel.app/"
   },
