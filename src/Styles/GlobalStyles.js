@@ -126,14 +126,12 @@ input:disabled {
 }
 
 input:focus,
-/* button:focus, */
 textarea:focus,
 select:focus {
   outline: 2px solid var(--color-grey-700);
   outline-offset: 2px;
 }
 
-/* Parent selector, finally 😃 */
 button:has(svg) {
   line-height: 0;
 }
