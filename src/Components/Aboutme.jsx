@@ -66,18 +66,7 @@ function Aboutme() {
 
   return (
     <>
-      {/* <Highlight
-        x={10}
-        y={120}
-        opacity="100%"
-        primary="--turquoise"
-        secondary="--orange-0-15"
-        size="75vw"
-        transition="var(--transition-4)"
-        event="none"
-        position="absolute"
-      /> */}
-      <Section id="aboutme" minHeight="120rem" position="relative">
+      <Section id="about" minHeight="120rem" position="relative">
         <div ref={ref}>
           <Column id="aboutme-column-a" align="center" gap="2rem" marginTop="8rem">
             <Span>Greetings, I am Jovin Liu</Span>

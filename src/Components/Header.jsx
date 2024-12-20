@@ -72,8 +72,8 @@ function Header() {
       <Navlist id="nav-list" onClick={handleClick}>
         <NavButton icon="home-outline">Home</NavButton>
         <Row id="nav-button-container" gap="4rem" align="center">
-          <NavButton icon="person-outline" href="#aboutme" ref={aboutmeBtn}>
-            About Me
+          <NavButton icon="person-outline" href="#about" ref={aboutmeBtn}>
+            About
           </NavButton>
           <Slash>/</Slash>
           <NavButton icon="code-working-outline" href="#projects" ref={projectsBtn}>
