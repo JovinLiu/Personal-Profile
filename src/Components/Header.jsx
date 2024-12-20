@@ -73,7 +73,7 @@ function Header() {
         <NavButton icon="home-outline">Home</NavButton>
         <Row id="nav-button-container" gap="4rem" align="center">
           <NavButton icon="person-outline" href="#aboutme" ref={aboutmeBtn}>
-            About
+            About Me
           </NavButton>
           <Slash>/</Slash>
           <NavButton icon="code-working-outline" href="#projects" ref={projectsBtn}>
