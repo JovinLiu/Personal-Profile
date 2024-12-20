@@ -143,14 +143,11 @@ Header #navbar {
   }
 
   @media (max-width: 465px) {
-    font-weight: 600;
-    font-size: 4.5rem;
-    line-height: 15rem;
+    font-size: 5rem;
   }
 
   @media (max-width: 380px) {
-    font-size: 4rem;
-    line-height: 10rem;
+    font-size: 4.5rem;
   }
 }
 
