@@ -45,6 +45,7 @@ const GlobalStyles = createGlobalStyle`
   --mongoose: #740002;
   --postman: #f3512a;
   --git: #e13626;
+  --bootstrap: #4c0bce;
   --pink-0: rgba(230, 91, 154, 0);
   --purple-0: rgba(135, 104, 166, 0);
   --turquoise-0: rgba(91, 223, 231, 0);

@@ -78,6 +78,16 @@ const skillArr = [
     bgcolor: "var(--turquoise)"
   },
   {
+    category: "bootstrap",
+    title: `Bootstrap`,
+    description:
+      "Experienced in using Bootstrap, a powerful CSS framework, to quickly build responsive and modern web designs through its built-in components and tools.",
+    top: "0.55rem",
+    left: "0.6rem",
+    scale: "0.8",
+    bgcolor: "var(--bootstrap)"
+  },
+  {
     category: "styledcomponents",
     title: `Styled Components`,
     description:
