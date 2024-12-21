@@ -42,8 +42,8 @@ function Skills() {
         {skillArr.map((skill, i) => (
           <SkillsCard content={skill} key={i} />
         ))}
-        <GridPosition column="2 / -1" row="10 / 11">
-          <P id="skills-text-box-b" width="50vw" align="center" fontSize="1.5rem" lineHeight="4rem" marginTop="5rem" color="var(--light-0-75)">
+        <GridPosition column="3 / -1" row="10 / 11">
+          <P id="skills-text-box-b" width="22vw" align="center" fontSize="1.5rem" lineHeight="4rem" marginTop="5rem" color="var(--light-0-75)">
             Through my unwavering dedication, I am broadening my skill set and working towards mastering new programming languages.
           </P>
         </GridPosition>
