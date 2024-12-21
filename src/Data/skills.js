@@ -128,6 +128,16 @@ const skillArr = [
     bgcolor: "var(--redux)"
   },
   {
+    category: "jquery",
+    title: `jQuery`,
+    description:
+      "Experienced in using the jQuery library to quickly manipulate the DOM through its intuitive methods and concise syntax, enabling efficient event handling and animation effects.",
+    top: "0.72rem",
+    left: "0.76rem",
+    scale: "0.8",
+    bgcolor: "var(--jquery)"
+  },
+  {
     category: "nodejs",
     title: `Node JS`,
     description:

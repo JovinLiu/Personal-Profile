@@ -46,6 +46,11 @@ const GlobalStyles = createGlobalStyle`
   --postman: #f3512a;
   --git: #e13626;
   --bootstrap: #4c0bce;
+  --sql: rgb(0, 188, 242);
+  --postgresql: rgb(51, 103, 145);
+  --jquery: rgb(18, 102, 169);
+  --graphql: rgb(229, 53, 171);
+  --aws: rgb(255, 153, 51);
   --pink-0: rgba(230, 91, 154, 0);
   --purple-0: rgba(135, 104, 166, 0);
   --turquoise-0: rgba(91, 223, 231, 0);
