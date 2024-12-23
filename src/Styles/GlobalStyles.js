@@ -51,6 +51,7 @@ const GlobalStyles = createGlobalStyle`
   --jquery: rgb(18, 102, 169);
   --graphql: rgb(229, 53, 171);
   --aws: rgb(255, 153, 51);
+  --linux: rgb(0, 0, 0);;
   --pink-0: rgba(230, 91, 154, 0);
   --purple-0: rgba(135, 104, 166, 0);
   --turquoise-0: rgba(91, 223, 231, 0);

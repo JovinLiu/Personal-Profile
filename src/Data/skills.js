@@ -58,6 +58,15 @@ const skillArr = [
     bgcolor: "var(--nextjs)"
   },
   {
+    category: "aws",
+    title: `AWS`,
+    description: "Experienced in using AWS for deploying and managing applications in the cloud.",
+    top: "0.7rem",
+    left: "0.8rem",
+    scale: "1",
+    bgcolor: "var(--aws)"
+  },
+  {
     category: "sass",
     title: `Sass`,
     description:
@@ -217,6 +226,15 @@ const skillArr = [
     bgcolor: "black"
   },
   {
+    category: "graphql",
+    title: `GraphQL`,
+    description: "Experienced in using GraphQL to fetch and manage data efficiently by defining precise queries and schemas.",
+    top: "1rem",
+    left: "1.05rem",
+    scale: "1.1",
+    bgcolor: "var(--graphql)"
+  },
+  {
     category: "postman",
     title: `Postman`,
     description:
@@ -225,6 +243,16 @@ const skillArr = [
     left: "0.75rem",
     scale: "1",
     bgcolor: "var(--postman)"
+  },
+  {
+    category: "linux",
+    title: `Linux`,
+    description:
+      "Experienced in using Linux for basic system operations, including navigating the file system, managing files, and using common commands.",
+    top: "0.74rem",
+    left: "0.75rem",
+    scale: "1",
+    bgcolor: "var(--linux)"
   },
   {
     category: "git",
