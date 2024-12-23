@@ -168,6 +168,26 @@ const skillArr = [
     bgcolor: "var(--supabase)"
   },
   {
+    category: "sql",
+    title: `SQL`,
+    description:
+      "Experienced in using SQL to manage databases, including creating tables, performing CRUD operations, and analyzing data to meet various requirements.",
+    top: "0.78rem",
+    left: "0.78rem",
+    scale: "0.8",
+    bgcolor: "var(--sql)"
+  },
+  {
+    category: "postgresql",
+    title: `PostgreSQL`,
+    description:
+      "Experienced in using PostgreSQL to manage relational databases, including creating tables, performing CRUD operations, and writing queries to analyze and retrieve data effectively.",
+    top: "0.78rem",
+    left: "0.78rem",
+    scale: "0.8",
+    bgcolor: "var(--postgresql)"
+  },
+  {
     category: "mongodb",
     title: `MongoDB`,
     description:
