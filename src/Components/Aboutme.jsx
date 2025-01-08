@@ -75,11 +75,11 @@ function Aboutme() {
               <br />I am a Full Stack Web Developer with a focus on creating web applications that seamlessly integrate functionality with visual
               appeal. My primary technical stack includes <Strong>React</Strong> for front-end development, <Strong>Node.js</Strong> for back-end
               services, and <Strong>Next.js</Strong> for full stack development. I am experienced in working with <Strong>SQL</Strong>,{" "}
-              <Strong>PostgreSQL</Strong>, <Strong>NoSQL</Strong> databases, and <Strong>AWS</Strong> services, which enable me to build scalable and
-              efficient solutions. Through a broad range of project experiences, I have honed my ability to design effective solutions and tackle
-              complex coding challenges. My passion for web development drives me to continually enhance the user experience in every project I
-              undertake. I remain committed to staying current with industry trends and continuously expanding my knowledge and skills in this
-              ever-evolving field. I invite you to explore my portfolio and connect with me.
+              <Strong>NoSQL</Strong> databases, and <Strong>AWS</Strong> services, which enable me to build scalable and efficient solutions. Through
+              a broad range of project experiences, I have honed my ability to design effective solutions and tackle complex coding challenges. My
+              passion for web development drives me to continually enhance the user experience in every project I undertake. I remain committed to
+              staying current with industry trends and continuously expanding my knowledge and skills in this ever-evolving field. I invite you to
+              explore my portfolio and connect with me.
             </P>
           </Column>
 
